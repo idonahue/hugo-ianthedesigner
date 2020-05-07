@@ -3,7 +3,7 @@
 PROJECT: Project Name
 VERSION: Versoin Number
 -------------------------------------------------------------------*/
-@import "https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:300,400,500,700";
+@import "https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap";
 
 @font-face {
   font-family: bwnistaint-xbd;
@@ -14,10 +14,10 @@ VERSION: Versoin Number
 
 body {
   line-height: 1.2;
-  font-family: roboto, sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 15px;
-  color: #4c4c4c
+  color: #4c4c4c;
 }
 
 p {
@@ -25,7 +25,7 @@ p {
   color: #4c4c4c;
   font-size: 15px;
   line-height: 1.8;
-  font-family: roboto, sans-serif
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 h1,
@@ -36,12 +36,12 @@ h5,
 h6 {
   color: #000;
   font-family: playfair display, serif;
-  line-height: 1.2
+  line-height: 1.2;
 }
 
 h1,
 .h1 {
-  font-size: 80px
+  font-size: 80px;
 }
 
 @media(max-width:991px) {
@@ -332,49 +332,49 @@ a:hover {
 }
 
 .font-secondary {
-  font-family: playfair display, serif !important
+  font-family: 'Nunito Sans', sans-serif !important;
 }
 
 .font-tertiary {
-  font-family: bwnistaint-xbd !important
+  font-family: bwnistaint-xbd !important;
 }
 
 .shadow {
-  box-shadow: 0 18px 39.1px 6.9px rgba(224, 241, 255, .34) !important
+  box-shadow: 0 18px 39.1px 6.9px rgba(224, 241, 255, .34) !important;
 }
 
 .bg-dark {
-  background-color: #222 !important
+  background-color: #222 !important;
 }
 
 .icon {
-  font-size: 45px
+  font-size: 45px;
 }
 
 .icon-bg {
   height: 100px;
   width: 100px;
   line-height: 100px;
-  text-align: center
+  text-align: center;
 }
 
 .icon-light {
-  color: #c8d5ef
+  color: #c8d5ef;
 }
 
 .slick-dots {
   text-align: center;
-  padding-left: 0
+  padding-left: 0;
 }
 
 .slick-dots li {
   display: inline-block;
-  margin: 2px
+  margin: 2px;
 }
 
 .slick-dots li.slick-active button {
   background: #fff;
-  width: 25px
+  width: 25px;
 }
 
 .slick-dots li button {
@@ -385,7 +385,7 @@ a:hover {
   border-radius: 10px;
   overflow: hidden;
   transition: .2s ease;
-  border: 0
+  border: 0;
 }
 
 .form-control {
