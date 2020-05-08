@@ -52,7 +52,8 @@ weight = 5
 home = "Home"
 logo = "images/logo.png"
 # theme color
-theme_color = "#41228e"
+# theme_color = "#41228e"
+theme_color = "#22262C"
 # contact info
 phone = "+880 2544 658 256"
 email = "steve.fruits@email.com"

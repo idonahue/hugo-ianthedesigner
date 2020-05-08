@@ -4,6 +4,7 @@ PROJECT: Project Name
 VERSION: Versoin Number
 -------------------------------------------------------------------*/
 @import "https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap";
+@import "https://fonts.googleapis.com/css?family=DM+Serif+Text&display=swap";
 
 @font-face {
   font-family: bwnistaint-xbd;
@@ -14,18 +15,19 @@ VERSION: Versoin Number
 
 body {
   line-height: 1.2;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: var(--font-secondary);
   -webkit-font-smoothing: antialiased;
-  font-size: 15px;
+  font-size: 20px;
   color: #4c4c4c;
 }
 
 p {
   font-weight: 400;
   color: #4c4c4c;
-  font-size: 15px;
+  /* font-size: 20px; */
   line-height: 1.8;
-  font-family: 'Nunito Sans', sans-serif;
+  /* font-family: 'Nunito Sans', sans-serif; */
+  font-family: var(--font-secondary);
 }
 
 h1,
@@ -35,7 +37,8 @@ h4,
 h5,
 h6 {
   color: #000;
-  font-family: playfair display, serif;
+  /* font-family: playfair display, serif; */
+  font-family: var(--font-primary);
   line-height: 1.2;
 }
 
@@ -87,7 +90,7 @@ h6,
 
 .btn {
   font-size: 22px;
-  font-family: playfair display, serif;
+  /* font-family: playfair display, serif; */
   text-transform: capitalize;
   padding: 16px 44px;
   border-radius: 5px;
@@ -223,7 +226,8 @@ a:hover {
 
 .section-title {
   margin-bottom: 80px;
-  font-family: bwnistaint-xbd
+  /* font-family: bwnistaint-xbd */
+  font-family: var(--font-primary);
 }
 
 .bg-cover {
@@ -332,7 +336,7 @@ a:hover {
 }
 
 .font-secondary {
-  font-family: 'Nunito Sans', sans-serif !important;
+  font-family: var(--font-secondary) !important;
 }
 
 .font-tertiary {
@@ -742,7 +746,9 @@ blockquote {
 }
 
 .content strong {
-  font-family: playfair display, serif;
+  font-family: var(--font-primary);
+  font-weight: bold;
+  /* font-family: playfair display, serif; */
   font-size: 22px;
   font-weight: 400;
   color: #000;
