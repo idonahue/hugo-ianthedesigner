@@ -13,6 +13,7 @@ VERSION: Versoin Number
   font-display: swap
 }
 
+
 body {
   line-height: 1.2;
   font-family: var(--font-secondary);
@@ -408,6 +409,31 @@ a:hover {
 textarea.form-control {
   height: 120px
 }
+
+.button {
+  padding: 16px 24px;
+  border: 1px solid gray;
+  border-radius: 50px;
+  &.button-inverse {
+
+  }
+}
+
+// Flexbox Utilities
+.flexbox {
+  display: flex;
+}
+.space-around {
+  justify-content: space-around;
+}
+.space-between {
+  justify-content: space-between;
+}
+.center {
+  align-items: center;
+}
+
+// END Flexbox Utitlies
 
 .card {
   border: 0
@@ -877,3 +903,73 @@ blockquote {
 .filter-controls li.active {
   font-weight: 700
 }
+
+
+
+/* About Page */
+.section-cv {
+  background-color: #3B424D;
+}
+.section-cv .intro,
+.job .job-title {
+  color: var(--color-gray-03);
+}
+.section-cv h3 {
+  color: var(--color-gray-03);
+}
+.section-cv .intro {
+  margin-bottom: 24px;
+}
+.section-cv .larger {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  color: var(--color-gray-03);
+  font-size: 22px;
+  line-height: 30px;
+}
+.job-overview {
+  display: flex;
+  justify-content: space-between;
+}
+.date-range {
+  font-size: 16px;
+  line-height: 34px;
+}
+.job {
+  padding: 24px 0;
+  border-top: 1px solid #798A93;
+  color: #FFFFFF;
+  font-family: var(--font-secondary);
+  font-style: normal;
+  font-weight: bold;
+}
+.job .company {
+  font-size: 27px;
+  font-family: var(--font-secondary);
+  line-height: 34px;
+  .note {
+    margin-left: 16px;
+    color: var(--color-gray-04);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 34px;
+  }
+}
+.job .job-title {
+  margin-top: 24px;
+  margin-bottom: 0;
+  font-size: 19px;
+  line-height: 26px;
+}
+.job .job-description {
+  max-width: 480px;
+  margin-top: 0;
+  color: var(--color-gray-05);
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+
+
+/* END About Page */

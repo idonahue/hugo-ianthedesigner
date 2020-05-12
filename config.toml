@@ -1,8 +1,8 @@
 # default configuration
-baseURL = "http://examplesite.com"
+baseURL = "http://ianthedesigner.com"
 languageCode = "en-us"
 summaryLength = "10"
-theme = "kross-hugo"
+theme = "ianthedesigner-hugo"
 title = "Ian Donahue - Product Designer"
 
 # css plugins
@@ -55,16 +55,16 @@ logo = "images/logo.png"
 # theme_color = "#41228e"
 theme_color = "#22262C"
 # contact info
-phone = "+880 2544 658 256"
-email = "steve.fruits@email.com"
-address = "125/A, CA Commercial Area, California, USA"
+phone = "+1 555 555 5555"
+email = "donahue.ian@gmail.com"
+address = "Berlin, Germany"
 # meta description
-author = "Johnathan Smith"
-description = "This is meta description"
+author = "Ian Donahue"
+description = "Product Designer with +9 years of professional experience"
 # google analytics
 google_analytics_id = "" # Your ID
 # copyright
-copyright = "Copyright &copy; 2020 a theme by [gethugothemes](https://gethugothemes.com)"
+copyright = "Copyright &copy; 2020 Ian Donahue"
 
 
 # contact
@@ -80,16 +80,16 @@ preloader = "" # use png, jpg, svg or gif format
 # social site
 [[params.social]]
 icon = "ti-facebook"
-URL = "#"
+URL = "https://www.facebook.com/iandonahue"
 
 [[params.social]]
 icon = "ti-instagram"
-URL = "#"
+URL = "https://www.instagram.com/iandonahue/"
 
 [[params.social]]
 icon = "ti-dribbble"
-URL = "#"
+URL = "https://dribbble.com/iandonahue"
 
 [[params.social]]
 icon = "ti-twitter-alt"
-URL = "#"
+URL = "https://twitter.com/iandonahue"
