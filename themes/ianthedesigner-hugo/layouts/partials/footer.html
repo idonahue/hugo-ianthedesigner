@@ -52,8 +52,38 @@
       </div>
     </div>
   </div>
-  <div class="border-top text-center border-dark py-5">
-    <p class="mb-0 text-light">{{ .Site.Params.copyright | markdownify }}</p>
+  <div class="container border-top text-center border-dark py-5 flexbox justify-content-between">
+    <div class="social-links-container flexbox justify-content-between">
+      <ul>
+        <li>
+          <a href="mailto:donahue.ian+ianthedesigner@gmail.com?subject=Hello Ian!" target="_blank">Email</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="https://dribbble.com/iandonahue" target="_blank">dribbble</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="https://github.com/iandonahue" target="_blank">Github</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="https://dribbble.com/iandonahue" target="_blank">Codepen</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="https://instagram.com/maothedachshund" target="_blank">🐕</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="copyright">
+      <p class="mb-0 text-light">{{ .Site.Params.copyright | markdownify }}</p>
+    </div>
   </div>
 </footer>
 <!-- /footer -->

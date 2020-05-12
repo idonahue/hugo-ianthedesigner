@@ -13,6 +13,22 @@ VERSION: Versoin Number
   font-display: swap
 }
 
+// Variables
+
+// Colors
+$color-primary:   #22262C;
+
+$color-gray-01:   #798A93;
+$color-gray-02:   #D9E2EA;
+$color-gray-03:   #CBD6DD;
+$color-gray-04:   #B1BDC6;
+$color-gray-05:   #798A93;
+$color-gray-06:   #33454A;
+$color-gray-07:   #22262C;
+
+
+// END Variables
+
 
 body {
   line-height: 1.2;
@@ -411,7 +427,7 @@ textarea.form-control {
 }
 
 .button {
-  padding: 16px 24px;
+  padding: 11px 24px;
   border: 1px solid gray;
   border-radius: 50px;
   &.button-inverse {
@@ -423,9 +439,9 @@ textarea.form-control {
 .flexbox {
   display: flex;
 }
-.space-around {
-  justify-content: space-around;
-}
+// .space-around {
+//   justify-content: space-around;
+// }
 .space-between {
   justify-content: space-between;
 }
@@ -905,17 +921,19 @@ blockquote {
 }
 
 
+// ========================================== //
+// About Page
+// ========================================== //
 
-/* About Page */
 .section-cv {
   background-color: #3B424D;
 }
 .section-cv .intro,
 .job .job-title {
-  color: var(--color-gray-03);
+  color: $color-gray-03;
 }
 .section-cv h3 {
-  color: var(--color-gray-03);
+  color: $color-gray-03;
 }
 .section-cv .intro {
   margin-bottom: 24px;
@@ -923,7 +941,7 @@ blockquote {
 .section-cv .larger {
   margin-top: 24px;
   margin-bottom: 24px;
-  color: var(--color-gray-03);
+  color: $color-gray-03;
   font-size: 22px;
   line-height: 30px;
 }
@@ -964,12 +982,93 @@ blockquote {
 .job .job-description {
   max-width: 480px;
   margin-top: 0;
-  color: var(--color-gray-05);
+  color: $color-gray-05;
   font-weight: normal;
   font-size: 18px;
   line-height: 25px;
 }
 
 
+.stats-container {
+  padding: 48px;
+  color: $color-gray-05;
+  background-color: rgba($color-gray-07, 0.2);
+  .header {
+    margin-bottom: 32px;
+    color: $color-gray-02;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: 31px;
+    line-height: 37px;
+  }
+  .stats {
+    .stat {
+      margin-bottom: 24px;
+    }
+    .label {
+      color: $color-gray-03;
+      font-weight: bold;
+      font-size: 19px;
+      line-height: 26px;
+      text-decoration: uppercase;
+    }
+    .value {
+      a {
+        padding: 6px;;
+        margin-right: 8px;
+        color: $color-gray-04;
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 26px;
+        background-color: rgba($color-gray-07, 0.3);
+        border-radius: 2px;
+        // Hover Position Settings
+        position: relative;
+        bottom: 0;
+        &:hover {
+          box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.08);
+          bottom: 3px;
+        }
 
-/* END About Page */
+      }
+    }
+  }
+}
+
+
+
+// END About Page
+
+
+// ========================================== //
+// Footer Module
+// ========================================== //
+
+.footer-section {
+  .social-links-container,
+  .copyright {
+    color: $color-gray-04;
+    font-size: 14px;
+    line-height: 34px;
+  }
+  .social-links-container {
+    ul {
+      padding-left: 0;
+      li {
+        list-style: none;
+        margin-right: 16px;
+      }
+    }
+    a {
+      color: $color-gray-04;
+      text-decoration-line: underline;
+      // Hover Effect
+      position: relative;
+      bottom: 0;
+      &:hover {
+        bottom: 3px;
+      }
+    }
+
+  }
+}
