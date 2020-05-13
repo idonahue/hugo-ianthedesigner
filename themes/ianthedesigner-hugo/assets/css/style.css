@@ -365,8 +365,6 @@ textarea.form-control {
     padding: 20px;
     background: var(--primary-color); } }
 .navbar .nav-item .nav-link {
-  font-family: bwnistaint-xbd;
-  text-transform: uppercase;
   padding: 15px; }
 
 .navbar .nav-item.active .nav-link {
