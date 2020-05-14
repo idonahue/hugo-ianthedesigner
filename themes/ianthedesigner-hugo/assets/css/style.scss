@@ -3,8 +3,9 @@
 PROJECT: Project Name
 VERSION: Versoin Number
 -------------------------------------------------------------------*/
-@import "https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap";
-@import "https://fonts.googleapis.com/css?family=DM+Serif+Text&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap";
+
+@import "scss/_utility-classes";
 
 @font-face {
   font-family: bwnistaint-xbd;
@@ -53,51 +54,57 @@ h3,
 h4,
 h5,
 h6 {
-  color: #000;
-  /* font-family: playfair display, serif; */
+  color: $color-gray-07;
   font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: 600;
   line-height: 1.2;
 }
 
 h1,
 .h1 {
-  font-size: 80px;
+  font-size: 53px;
 }
 
 @media(max-width:991px) {
 
   h1,
   .h1 {
-    font-size: 65px
+    font-size: 45px;
   }
 }
 
 h2,
 .h2 {
-  font-size: 60px
+  font-size: 34px;
+  line-height: 40px;
 }
 
 @media(max-width:991px) {
 
   h2,
   .h2 {
-    font-size: 50px
+    font-size: 34px;
+    line-height: 40px;
   }
 }
 
 h3,
 .h3 {
-  font-size: 40px
+  font-size: 29px;
+  line-height: 34px;
 }
 
 h4,
 .h4 {
-  font-size: 22px
+  font-size: 26px;
+  line-height: 30px;
 }
 
 h5,
 .h5 {
-  font-size: 18px
+  font-size: 24px;
+  line-height: 28px;
 }
 
 h6,
@@ -300,46 +307,6 @@ a:hover {
   color: #999 !important
 }
 
-.mb-10 {
-  margin-bottom: 10px !important
-}
-
-.mb-20 {
-  margin-bottom: 20px !important
-}
-
-.mb-30 {
-  margin-bottom: 30px !important
-}
-
-.mb-40 {
-  margin-bottom: 40px !important
-}
-
-.mb-50 {
-  margin-bottom: 50px !important
-}
-
-.mb-60 {
-  margin-bottom: 60px !important
-}
-
-.mb-70 {
-  margin-bottom: 70px !important
-}
-
-.mb-80 {
-  margin-bottom: 80px !important
-}
-
-.mb-90 {
-  margin-bottom: 90px !important
-}
-
-.mb-100 {
-  margin-bottom: 100px !important
-}
-
 .zindex-1 {
   z-index: 1
 }
@@ -451,16 +418,34 @@ textarea.form-control {
 
 // END Flexbox Utitlies
 
+.blog-post-card {
+  margin-bottom: 36px;
+  border-bottom: 1px solid $color-gray-03;
+  .card {
+    .card-body {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    .card-text {
+      margin: 0;
+      color: $color-gray-04;
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
+}
 .card {
-  border: 0
+  border: 0;
+  border-radius: 0;
+
 }
 
 .card-header {
-  border: 0
+  border: 0;
 }
 
 .card-footer {
-  border: 0
+  border: 0;
 }
 
 
@@ -470,24 +455,24 @@ textarea.form-control {
 
 .navigation {
   padding: 40px 130px;
-  transition: .3s ease
+  transition: .3s ease;
 }
 
 .navigation.nav-bg {
   background-color: var(--primary-color);
-  padding: 15px 100px
+  padding: 15px 100px;
 }
 
 @media(max-width:991px) {
   .navigation.nav-bg {
-    padding: 15px 20px
+    padding: 15px 20px;
   }
 }
 
 @media(max-width:991px) {
   .navigation {
     padding: 20px;
-    background: var(--primary-color)
+    background: var(--primary-color);
   }
 }
 
@@ -1081,3 +1066,17 @@ blockquote {
 }
 
 // END Footer Module
+
+
+// ========================================== //
+// Post Page
+// ========================================== //
+
+.page-single {}
+.publish-date {
+  color: $color-gray-05;
+  font-size: 18px;
+}
+
+
+// END Post Page

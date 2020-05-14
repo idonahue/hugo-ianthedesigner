@@ -4,9 +4,9 @@ date: 2020-05-12T21:03:09+02:00
 draft: true
 ---
 
-# German Resources (Tools)
+## German Resources (Tools)
 
-## Dictionaries
+### Dictionaries
 
 **[dict.cc](https://dict.cc)**
 
