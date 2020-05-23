@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+  {{ partial "page-title.html" . }}
+
+  <!-- blog -->
+  <section class="blog-post-container section">
+    <div class="container">
+      <div class="row">
+        <div class="date-container col-lg-3 col-sm-12 mb-4" style="border-top: 1px solid orange; padding-top: 30px; font-weight: bold;">
+          2020
+        </div>
+
+        <div class="col-lg-6 col-sm-12 mb-4">
+          {{ range .Data.Pages }}
+          {{ .Render "post" }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /blog -->
+
+{{ end }}

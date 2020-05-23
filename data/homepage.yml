@@ -11,26 +11,6 @@ about:
     label : "know more"
     URL : "about"
 
-# skill
-skill:
-  enable : true
-  title : "Skills"
-  item:
-    - title : "Web Design"
-      progress : "90%"
-      color : "#fdb157"
-
-    - title : "Logo Design"
-      progress : "60%"
-      color : "#9473e6"
-
-    - title : "After Effects"
-      progress : "80%"
-      color : "#bdecf6"
-
-    - title : "Web App"
-      progress : "70%"
-      color : "#ffbcaa"
 
 # experience
 experience:
@@ -38,18 +18,33 @@ experience:
   title : "Experience"
   item:
     - logo : "images/experience/icon-1.png"
-      title : "Junior UX Designer"
-      company : "WEBEX"
+      title : "Senior Product Designer"
+      company : "Dave"
       duration : "Jan 2007 - Feb 2009"
 
     - logo : "images/experience/icon-2.png"
-      title : "UX & UI Designer"
-      company : "AUGMEDIX"
+      title : "Senior Product Designer"
+      company : "UberMedia"
       duration : "Mar 2009 - Aug 2014"
 
     - logo : "images/experience/icon-1.png"
-      title : "Senior UI Designer"
-      company : "THEMEFISHER"
+      title : "Co-founder & VP, User Experience"
+      company : "Cintric"
+      duration : "Sep 2014 - Present"
+
+    - logo : "images/experience/icon-1.png"
+      title : "Product Designer"
+      company : "CompuCom"
+      duration : "Sep 2014 - Present"
+
+    - logo : "images/experience/icon-1.png"
+      title : "Venn"
+      company : "Co-founder & Product Designer"
+      duration : "Sep 2014 - Present"
+
+    - logo : "images/experience/icon-1.png"
+      title : "Co-founder & VP, User Experience"
+      company : "Cintric"
       duration : "Sep 2014 - Present"
 
 # education

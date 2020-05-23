@@ -1,0 +1,13 @@
+<div class="blog-post-card">
+  <article class="card">
+    <div class="card-body">
+      <h4 class="card-title"><a class="text-dark" href="{{.Permalink}}">{{ .Title }}</a>
+      </h4>
+      <p class="cars-text">{{ .Summary }}</p>
+      <div class="flexbox justify-content-between">
+        <p class="card-text">{{ .PublishDate.Format "Jan 02, 2006" }}</p>
+        <a href="{{.Permalink}}" class="btn btn-xs btn-primary">Read More</a>
+      </div>
+    </div>
+  </article>
+</div>
