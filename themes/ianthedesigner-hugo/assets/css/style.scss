@@ -23,15 +23,13 @@ body {
   font-family: var(--font-secondary);
   -webkit-font-smoothing: antialiased;
   font-size: 20px;
-  color: #4c4c4c;
+  color: #798A93;
 }
 
 p {
   font-weight: 400;
-  color: #4c4c4c;
-  /* font-size: 20px; */
+  // color: #4c4c4c;
   line-height: 1.8;
-  /* font-family: 'Nunito Sans', sans-serif; */
   font-family: var(--font-secondary);
 }
 
@@ -41,7 +39,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: $color-gray-07;
+  color: #143757;
   font-family: var(--font-primary);
   font-style: normal;
   font-weight: 600;
@@ -904,23 +902,18 @@ blockquote {
 // About Page
 // ========================================== //
 
-.section-cv {
-  background-color: #3B424D;
-}
+.section-cv {}
 .section-cv .intro,
 .job .job-title {
-  color: $color-gray-03;
+  // color: $color-gray-03;
 }
-.section-cv h3 {
-  color: $color-gray-03;
-}
+.section-cv h3 {}
 .section-cv .intro {
   margin-bottom: 24px;
 }
 .section-cv .larger {
   margin-top: 24px;
   margin-bottom: 24px;
-  color: $color-gray-03;
   font-size: 22px;
   line-height: 30px;
 }
@@ -929,13 +922,16 @@ blockquote {
   justify-content: space-between;
 }
 .date-range {
+  color: $yg-color-gray-01;
+  font-weight: 500;
   font-size: 16px;
   line-height: 34px;
+  text-align: right;
 }
 .job {
   padding: 24px 0;
   border-top: 1px solid #798A93;
-  color: #FFFFFF;
+  color: $yg-color-black;
   font-family: var(--font-secondary);
   font-style: normal;
   font-weight: bold;
@@ -946,7 +942,7 @@ blockquote {
   line-height: 34px;
   .note {
     margin-left: 16px;
-    color: var(--color-gray-04);
+    color: $yg-color-gray-01;
     font-size: 15px;
     font-weight: 600;
     line-height: 34px;
@@ -955,23 +951,25 @@ blockquote {
 .job .job-title {
   margin-top: 24px;
   margin-bottom: 0;
+  color: $yg-color-gray-01;
+  font-weight: 500;
   font-size: 19px;
-  line-height: 26px;
+  line-height: 22px;
 }
 .job .job-description {
   max-width: 480px;
-  margin-top: 0;
+  margin-top: 8px;
   color: $color-gray-05;
   font-weight: normal;
   font-size: 18px;
-  line-height: 25px;
+  line-height: 21px;
 }
 
 
 .stats-container {
   padding: 48px;
   color: $color-gray-05;
-  background-color: rgba($color-gray-07, 0.2);
+  background-color: #F3F8F7;
   .header {
     margin-bottom: 32px;
     color: $color-gray-02;
@@ -985,17 +983,22 @@ blockquote {
       margin-bottom: 24px;
     }
     .label {
-      color: $color-gray-03;
+      color: $yg-color-black;
       font-weight: bold;
       font-size: 19px;
       line-height: 26px;
       text-decoration: uppercase;
+      font-weight: 500;
+      font-size: 19px;
+      line-height: 22px;
+      text-transform: uppercase;
+      padding-right: 16px;
     }
     .value {
       a {
         padding: 6px;;
         margin-right: 8px;
-        color: $color-gray-04;
+        color: $yg-color-gray-01;
         font-weight: bold;
         font-size: 19px;
         line-height: 26px;
@@ -1008,10 +1011,21 @@ blockquote {
           box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.08);
           bottom: 3px;
         }
-
       }
     }
   }
+}
+
+.section-experience {}
+.job {}
+.job-company {
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 34px;
+}
+.job-title {
+  font-size: 19px;
+  line-height: 22px;
 }
 
 

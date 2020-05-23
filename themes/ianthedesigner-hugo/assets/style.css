@@ -182,11 +182,14 @@ body {
   font-family: var(--font-secondary);
   -webkit-font-smoothing: antialiased;
   font-size: 20px;
-  color: #798A93; }
+  color: #4c4c4c; }
 
 p {
   font-weight: 400;
+  color: #4c4c4c;
+  /* font-size: 20px; */
   line-height: 1.8;
+  /* font-family: 'Nunito Sans', sans-serif; */
   font-family: var(--font-secondary); }
 
 h1,
@@ -195,7 +198,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #143757;
+  color: #22262C;
   font-family: var(--font-primary);
   font-style: normal;
   font-weight: 600;
@@ -864,12 +867,20 @@ blockquote {
 .filter-controls li.active {
   font-weight: 700; }
 
+.section-cv .intro,
+.job .job-title {
+  color: #CBD6DD; }
+
+.section-cv h3 {
+  color: #CBD6DD; }
+
 .section-cv .intro {
   margin-bottom: 24px; }
 
 .section-cv .larger {
   margin-top: 24px;
   margin-bottom: 24px;
+  color: #CBD6DD;
   font-size: 22px;
   line-height: 30px; }
 
@@ -878,16 +889,13 @@ blockquote {
   justify-content: space-between; }
 
 .date-range {
-  color: #798A93;
-  font-weight: 500;
   font-size: 16px;
-  line-height: 34px;
-  text-align: right; }
+  line-height: 34px; }
 
 .job {
   padding: 24px 0;
   border-top: 1px solid #798A93;
-  color: #143757;
+  color: #FFFFFF;
   font-family: var(--font-secondary);
   font-style: normal;
   font-weight: bold; }
@@ -898,7 +906,7 @@ blockquote {
   line-height: 34px; }
   .job .company .note {
     margin-left: 16px;
-    color: #798A93;
+    color: var(--color-gray-04);
     font-size: 15px;
     font-weight: 600;
     line-height: 34px; }
@@ -906,23 +914,21 @@ blockquote {
 .job .job-title {
   margin-top: 24px;
   margin-bottom: 0;
-  color: #798A93;
-  font-weight: 500;
   font-size: 19px;
-  line-height: 22px; }
+  line-height: 26px; }
 
 .job .job-description {
   max-width: 480px;
-  margin-top: 8px;
+  margin-top: 0;
   color: #798A93;
   font-weight: normal;
   font-size: 18px;
-  line-height: 21px; }
+  line-height: 25px; }
 
 .stats-container {
   padding: 48px;
   color: #798A93;
-  background-color: #F3F8F7; }
+  background-color: rgba(34, 38, 44, 0.2); }
   .stats-container .header {
     margin-bottom: 32px;
     color: #D9E2EA;
@@ -933,20 +939,15 @@ blockquote {
   .stats-container .stats .stat {
     margin-bottom: 24px; }
   .stats-container .stats .label {
-    color: #143757;
+    color: #CBD6DD;
     font-weight: bold;
     font-size: 19px;
     line-height: 26px;
-    text-decoration: uppercase;
-    font-weight: 500;
-    font-size: 19px;
-    line-height: 22px;
-    text-transform: uppercase;
-    padding-right: 16px; }
+    text-decoration: uppercase; }
   .stats-container .stats .value a {
     padding: 6px;
     margin-right: 8px;
-    color: #798A93;
+    color: #B1BDC6;
     font-weight: bold;
     font-size: 19px;
     line-height: 26px;
@@ -957,6 +958,9 @@ blockquote {
     .stats-container .stats .value a:hover {
       box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.08);
       bottom: 3px; }
+
+.job {
+  border-bottom: 1px solid green; }
 
 .job-company {
   font-weight: 600;

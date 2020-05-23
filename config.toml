@@ -55,9 +55,7 @@ logo = "images/logo.png"
 # theme_color = "#41228e"
 theme_color = "#22262C"
 # contact info
-phone = "+1 555 555 5555"
 email = "donahue.ian@gmail.com"
-address = "Berlin, Germany"
 # meta description
 author = "Ian Donahue"
 description = "Product Designer with +9 years of professional experience"
