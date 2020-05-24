@@ -382,6 +382,9 @@ a:hover {
 .bg-primary {
   background: var(--primary-color) !important; }
 
+.bg-primary .text-white {
+  color: #D9E2EA; }
+
 .bg-gray {
   background: #eaeaea !important; }
 
@@ -408,9 +411,6 @@ a:hover {
 
 .font-secondary {
   font-family: var(--font-secondary) !important; }
-
-.font-tertiary {
-  font-family: bwnistaint-xbd !important; }
 
 .shadow {
   box-shadow: 0 18px 39.1px 6.9px rgba(224, 241, 255, 0.34) !important; }
@@ -469,7 +469,10 @@ textarea.form-control {
 .button {
   padding: 11px 24px;
   border: 1px solid gray;
-  border-radius: 50px; }
+  border-radius: 50px;
+  color: #798A93;
+  font-size: 18px;
+  line-height: 25px; }
 
 .flexbox {
   display: flex; }
@@ -864,8 +867,27 @@ blockquote {
 .filter-controls li.active {
   font-weight: 700; }
 
+.hero-section {
+  padding-top: 100px; }
+  .hero-section .biography {
+    margin-top: 48px;
+    margin-bottom: 48px; }
+
+.biography {
+  padding: 48px;
+  background-color: white;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 34px;
+  color: #33454A; }
+  .biography .header {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 34px;
+    color: #143757; }
+
 .section-cv .intro {
-  margin-bottom: 24px; }
+  margin-bottom: 54px; }
 
 .section-cv .larger {
   margin-top: 24px;
@@ -895,18 +917,19 @@ blockquote {
 .job .company {
   font-size: 27px;
   font-family: var(--font-secondary);
+  font-weight: 600;
   line-height: 34px; }
   .job .company .note {
     margin-left: 16px;
     color: #798A93;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: normal;
     line-height: 34px; }
 
 .job .job-title {
-  margin-top: 24px;
-  margin-bottom: 0;
-  color: #798A93;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: #143757;
   font-weight: 500;
   font-size: 19px;
   line-height: 22px; }
@@ -917,7 +940,7 @@ blockquote {
   color: #798A93;
   font-weight: normal;
   font-size: 18px;
-  line-height: 21px; }
+  line-height: 150%; }
 
 .stats-container {
   padding: 48px;
@@ -925,7 +948,7 @@ blockquote {
   background-color: #F3F8F7; }
   .stats-container .header {
     margin-bottom: 32px;
-    color: #D9E2EA;
+    color: #143757;
     font-family: var(--font-primary);
     font-weight: 600;
     font-size: 31px;
@@ -944,14 +967,14 @@ blockquote {
     text-transform: uppercase;
     padding-right: 16px; }
   .stats-container .stats .value a {
-    padding: 6px;
+    padding: 8px;
     margin-right: 8px;
     color: #798A93;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 19px;
     line-height: 26px;
-    background-color: rgba(34, 38, 44, 0.3);
-    border-radius: 2px;
+    background-color: #D9E2EA;
+    border-radius: 7px;
     position: relative;
     bottom: 0; }
     .stats-container .stats .value a:hover {
@@ -963,9 +986,16 @@ blockquote {
   font-size: 27px;
   line-height: 34px; }
 
-.job-title {
-  font-size: 19px;
-  line-height: 22px; }
+.link-linkedin {
+  margin-top: 48px;
+  margin-bottom: 72px; }
+
+.site-note {
+  margin-top: 72px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%; }
 
 .footer-section .social-links-container,
 .footer-section .copyright {

@@ -245,9 +245,7 @@ a:hover {
   background-repeat: no-repeat
 }
 
-.overlay {
-  position: relative
-}
+.overlay { position: relative; }
 
 .overlay::before {
   position: absolute;
@@ -260,57 +258,31 @@ a:hover {
   opacity: .5
 }
 
-.outline-0 {
-  outline: 0 !important
-}
+.outline-0 { outline: 0 !important; }
 
-.d-unset {
-  display: unset !important
-}
+.d-unset { display: unset !important; }
 
-.bg-primary {
-  background: var(--primary-color) !important
-}
+.bg-primary { background: var(--primary-color) !important; }
 
-.bg-gray {
-  background: #eaeaea !important
-}
+.bg-primary .text-white { color: #D9E2EA; }
 
-.text-primary {
-  color: var(--primary-color) !important
-}
+.bg-gray { background: #eaeaea !important; }
 
-.text-color {
-  color: #4c4c4c
-}
+.text-primary { color: var(--primary-color) !important; }
 
-.text-dark {
-  color: #000 !important
-}
+.text-color { color: #4c4c4c; }
 
-.text-light {
-  color: #999 !important
-}
+.text-dark { color: #000 !important; }
 
-.zindex-1 {
-  z-index: 1
-}
+.text-light { color: #999 !important; }
 
-.rounded-lg {
-  border-radius: 15px
-}
+.zindex-1 { z-index: 1; }
 
-.overflow-hidden {
-  overflow: hidden
-}
+.rounded-lg { border-radius: 15px; }
 
-.font-secondary {
-  font-family: var(--font-secondary) !important;
-}
+.overflow-hidden { overflow: hidden; }
 
-.font-tertiary {
-  font-family: bwnistaint-xbd !important;
-}
+.font-secondary { font-family: var(--font-secondary) !important; }
 
 .shadow {
   box-shadow: 0 18px 39.1px 6.9px rgba(224, 241, 255, .34) !important;
@@ -382,6 +354,10 @@ textarea.form-control {
   padding: 11px 24px;
   border: 1px solid gray;
   border-radius: 50px;
+  color: #798A93;
+  font-size: 18px;
+  line-height: 25px;
+
   &.button-inverse {
 
   }
@@ -902,6 +878,31 @@ blockquote {
 // About Page
 // ========================================== //
 
+.hero-section {
+  padding-top: 100px;
+  .primary-text {}
+  .biography {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+}
+.biography {
+  padding: 48px;
+  background-color: white;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 34px;
+  color: #33454A;
+  .header {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 34px;
+    color: $yg-color-black;
+  }
+}
+
+
+
 .section-cv {}
 .section-cv .intro,
 .job .job-title {
@@ -909,7 +910,7 @@ blockquote {
 }
 .section-cv h3 {}
 .section-cv .intro {
-  margin-bottom: 24px;
+  margin-bottom: 54px;
 }
 .section-cv .larger {
   margin-top: 24px;
@@ -939,19 +940,20 @@ blockquote {
 .job .company {
   font-size: 27px;
   font-family: var(--font-secondary);
+  font-weight: 600;
   line-height: 34px;
   .note {
     margin-left: 16px;
     color: $yg-color-gray-01;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: normal;
     line-height: 34px;
   }
 }
 .job .job-title {
-  margin-top: 24px;
-  margin-bottom: 0;
-  color: $yg-color-gray-01;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: $yg-color-black;
   font-weight: 500;
   font-size: 19px;
   line-height: 22px;
@@ -962,7 +964,7 @@ blockquote {
   color: $color-gray-05;
   font-weight: normal;
   font-size: 18px;
-  line-height: 21px;
+  line-height: 150%;
 }
 
 
@@ -972,7 +974,7 @@ blockquote {
   background-color: #F3F8F7;
   .header {
     margin-bottom: 32px;
-    color: $color-gray-02;
+    color: $yg-color-black;
     font-family: var(--font-primary);
     font-weight: 600;
     font-size: 31px;
@@ -996,14 +998,16 @@ blockquote {
     }
     .value {
       a {
-        padding: 6px;;
+        padding: 8px;
         margin-right: 8px;
         color: $yg-color-gray-01;
-        font-weight: bold;
+
+
+        font-weight: 500;
         font-size: 19px;
         line-height: 26px;
-        background-color: rgba($color-gray-07, 0.3);
-        border-radius: 2px;
+        background-color: #D9E2EA;
+        border-radius: 7px;
         // Hover Position Settings
         position: relative;
         bottom: 0;
@@ -1023,11 +1027,19 @@ blockquote {
   font-size: 27px;
   line-height: 34px;
 }
-.job-title {
-  font-size: 19px;
-  line-height: 22px;
+
+.link-linkedin {
+  margin-top: 48px;
+  margin-bottom: 72px;
 }
 
+.site-note {
+  margin-top: 72px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+}
 
 
 // END About Page
