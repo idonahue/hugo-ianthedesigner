@@ -908,30 +908,30 @@ blockquote {
 
 .job {
   padding: 24px 0;
-  border-top: 1px solid #798A93;
+  border-top: 1px solid rgba(121, 138, 147, 0.4);
   color: #143757;
   font-family: var(--font-secondary);
   font-style: normal;
   font-weight: bold; }
 
-.job .company {
+.job .primary {
   font-size: 27px;
   font-family: var(--font-secondary);
   font-weight: 600;
   line-height: 34px; }
-  .job .company .note {
+  .job .primary .note {
     margin-left: 16px;
     color: #798A93;
     font-size: 15px;
     font-weight: normal;
     line-height: 34px; }
 
-.job .job-title {
+.job .secondary {
   margin-top: 8px;
   margin-bottom: 8px;
-  color: #143757;
-  font-weight: 500;
-  font-size: 19px;
+  color: #798A93;
+  font-weight: normal;
+  font-size: 22px;
   line-height: 22px; }
 
 .job .job-description {

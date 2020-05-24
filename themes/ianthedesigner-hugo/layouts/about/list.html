@@ -44,11 +44,11 @@
         {{ with .Site.Data.about.cv_experience }}
           {{ range .item }}
           <div class="job">
-            <div class="company">
+            <div class="primary">
               {{ .title }}
             </div>
             <div class="job-overview">
-              <div class="job-title">
+              <div class="secondary">
                 {{ .company }}
               </div>
               <div class="date-range">
