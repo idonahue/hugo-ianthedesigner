@@ -6,6 +6,7 @@ VERSION: Versoin Number
 @import "https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap";
 
 @import "scss/_variables";
+@import "scss/_base.scss";
 @import "scss/_typography";
 @import "scss/_utility-classes";
 @import "scss/_portfolio";
