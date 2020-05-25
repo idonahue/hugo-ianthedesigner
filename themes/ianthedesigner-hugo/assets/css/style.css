@@ -30,7 +30,7 @@ h6 {
 
 h1, .h1 {
   font-size: 67px;
-  line-height: 150%;
+  line-height: 110%;
   letter-spacing: -1px; }
 
 @media (max-width: 991px) {
@@ -117,6 +117,44 @@ a.text-dark:hover {
 
 a:hover {
   color: var(--primary-color); }
+
+.page-title .text-white h1 {
+  line-height: 110%; }
+
+.alert {
+  padding: 24px; }
+  .alert p {
+    margin-bottom: 0;
+    font-size: 18px; }
+  .alert .message {
+    padding-left: 24px; }
+  .alert.alert-info {
+    background-color: white;
+    border: 0;
+    box-shadow: 0px 36px 100px rgba(33, 68, 104, 0.12), 0px 12px 32px rgba(25, 28, 31, 0.08);
+    border-radius: 6px; }
+    .alert.alert-info .icon {
+      height: 88px;
+      width: 88px;
+      background-image: url("../images/components/wave.png");
+      background-size: 64px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      animation: handWave linear 6s;
+      animation-iteration-count: infinite;
+      transform-origin: 50% 50%;
+      -webkit-animation: handWave linear 6s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-transform-origin: 50% 50%;
+      -moz-animation: handWave linear 6s;
+      -moz-animation-iteration-count: infinite;
+      -moz-transform-origin: 50% 50%;
+      -o-animation: handWave linear 6s;
+      -o-animation-iteration-count: infinite;
+      -o-transform-origin: 50% 50%;
+      -ms-animation: handWave linear 6s;
+      -ms-animation-iteration-count: infinite;
+      -ms-transform-origin: 50% 50%; }
 
 .mb-8 {
   margin-bottom: 8px !important; }
@@ -501,6 +539,53 @@ a:hover {
     .ubermedia-container .layer-bg .layer.l3 img {
       width: 596px; }
 
+.case-study-hero {
+  position: relative;
+  bottom: 30px;
+  width: calc(100% - 48px);
+  max-width: 1200px;
+  height: 696px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #858D99;
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: 0px 36px 100px rgba(33, 68, 104, 0.12), 0px 12px 32px rgba(25, 28, 31, 0.08);
+  border-radius: 8px; }
+
+.case-study-ubermedia {
+  height: 500px;
+  background-image: url("/images/portfolio/ubermedia/case-study-hero-ubermedia.png");
+  background-color: #4a90e2;
+  background-position: center -27px;
+  background-size: cover; }
+
+.caption {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-size: 16px; }
+
+.content-image {
+  width: 100%; }
+  .content-image img {
+    width: 100%; }
+
+.case-study-section {
+  background-color: #FAFAFA; }
+
+.cs-meta-container {
+  position: absolute; }
+
+@media (max-width: 991px) {
+  .cs-meta-container {
+    position: relative; }
+
+  .cs-meta-container {
+    display: flex;
+    flex-wrap: wrap; }
+
+  .meta-item {
+    width: 33%; } }
 .meta-item {
   margin-bottom: 16px;
   font-size: 20px; }
@@ -512,6 +597,81 @@ a:hover {
     font-weight: normal;
     line-height: 28px; }
 
+@keyframes handWave {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg); }
+  3% {
+    transform: translate(-25px, 0px) rotate(-5deg); }
+  6% {
+    transform: translate(20px, 0px) rotate(3deg); }
+  10% {
+    transform: translate(-15px, 0px) rotate(-3deg); }
+  13% {
+    transform: translate(10px, 0px) rotate(2deg); }
+  17% {
+    transform: translate(0px, 0px) rotate(0deg); }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg); } }
+@-moz-keyframes handWave {
+  0% {
+    -moz-transform: translate(0px, 0px) rotate(0deg); }
+  3% {
+    -moz-transform: translate(-25px, 0px) rotate(-5deg); }
+  6% {
+    -moz-transform: translate(20px, 0px) rotate(3deg); }
+  10% {
+    -moz-transform: translate(-15px, 0px) rotate(-3deg); }
+  13% {
+    -moz-transform: translate(10px, 0px) rotate(2deg); }
+  17% {
+    -moz-transform: translate(0px, 0px) rotate(0deg); }
+  100% {
+    -moz-transform: translate(0px, 0px) rotate(0deg); } }
+@-webkit-keyframes handWave {
+  0% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg); }
+  3% {
+    -webkit-transform: translate(-25px, 0px) rotate(-5deg); }
+  6% {
+    -webkit-transform: translate(20px, 0px) rotate(3deg); }
+  10% {
+    -webkit-transform: translate(-15px, 0px) rotate(-3deg); }
+  13% {
+    -webkit-transform: translate(10px, 0px) rotate(2deg); }
+  17% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg); }
+  100% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg); } }
+@-o-keyframes handWave {
+  0% {
+    -o-transform: translate(0px, 0px) rotate(0deg); }
+  3% {
+    -o-transform: translate(-25px, 0px) rotate(-5deg); }
+  6% {
+    -o-transform: translate(20px, 0px) rotate(3deg); }
+  10% {
+    -o-transform: translate(-15px, 0px) rotate(-3deg); }
+  13% {
+    -o-transform: translate(10px, 0px) rotate(2deg); }
+  17% {
+    -o-transform: translate(0px, 0px) rotate(0deg); }
+  100% {
+    -o-transform: translate(0px, 0px) rotate(0deg); } }
+@-ms-keyframes handWave {
+  0% {
+    -ms-transform: translate(0px, 0px) rotate(0deg); }
+  3% {
+    -ms-transform: translate(-25px, 0px) rotate(-5deg); }
+  6% {
+    -ms-transform: translate(20px, 0px) rotate(3deg); }
+  10% {
+    -ms-transform: translate(-15px, 0px) rotate(-3deg); }
+  13% {
+    -ms-transform: translate(10px, 0px) rotate(2deg); }
+  17% {
+    -ms-transform: translate(0px, 0px) rotate(0deg); }
+  100% {
+    -ms-transform: translate(0px, 0px) rotate(0deg); } }
 @font-face {
   font-family: bwnistaint-xbd;
   src: url(../fonts/BwNistaInt-xBd.woff) format("woff");
@@ -519,7 +679,6 @@ a:hover {
   font-display: swap; }
 .btn {
   font-size: 22px;
-  /* font-family: playfair display, serif; */
   text-transform: capitalize;
   padding: 16px 44px;
   border-radius: 5px;
@@ -573,6 +732,12 @@ a:hover {
 
 .block {
   display: block; }
+
+.divider {
+  width: 100%;
+  margin-top: 64px;
+  margin-bottom: 64px;
+  border-top: 1px solid #E3E7EA; }
 
 .slick-slide {
   outline: 0; }

@@ -1,5 +1,5 @@
 ---
-title: "Vist Ian"
+title: "Vist Measurement"
 description: "This is meta description."
 draft: false
 case-study-title: "Blah Blah Blah UberMedia Vista info goes here."

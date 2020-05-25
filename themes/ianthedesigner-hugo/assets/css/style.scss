@@ -11,6 +11,7 @@ VERSION: Versoin Number
 @import "scss/_utility-classes";
 @import "scss/_portfolio";
 @import "scss/_case-study";
+@import "scss/_animations";
 
 
 @font-face {
@@ -22,7 +23,6 @@ VERSION: Versoin Number
 
 .btn {
   font-size: 22px;
-  /* font-family: playfair display, serif; */
   text-transform: capitalize;
   padding: 16px 44px;
   border-radius: 5px;
@@ -90,6 +90,13 @@ VERSION: Versoin Number
   display: block;
 }
 
+.divider {
+  width: 100%;
+  margin-top: 64px;
+  margin-bottom: 64px;
+  border-top: 1px solid #E3E7EA;
+}
+
 .slick-slide {
   outline: 0
 }
@@ -154,13 +161,9 @@ VERSION: Versoin Number
   box-shadow: 0 18px 39.1px 6.9px rgba(224, 241, 255, .34) !important;
 }
 
-.bg-dark {
-  background-color: #222 !important;
-}
+.bg-dark { background-color: #222 !important; }
 
-.icon {
-  font-size: 45px;
-}
+.icon { font-size: 45px; }
 
 .icon-bg {
   height: 100px;
@@ -169,9 +172,7 @@ VERSION: Versoin Number
   text-align: center;
 }
 
-.icon-light {
-  color: #c8d5ef;
-}
+.icon-light { color: #c8d5ef; }
 
 .slick-dots {
   text-align: center;
@@ -212,9 +213,7 @@ VERSION: Versoin Number
   box-shadow: none !important
 }
 
-textarea.form-control {
-  height: 120px
-}
+textarea.form-control { height: 120px }
 
 .button {
   padding: 11px 24px;
@@ -224,24 +223,13 @@ textarea.form-control {
   font-size: 18px;
   line-height: 25px;
 
-  &.button-inverse {
-
-  }
+  &.button-inverse {}
 }
 
 // Flexbox Utilities
-.flexbox {
-  display: flex;
-}
-// .space-around {
-//   justify-content: space-around;
-// }
-.space-between {
-  justify-content: space-between;
-}
-.center {
-  align-items: center;
-}
+.flexbox { display: flex; }
+.space-between { justify-content: space-between; }
+.center { align-items: center; }
 
 // END Flexbox Utitlies
 
@@ -267,13 +255,9 @@ textarea.form-control {
 
 }
 
-.card-header {
-  border: 0;
-}
+.card-header { border: 0; }
 
-.card-footer {
-  border: 0;
-}
+.card-footer { border: 0; }
 
 
 // ========================================== //
