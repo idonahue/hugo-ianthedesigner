@@ -7,6 +7,7 @@ VERSION: Versoin Number
 
 @import "scss/_variables";
 @import "scss/_utility-classes";
+@import "scss/_portfolio";
 
 
 @font-face {
@@ -222,6 +223,10 @@ a.text-dark:hover {
 
 a:hover {
   color: var(--primary-color)
+}
+
+.block {
+  display: block;
 }
 
 .slick-slide {
