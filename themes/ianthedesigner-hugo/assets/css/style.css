@@ -8,12 +8,12 @@ body {
   line-height: 1.2;
   font-family: var(--font-secondary);
   -webkit-font-smoothing: antialiased;
-  font-size: 22px;
+  font-size: 20px;
   color: #798A93; }
 
 p {
   font-weight: 400;
-  line-height: 1.8;
+  line-height: 1.4;
   font-family: var(--font-secondary); }
 
 h1,
