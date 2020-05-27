@@ -201,14 +201,26 @@ a:hover {
 .mb-70 {
   margin-bottom: 70px !important; }
 
+.mb-72 {
+  margin-bottom: 72px !important; }
+
 .mb-80 {
   margin-bottom: 80px !important; }
+
+.mb-88 {
+  margin-bottom: 88px !important; }
 
 .mb-90 {
   margin-bottom: 90px !important; }
 
+.mb-96 {
+  margin-bottom: 96px !important; }
+
 .mb-100 {
   margin-bottom: 100px !important; }
+
+.mb-104 {
+  margin-bottom: 104px !important; }
 
 .mt-8 {
   margin-top: 8px !important; }
@@ -1021,7 +1033,7 @@ textarea.form-control {
   padding: 15px; }
 
 .navbar .nav-item.active .nav-link {
-  color: #52f8f4; }
+  color: #FFD84D; }
 
 .navbar-dark .navbar-nav .nav-link {
   color: #fff; }
