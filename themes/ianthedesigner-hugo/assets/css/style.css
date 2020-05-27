@@ -722,12 +722,17 @@ a:hover .graphic-container {
   height: 100vh;
   padding-top: 250px !important; }
 
-.layer {
-  opacity: 10%;
+.layer img {
+  opacity: 0.1;
+  border-radius: 50%;
   transition: 0.5s; }
-  .layer:hover {
-    opacity: 100%;
-    transition: 0.5s; }
+
+.layer:hover img {
+  opacity: 1;
+  transition: 0.5s; }
+
+.layer .ian {
+  border-radius: 6px; }
 
 .layer {
   position: absolute;
