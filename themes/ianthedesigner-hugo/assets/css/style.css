@@ -611,6 +611,13 @@ a:hover .graphic-container {
   box-shadow: 0px 36px 100px rgba(33, 68, 104, 0.12), 0px 12px 32px rgba(25, 28, 31, 0.08);
   border-radius: 8px; }
 
+.case-study-dave {
+  height: 500px;
+  background-image: url("/images/portfolio/dave/dave-hero.png");
+  background-color: #4a90e2;
+  background-position: center -27px;
+  background-size: cover; }
+
 .case-study-ubermedia {
   height: 500px;
   background-image: url("/images/portfolio/ubermedia/case-study-hero-ubermedia.png");
@@ -624,9 +631,15 @@ a:hover .graphic-container {
   font-size: 16px; }
 
 .content-image {
-  width: 100%; }
+  width: 100%;
+  padding: 64px;
+  margin-top: 40px;
+  margin-bottom: 96px;
+  text-align: center;
+  background-color: #FAFAFA; }
   .content-image img {
-    width: 100%; }
+    width: 100%;
+    border-radius: 6px; }
 
 .case-study-section {
   background-color: #FAFAFA; }
