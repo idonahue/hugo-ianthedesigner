@@ -112,13 +112,14 @@
   top: 458px;
   left: 0;
   img {
-    width: 566px;
+    width: 497px;
     position: relative;
     top: 280px;
+    left: 32px;
     transition: 0.5s;
   }
 }
 .ian-davemoji:hover img {
-  top: -290px;
+  top: -230px;
   transition: 0.5s;
 }
