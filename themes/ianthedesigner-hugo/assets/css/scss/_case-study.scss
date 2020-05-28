@@ -104,22 +104,13 @@
 
 .ian-davemoji {
   position: relative;
-      border: 281px;
-      height: 276px;
-      width: 270px;
-      display: inline-block;
-      top: 458px;
-      left: 30px;
-      overflow: hidden;
-
-  // position: relative;
-  // border: 281px;
-  // height: 266px;
-  // width: 259px;
-  // display: inline-block;
-  // bottom: -470px;
-  // z-index: -7;
-  // left: 30px;
+  border: 281px;
+  height: 276px;
+  width: 270px;
+  display: inline-block;
+  top: 458px;
+  left: 30px;
+  overflow: hidden;
   img {
     width: 100%;
     position: relative;
@@ -128,6 +119,6 @@
   }
 }
 .case-study-dave:hover .ian-davemoji img {
-    top: 0;
-    transition: 0.5s;
+  top: 0;
+  transition: 0.5s;
 }
