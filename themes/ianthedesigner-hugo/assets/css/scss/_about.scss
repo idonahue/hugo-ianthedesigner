@@ -16,6 +16,7 @@
 .layer:hover img{
   opacity: 1;
   transition: 0.5s;
+  z-index: 2;
 }
 .layer .ian {
   border-radius: 6px;

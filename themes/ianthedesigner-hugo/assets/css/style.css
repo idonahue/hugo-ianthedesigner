@@ -774,7 +774,8 @@ a:hover .graphic-container {
 
 .layer:hover img {
   opacity: 1;
-  transition: 0.5s; }
+  transition: 0.5s;
+  z-index: 2; }
 
 .layer .ian {
   border-radius: 6px; }
@@ -1081,7 +1082,7 @@ textarea.form-control {
     overflow: hidden; } }
 .hero-area h1 {
   position: relative;
-  z-index: 2; }
+  z-index: 1; }
 
 .layer-bg {
   position: absolute;
