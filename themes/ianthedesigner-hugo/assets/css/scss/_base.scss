@@ -147,9 +147,23 @@ a:hover { color: var(--primary-color) }
 
 .page-title {
   .text-white {
+
     h1 {
       line-height: 110%;
     }
+  }
+}
+
+.hero-area .text-white {
+  color: #D9E2EA !important;
+}
+.hero-area .text-hover-hightlight {
+  color: white;
+  opacity: 0.3;
+  transition: 1.5s;
+  &:hover {
+    opacity: 1;
+    transition: .4s;
   }
 }
 
