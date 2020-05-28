@@ -1,9 +1,10 @@
 # default configuration
-baseURL = ""
+baseURL = "https://ianthedesigner.netlify.app"
 languageCode = "en-us"
 summaryLength = "10"
 theme = "ianthedesigner-hugo"
 title = "Ian Donahue - Product Designer"
+relativeURLs = true
 
 # css plugins
 [[params.plugins.css]]
