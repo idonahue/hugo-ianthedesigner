@@ -637,7 +637,8 @@ a:hover .graphic-container {
   background-image: url("/images/portfolio/dave/dave-hero.png");
   background-color: transparent;
   background-position: left bottom;
-  background-size: cover; }
+  background-size: cover;
+  overflow: hidden; }
 
 .case-study-ubermedia {
   height: 558px;
@@ -695,19 +696,18 @@ a:hover .graphic-container {
   position: relative;
   border: 281px;
   height: 276px;
-  width: 270px;
+  width: 100%;
   display: inline-block;
   top: 458px;
-  left: 30px;
-  overflow: hidden; }
+  left: 0; }
   .ian-davemoji img {
-    width: 100%;
+    width: 566px;
     position: relative;
     top: 280px;
     transition: 0.5s; }
 
-.case-study-dave:hover .ian-davemoji img {
-  top: 0;
+.ian-davemoji:hover img {
+  top: -290px;
   transition: 0.5s; }
 
 @keyframes handWave {
