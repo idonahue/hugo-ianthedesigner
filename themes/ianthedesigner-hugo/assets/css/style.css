@@ -506,7 +506,8 @@ b {
   margin-bottom: 96px; }
 
 .project-section {
-  margin-bottom: 48px; }
+  margin-bottom: 48px;
+  margin-top: 24px; }
   .project-section .company-name {
     margin-top: 32px;
     margin-bottom: 16px;
