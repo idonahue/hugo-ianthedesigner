@@ -1,6 +1,22 @@
+.page-title.page-title-dave,
+.page-title.page-title-ubermedia {
+  padding-bottom: 350px;
+}
+.hero {
+  height: 300px;
+  background: #fafafa;
+  &.ubermedia {
+    height: 170px;
+  }
+}
+.content {
+  position: relative;
+  bottom: 300px;
+}
+
 .case-study-hero {
   position: relative;
-  bottom: 30px;
+  bottom: 370px;
   width: calc(100% - 48px);
   max-width: 1200px;
   height: 696px;
@@ -12,15 +28,17 @@
   box-shadow: 0px 36px 100px rgba(33, 68, 104, 0.12), 0px 12px 32px rgba(25, 28, 31, 0.08);
   border-radius: 8px;
 }
+
 .case-study-dave {
-  height: 500px;
+  height: 734px;
   background-image: url('/images/portfolio/dave/dave-hero.png');
-  background-color: #4a90e2;
-  background-position: center -27px;
+  background-color: transparent;
+  background-position: left bottom;
   background-size: cover;
 }
 .case-study-ubermedia {
-  height: 500px;
+  height: 558px;
+  margin-top: 70px;
   background-image: url('/images/portfolio/ubermedia/case-study-hero-ubermedia.png');
   background-color: #4a90e2;
   background-position: center -27px;
@@ -49,6 +67,7 @@
 
 .cs-meta-container {
   position: absolute;
+  margin-top: 32px;
 }
 @media (max-width: 991px) {
   .cs-meta-container {
