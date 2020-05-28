@@ -31,6 +31,16 @@ h1, .h1 {
   letter-spacing: -1px;
 }
 
+p a {
+  color: $yg-color-black;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  &:hover {
+    color: $yg-color-black;
+    border-bottom: 2px solid $color-secondary;
+  }
+}
+
 @media(max-width:991px) {
 
   h1,
@@ -137,9 +147,23 @@ a:hover { color: var(--primary-color) }
 
 .page-title {
   .text-white {
+
     h1 {
       line-height: 110%;
     }
+  }
+}
+
+.hero-area .text-white {
+  color: #D9E2EA !important;
+}
+.hero-area .text-hover-hightlight {
+  color: white;
+  opacity: 0.3;
+  transition: 1.5s;
+  &:hover {
+    opacity: 1;
+    transition: .4s;
   }
 }
 

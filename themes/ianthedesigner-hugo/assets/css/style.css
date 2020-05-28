@@ -33,6 +33,14 @@ h1, .h1 {
   line-height: 110%;
   letter-spacing: -1px; }
 
+p a {
+  color: #143757;
+  font-weight: 600;
+  border-bottom: 1px solid transparent; }
+  p a:hover {
+    color: #143757;
+    border-bottom: 2px solid #FFD84D; }
+
 @media (max-width: 991px) {
   h1,
   .h1 {
@@ -120,6 +128,17 @@ a:hover {
 
 .page-title .text-white h1 {
   line-height: 110%; }
+
+.hero-area .text-white {
+  color: #D9E2EA !important; }
+
+.hero-area .text-hover-hightlight {
+  color: white;
+  opacity: 0.3;
+  transition: 1.5s; }
+  .hero-area .text-hover-hightlight:hover {
+    opacity: 1;
+    transition: .4s; }
 
 .alert {
   padding: 24px; }
@@ -503,7 +522,9 @@ b {
   display: inline-block; }
 
 .page-portfolio {
-  margin-bottom: 96px; }
+  padding-top: 64px;
+  padding-bottom: 96px;
+  background-color: #FAFAFA; }
 
 .project-section {
   margin-bottom: 48px;
@@ -609,6 +630,8 @@ a:hover .graphic-container {
 .hero {
   height: 300px;
   background: #fafafa; }
+  .hero.dave {
+    height: 364px; }
   .hero.ubermedia {
     height: 170px; }
 
@@ -635,7 +658,8 @@ a:hover .graphic-container {
   background-image: url("/images/portfolio/dave/dave-hero.png");
   background-color: transparent;
   background-position: left bottom;
-  background-size: cover; }
+  background-size: cover;
+  overflow: hidden; }
 
 .case-study-ubermedia {
   height: 558px;
@@ -688,6 +712,25 @@ a:hover .graphic-container {
   .meta-item .value {
     font-weight: normal;
     line-height: 28px; }
+
+.ian-davemoji {
+  position: relative;
+  border: 281px;
+  height: 276px;
+  width: 100%;
+  display: inline-block;
+  top: 458px;
+  left: 0; }
+  .ian-davemoji img {
+    width: 497px;
+    position: relative;
+    top: 280px;
+    left: 32px;
+    transition: 0.5s; }
+
+.ian-davemoji:hover img {
+  top: -230px;
+  transition: 0.5s; }
 
 @keyframes handWave {
   0% {
@@ -932,6 +975,9 @@ a:hover .graphic-container {
 .bg-primary .text-white {
   color: #D9E2EA; }
 
+.bg-primary p a {
+  color: white; }
+
 .bg-gray {
   background: #eaeaea !important; }
 
@@ -1074,7 +1120,7 @@ textarea.form-control {
   color: #fff; }
 
 .hero-area {
-  padding: 250px 0 200px;
+  padding: 190px 0 30px;
   position: relative; }
 
 @media (max-width: 767px) {

@@ -5,6 +5,9 @@
 .hero {
   height: 300px;
   background: #fafafa;
+  &.dave {
+    height: 364px;
+  }
   &.ubermedia {
     height: 170px;
   }
@@ -35,6 +38,7 @@
   background-color: transparent;
   background-position: left bottom;
   background-size: cover;
+  overflow: hidden;
 }
 .case-study-ubermedia {
   height: 558px;
@@ -96,4 +100,26 @@
     font-weight: normal;
     line-height: 28px;
   }
+}
+
+
+.ian-davemoji {
+  position: relative;
+  border: 281px;
+  height: 276px;
+  width: 100%;
+  display: inline-block;
+  top: 458px;
+  left: 0;
+  img {
+    width: 497px;
+    position: relative;
+    top: 280px;
+    left: 32px;
+    transition: 0.5s;
+  }
+}
+.ian-davemoji:hover img {
+  top: -230px;
+  transition: 0.5s;
 }
