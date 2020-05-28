@@ -1,6 +1,6 @@
 ---
 title: "Vist Measurement"
-description: "This is meta description."
+description: "Vista Measurement"
 draft: false
 case-study-title: "Blah Blah Blah UberMedia Vista info goes here."
 client: "UberMedia"

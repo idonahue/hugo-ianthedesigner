@@ -1,6 +1,6 @@
 ---
 title: "Website Typography"
-description: "This is meta description."
-draft: false
+description: "Ian Donahue is really great"
+draft: true
 background-color: "#6f5499"
 ---

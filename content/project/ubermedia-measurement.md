@@ -2,8 +2,8 @@
 title: "Vista Measurement"
 date: 2019-05-12T12:14:34+06:00
 image: "images/blog/post-2.jpg"
-description: "This is meta description."
-draft: false
+description: "Ian Donahue is really great"
+draft: true
 client: "UberMedia"
 project-date: "2016 - 2017"
 ---
