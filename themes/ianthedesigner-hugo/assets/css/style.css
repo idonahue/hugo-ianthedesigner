@@ -511,7 +511,9 @@ b {
   display: inline-block; }
 
 .page-portfolio {
-  margin-bottom: 96px; }
+  padding-top: 64px;
+  padding-bottom: 96px;
+  background-color: #FAFAFA; }
 
 .project-section {
   margin-bottom: 48px;
@@ -961,6 +963,9 @@ a:hover .graphic-container {
 
 .bg-primary .text-white {
   color: #D9E2EA; }
+
+.bg-primary p a {
+  color: white; }
 
 .bg-gray {
   background: #eaeaea !important; }
