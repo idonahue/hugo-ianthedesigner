@@ -1,5 +1,5 @@
 # default configuration
-baseURL = "http://ianthdesigner.com"
+baseURL = "https://ianthedesigner.netlify.app"
 languageCode = "en-us"
 summaryLength = "10"
 theme = "ianthedesigner-hugo"
