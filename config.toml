@@ -1,5 +1,5 @@
 # default configuration
-baseURL = "http://ianthedesigner.com"
+baseURL = "http://ianthdesigner.com"
 languageCode = "en-us"
 summaryLength = "10"
 theme = "ianthedesigner-hugo"
