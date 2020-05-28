@@ -5,6 +5,9 @@
 .hero {
   height: 300px;
   background: #fafafa;
+  &.dave {
+    height: 364px;
+  }
   &.ubermedia {
     height: 170px;
   }
@@ -96,4 +99,35 @@
     font-weight: normal;
     line-height: 28px;
   }
+}
+
+
+.ian-davemoji {
+  position: relative;
+      border: 281px;
+      height: 276px;
+      width: 270px;
+      display: inline-block;
+      top: 458px;
+      left: 30px;
+      overflow: hidden;
+
+  // position: relative;
+  // border: 281px;
+  // height: 266px;
+  // width: 259px;
+  // display: inline-block;
+  // bottom: -470px;
+  // z-index: -7;
+  // left: 30px;
+  img {
+    width: 100%;
+    position: relative;
+    top: 280px;
+    transition: 0.5s;
+  }
+}
+.case-study-dave:hover .ian-davemoji img {
+    top: 0;
+    transition: 0.5s;
 }
