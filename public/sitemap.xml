@@ -3,35 +3,35 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://ianthedesigner.com/about/</loc>
+    <loc>/about/</loc>
   </url>
   
   <url>
-    <loc>http://ianthedesigner.com/categories/</loc>
+    <loc>/categories/</loc>
   </url>
   
   <url>
-    <loc>http://ianthedesigner.com/</loc>
+    <loc>/</loc>
   </url>
   
   <url>
-    <loc>http://ianthedesigner.com/project/</loc>
+    <loc>/project/</loc>
   </url>
   
   <url>
-    <loc>http://ianthedesigner.com/tags/</loc>
+    <loc>/tags/</loc>
   </url>
   
   <url>
-    <loc>http://ianthedesigner.com/dave-customer-success-workspace/</loc>
+    <loc>/dave-customer-success-workspace/</loc>
   </url>
   
   <url>
-    <loc>http://ianthedesigner.com/ubermedia-vista-measurement/</loc>
+    <loc>/ubermedia-vista-measurement/</loc>
   </url>
   
   <url>
-    <loc>http://ianthedesigner.com/portfolio/</loc>
+    <loc>/portfolio/</loc>
   </url>
   
 </urlset>
