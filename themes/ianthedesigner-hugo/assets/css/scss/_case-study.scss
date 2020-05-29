@@ -123,3 +123,19 @@
   top: -230px;
   transition: 0.5s;
 }
+
+.thumbnail-section {
+  .thumbnail {
+    margin-bottom: 32px;
+
+    // transition: 0.5s;
+    // &:hover {
+    //   transform: scale(1.5);
+    //   z-index: 200;
+    //   transition: 0.5s;
+    // }
+    img {
+      border-radius: 2;  
+    }
+  }
+}
