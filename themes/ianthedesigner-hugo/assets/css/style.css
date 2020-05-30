@@ -732,6 +732,11 @@ a:hover .graphic-container {
   top: -230px;
   transition: 0.5s; }
 
+.thumbnail-section .thumbnail {
+  margin-bottom: 32px; }
+  .thumbnail-section .thumbnail img {
+    border-radius: 2; }
+
 @keyframes handWave {
   0% {
     transform: translate(0px, 0px) rotate(0deg); }
