@@ -820,7 +820,6 @@ a:hover .graphic-container {
   100% {
     -ms-transform: translate(0px, 0px) rotate(0deg); } }
 .about-section {
-  height: 100vh;
   padding-top: 250px !important; }
 
 .layer img {
