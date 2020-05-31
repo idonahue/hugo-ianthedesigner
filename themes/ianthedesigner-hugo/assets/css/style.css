@@ -712,6 +712,13 @@ a:hover .graphic-container {
   .meta-item .value {
     font-weight: normal;
     line-height: 28px; }
+    .meta-item .value a {
+      color: #143757;
+      transition: 0.5s;
+      border-bottom: 2px solid transparent; }
+      .meta-item .value a:hover {
+        border-bottom: 2px solid #FFD84D;
+        transition: 0.5s; }
 
 .ian-davemoji {
   position: relative;
