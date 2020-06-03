@@ -1,0 +1,120 @@
+{{ define "main" }}
+
+<!-- page title -->
+<section class="hero-section about-section bg-primary position-relative overflow-hidden" id="parallax">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-12">
+        <h1 class="primary-text text-white font-tertiary">I’m Ian,<br> Product Designer, developer & dog photographer</h1>
+      </div>
+    </div>
+  </div>
+  <div class="layer" id="l2">
+    <img src="{{`images/illustrations/dots-cyan.svg` | relURL}}" alt="bg-shape">
+  </div>
+  <div class="layer" id="l3">
+    <img src="{{`images/mao-photo/mao-3.png` | relURL}}" alt="bg-shape" width="210px" class="shadow">
+  </div>
+  <div class="layer" id="l4">
+    <img src="{{`images/about/ian-donahue.png` | relURL}}" alt="bg-shape" width="400px" class="shadow ian">
+  </div>
+  <div class="layer" id="l5">
+    <img src="{{`images/mao-photo/mao-1.png` | relURL}}" alt="bg-shape" width="100px" class="shadow">
+  </div>
+  <div class="layer" id="l6">
+    <img src="{{`images/mao-photo/mao-4.png` | relURL}}" alt="bg-shape" width="200px" class="shadow">
+  </div>
+  <div class="layer" id="l7">
+    <img src="{{`images/mao-photo/mao-5.png` | relURL}}" alt="bg-shape" width="100px" class="shadow">
+  </div>
+  <div class="layer" id="l8">
+    <img src="{{`images/mao-photo/mao-2.png` | relURL}}" alt="bg-shape" width="220px" class="shadow">
+  </div>
+  <div class="layer" id="l9">
+    <img src="{{`images/mao-photo/mao-6.png` | relURL}}" alt="bg-shape" width="300px" class="shadow">
+  </div>
+  <!-- social icon -->
+  <ul class="inline-block list-unstyled ml-5 mt-3 position-relative zindex-1">
+    {{ range .Site.Params.social }}
+    <li class="mb-3"><a class="text-white" href="{{.URL | safeURL }}"><i class="{{.icon}}"></i></a></li>
+    {{ end }}
+  </ul>
+  <!-- /social icon -->
+</section>
+<!-- /page title -->
+
+<!-- cv -->
+<section class="section section-cv">
+  <div class="container">
+    <div class="row mb-96">
+      <div class="col-md-12 col-lg-6">
+        <h3 class="header">
+          Biography
+        </h3>
+        <p>
+          I'm an interdisciplinary Product Designer and startup cofounder. I’m currently a Lead Product Designer building workspaces tools at <a href="https://dave.com">Dave</a> and <a href="https://ubermedia.com">UberMedia</a>. I focus on making complex workflows simple, effective, while adding a bit of delightful. Also, I build front-ends since 2013. I have worked on go to market strategies, wire-framing, lo-fi, hi-fi, prototyping and followed it up with validation and testing. Currently studying German language and React.js, I’ll never stop learning.
+        </p>
+      </div>
+    </div>
+
+    <div class="row justify-content-between">
+      <div class="col-md-6">
+        <div class="intro">
+          <div class="flexbox justify-content-between center">
+            <h3 class="mt-0">Experience</h3>
+            <a class="button button-invert" target="_blank" href="https://www.linkedin.com/in/ianmdonahue/">
+              View More
+            </a>
+          </div>
+          <p class="larger pl-0 pr-0">
+            I have +9 years of design experience with a background in UX, UI, and front-end development. Along the way I founded and sold a company too.
+          </p>
+        </div>
+
+        {{ if .Site.Data.about.cv_experience.enable }}
+        {{ with .Site.Data.about.cv_experience }}
+          {{ range .item }}
+          <div class="job">
+            <div class="primary">
+              {{ .title }}
+            </div>
+            <div class="job-overview">
+              <div class="secondary">
+                {{ .company }}
+              </div>
+              <div class="date-range">
+                {{ .duration }}
+              </div>
+            </div>
+
+            <!-- <div class="job-description"></div> -->
+          </div>
+          {{ end }}
+        {{ end }}
+        {{ end }}
+        <div class="link-linkedin">
+          <a class="button button-invert" target="_blank" href="https://www.linkedin.com/in/ianmdonahue/">
+            View All
+          </a>
+        </div>
+
+        <div class="site-note">
+          <p>
+            About this site. I made it by hand. No templates, 3rd party services, etc. It was built with Hugo, a static site generator, HTML, CSS and javascript. It’s a playground for me to learn, play and explore. If you have questions, feel <br><a href="mailto:donahue.ian@gmail.com?subject=Questions">free to ask</a>.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="col-md-5 col-md-offset-1">
+        {{ partial "bio-stats.html" . }}
+        {{ partial "bio-personal.html" . }}
+
+      </div>
+    </div>
+  </div>
+
+</section>
+<!-- /cv -->
+
+{{ end }}

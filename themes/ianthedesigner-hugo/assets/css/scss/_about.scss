@@ -1,0 +1,77 @@
+// ------------------------------------------------------------------
+// [About Page]
+// PROJECT: Project Name
+// VERSION: Versoin Number
+//-------------------------------------------------------------------
+.about-section {
+  padding-top: 250px !important;
+}
+
+.layer img {
+  opacity: 0.1;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.layer:hover img{
+  opacity: 1;
+  transition: 0.5s;
+  z-index: 2;
+}
+.layer .ian {
+  border-radius: 6px;
+}
+
+
+
+.layer {
+  position: absolute;
+  z-index: 1
+}
+
+#l1 {
+  bottom: 0;
+  left: 0
+}
+
+#l2 {
+  top: 190px;
+  left: -250px
+}
+
+#l3 {
+  left: 5%;
+  top: 147px;
+}
+
+// Ian Graphic
+#l4 {
+  right: 15%;
+  top: 110px;
+}
+
+#l5 {
+  left: 1569.5px;
+  top: 95px;
+}
+
+#l6 {
+  bottom: -20px;
+  left: 10%
+}
+
+#l7 {
+  bottom: 100px;
+  left: 25%;
+  // left: 346.279px;
+  top: 560.671px;
+}
+
+#l8 {
+  bottom: 160px;
+  right: 45%
+}
+
+#l9 {
+  bottom: 100px;
+  right: -10px
+}
