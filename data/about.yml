@@ -15,7 +15,7 @@ cv_experience:
       company : "Dave"
       company_site : "https://dave.com"
       case_study: true
-      case_study_url: "#"
+      case_study_url: "../dave-customer-success-workspace/"
       duration : "Dec 2018 — Jan 2020"
       description_short: ""
       description_long : "Join Dave as the first product designer outside of Dave's CPO. Lead Designer on the Customer Support workspace and helped prepare it for the rollout. Design a scalable workspace, designed UX paradigms with usability as the focus. Established the internal tools design system."
@@ -23,9 +23,9 @@ cv_experience:
     - logo : "images/experience/icon-2.png"
       title : "Lead Product Designer"
       company : "UberMedia"
-      company_site : "https://dave.com"
+      company_site : "https://compucom.com"
       case_study: true
-      case_study_url: "#"
+      case_study_url: "../ubermedia-vista-measurement/"
       duration : "Dec 2017 — Jan 2020"
       description_short: ""
       description_long : "Cintric join UberMedia in 2017. Supported the company as the sole Product designer, which allowed for working on +10 projects. Primarily focused on 'Vista by UberMedia,' which launched UberMedia into a product-focused company. Additionally, was the product manager on Vista Measurement and established the design system for all of the products within 'Vista by UberMedia.'"
@@ -33,9 +33,9 @@ cv_experience:
     - logo : "images/experience/icon-1.png"
       title : "Co-founder & VP, User Experience"
       company : "Cintric"
-      company_site : "https://dave.com"
+      company_site : "https://cintric.com"
       case_study: false
-      case_study_url: "#"
+      case_study_url: ""
       duration : "Jan 2015 — Apr 2017"
       description_short: ""
       description_long : "Co-founded a Location Data Analysis company in San Francisco bay. Cintric turns existing mobile user-bases into location and consumer intelligence. Cross-disciplinary roles included working product, marketing, front-end development, and business strategy. Product-specific responsibilities included building and maintaining a design system, UI Engineering, HTML/CSS frameworks, prototyping, and usability testing."
@@ -43,7 +43,7 @@ cv_experience:
     - logo : "images/experience/icon-1.png"
       title : "Co-founder & Designer"
       company : Venn
-      company_site : "https://dave.com"
+      company_site : ""
       case_study: false
       case_study_url: "/meetloaf/"
       duration : "Jan 2014 — Jan 2015"
@@ -53,7 +53,7 @@ cv_experience:
     - logo : "images/experience/icon-1.png"
       title : "Product Designer"
       company : "CompuCom"
-      company_site : "https://dave.com"
+      company_site : "https://compucom.com"
       case_study: false
       case_study_url: "#"
       duration : "Mar 2013 — Feb 2015"
