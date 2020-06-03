@@ -712,6 +712,13 @@ a:hover .graphic-container {
   .meta-item .value {
     font-weight: normal;
     line-height: 28px; }
+    .meta-item .value a {
+      color: #143757;
+      transition: 0.5s;
+      border-bottom: 2px solid transparent; }
+      .meta-item .value a:hover {
+        border-bottom: 2px solid #FFD84D;
+        transition: 0.5s; }
 
 .ian-davemoji {
   position: relative;
@@ -813,7 +820,6 @@ a:hover .graphic-container {
   100% {
     -ms-transform: translate(0px, 0px) rotate(0deg); } }
 .about-section {
-  height: 100vh;
   padding-top: 250px !important; }
 
 .layer img {
@@ -842,11 +848,11 @@ a:hover .graphic-container {
   left: -250px; }
 
 #l3 {
-  right: 30%;
+  left: 5%;
   top: 147px; }
 
 #l4 {
-  left: 100px;
+  right: 15%;
   top: 110px; }
 
 #l5 {
@@ -859,8 +865,7 @@ a:hover .graphic-container {
 
 #l7 {
   bottom: 100px;
-  left: 20%;
-  left: 346.279px;
+  left: 25%;
   top: 560.671px; }
 
 #l8 {

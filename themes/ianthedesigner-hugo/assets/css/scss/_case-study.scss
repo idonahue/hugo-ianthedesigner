@@ -99,6 +99,15 @@
   .value {
     font-weight: normal;
     line-height: 28px;
+    a {
+      color: $yg-color-black;
+      transition: 0.5s;
+      border-bottom: 2px solid transparent;
+      &:hover {
+        border-bottom: 2px solid $color-secondary;
+transition: 0.5s;
+      }
+    }
   }
 }
 
@@ -135,7 +144,7 @@
     //   transition: 0.5s;
     // }
     img {
-      border-radius: 2;  
+      border-radius: 2;
     }
   }
 }
