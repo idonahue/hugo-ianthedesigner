@@ -121,7 +121,7 @@ transition: 0.5s;
   top: 458px;
   left: 0;
   img {
-    width: 497px;
+    width: 387px;
     position: relative;
     top: 280px;
     left: 32px;
@@ -129,7 +129,7 @@ transition: 0.5s;
   }
 }
 .ian-davemoji:hover img {
-  top: -230px;
+  top: -119px;
   transition: 0.5s;
 }
 
@@ -151,21 +151,27 @@ transition: 0.5s;
 
 // Meetloaf
 .page-title-meetloaf {
-  background-color: #EC4039;
+  background-image: url("/images/portfolio/meetloaf/bg-meetloaf.svg");
+  // background-color: #EC4039;
+  background-color: #fafafa;
   background-position: bottom right;
   background-repeat: no-repeat;
+  background-size: cover;
+  p, a {
+    color: white;
+  }
 }
 .hero.meetloaf {
-  background-image: url("/images/portfolio/meetloaf/bg-meetloaf.svg");
+  // background-image: url("/images/portfolio/meetloaf/bg-meetloaf.svg");
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
 }
 .bg-meetloaf {
-  padding-top: 250px;
-  padding-bottom: 200px;
+  padding-top: 280px;
+  padding-bottom: 450px;
   background-image: url("/images/portfolio/meetloaf/meetloaf-background.png");
-  background-size: 55%;
+  background-size: 63%;
   background-repeat: no-repeat;
   background-position: right bottom;
 }
