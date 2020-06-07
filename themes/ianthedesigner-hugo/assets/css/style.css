@@ -623,6 +623,12 @@ a:hover .graphic-container {
   background-size: 650px;
   background-position: top right; }
 
+.gents-section .graphic-container {
+  background-color: white;
+  background-image: url("/images/portfolio/gents-guide/thumbnail-gents-guide.png");
+  background-repeat: no-repeat;
+  background-position: center left; }
+
 .page-title.page-title-dave,
 .page-title.page-title-ubermedia {
   padding-bottom: 350px; }
