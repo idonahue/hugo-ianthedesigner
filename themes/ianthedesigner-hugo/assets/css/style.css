@@ -685,7 +685,9 @@ a:hover .graphic-container {
   padding-top: 24px;
   padding-bottom: 32px;
   background-image: url("/images/portfolio/gents-guide/gents-guide-artwork-2.jpg");
-  box-shadow: none; }
+  box-shadow: none;
+  background-position: center center;
+  background-size: cover; }
 
 .artwork {
   height: 100%;
