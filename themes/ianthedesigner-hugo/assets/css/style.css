@@ -634,6 +634,8 @@ a:hover .graphic-container {
     height: 364px; }
   .hero.ubermedia {
     height: 170px; }
+  .hero.gents-guide {
+    height: 364px; }
 
 .content {
   position: relative;
@@ -668,6 +670,23 @@ a:hover .graphic-container {
   background-color: #4a90e2;
   background-position: center -27px;
   background-size: cover; }
+
+.case-study-gents-guide {
+  height: 630px;
+  bottom: 266px;
+  padding-top: 24px;
+  padding-bottom: 32px;
+  background: linear-gradient(180deg, #FBFDFF 0%, #F9FBFD 3.65%, #EAEBF1 65.1%, #DFE0E6 67.71%, #ECEDF2 75.52%, #DBDCE3 100%);
+  box-shadow: none; }
+
+.artwork {
+  height: 100%;
+  width: 100%; }
+  .artwork.artwork-gents-guide {
+    background-image: url("/images/portfolio/gents-guide/gents-guide-artwork.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center; }
 
 .caption {
   margin-top: 32px;
