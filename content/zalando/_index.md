@@ -1,8 +1,8 @@
 ---
-title: "The Gent's Guide to Style"
-description: "Ian Donahue is really great"
+title: "Zalando"
+description: "Hello Zalando"
 draft: false
-case-study-title: "The Gent's Guide to Style"
+case-study-title: "Gent's Guide to Style"
 client: "UberMedia"
 industry: "Mobile Location Data"
 project-type: "B2B, Product Design"
