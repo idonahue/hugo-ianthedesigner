@@ -1,7 +1,7 @@
 ---
 title: "Meetloaf"
 description: "Meetloaf"
-draft: true
+draft: false
 case-study-title: "Blah Blah Blah UberMedia Vista info goes here."
 client: "Venn"
 industry: "Mobile Location Data"
