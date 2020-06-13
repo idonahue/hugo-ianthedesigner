@@ -3,10 +3,10 @@
 PROJECT: Project Name
 VERSION: Versoin Number
 -------------------------------------------------------------------*/
-@import "https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Work+Sans:wght@400;500;600;700&display=swap";
 body {
   line-height: 1.2;
-  font-family: var(--font-secondary);
+  font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
   font-size: 20px;
   color: #798A93; }
@@ -95,14 +95,27 @@ body {
   align-items: center;
   justify-content: center; }
 
-ol,
 ul {
-  list-style-type: none;
-  margin: 0; }
+  list-style: none;
+  /* Remove default bullets */ }
+
+ul {
+  padding-left: 20px; }
+
+ul li::before {
+  content: "\2022";
+  color: #143757;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em; }
 
 img {
   vertical-align: middle;
   border: 0; }
+
+p strong {
+  color: #143757; }
 
 a,
 a:hover,
@@ -521,6 +534,11 @@ b {
 .inline-block {
   display: inline-block; }
 
+.list-unstyled {
+  padding-left: 0; }
+  .list-unstyled li::before {
+    content: none; }
+
 .page-portfolio {
   padding-top: 64px;
   padding-bottom: 96px;
@@ -755,6 +773,16 @@ a:hover .graphic-container {
         border-bottom: 2px solid #FFD84D;
         transition: 0.5s; }
 
+.persona-container .persona .persona-content {
+  padding: 48px;
+  background-color: #FAFAFA;
+  flex-direction: column; }
+.persona-container .persona img {
+  width: 100%; }
+.persona-container .persona ul li {
+  font-size: 18px;
+  margin-bottom: 16px; }
+
 .ian-davemoji {
   position: relative;
   border: 281px;
@@ -800,6 +828,37 @@ a:hover .graphic-container {
   background-size: 63%;
   background-repeat: no-repeat;
   background-position: right bottom; }
+
+.thumbnails {
+  margin-top: 27px; }
+  .thumbnails img {
+    width: 100%;
+    border: 1px solid #E7EFF7; }
+  .thumbnails .thumnail-item {
+    margin-top: 24px; }
+
+.phone-frame-container {
+  height: 840px;
+  width: 100%;
+  position: relative; }
+  .phone-frame-container .phone-frame {
+    height: 840px;
+    width: 540px;
+    position: absolute;
+    background-image: url("/images/portfolio/meetloaf/screens/meetloaf-phone-frame@2x.png");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat; }
+    .phone-frame-container .phone-frame .phone-screen {
+      height: 532px;
+      width: 301px;
+      position: absolute;
+      left: 111px;
+      top: 136px;
+      border-radius: 2px;
+      background-size: cover; }
+      .phone-frame-container .phone-frame .phone-screen img {
+        width: 100%; }
 
 @keyframes handWave {
   0% {
@@ -1307,6 +1366,9 @@ textarea.form-control {
   .navigation {
     padding: 20px;
     background: var(--primary-color); } }
+.navbar .nav-item::before {
+  content: none; }
+
 .navbar .nav-item .nav-link {
   padding: 15px; }
 
@@ -1328,6 +1390,9 @@ textarea.form-control {
   position: relative;
   z-index: 1; }
 
+@media (max-width: 767px) {
+  #parallax .layer {
+    display: none; } }
 .layer-bg {
   position: absolute;
   bottom: 0;
@@ -1651,6 +1716,8 @@ blockquote {
   .footer-section .social-links-container ul li {
     list-style: none;
     margin-right: 16px; }
+.footer-section .social-links-container ul li::before {
+  content: none; }
 .footer-section .social-links-container a {
   color: #B1BDC6;
   text-decoration-line: underline;

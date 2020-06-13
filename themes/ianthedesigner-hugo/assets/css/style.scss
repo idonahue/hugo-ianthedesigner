@@ -3,7 +3,8 @@
 PROJECT: Project Name
 VERSION: Versoin Number
 -------------------------------------------------------------------*/
-@import "https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap";
+// @import "https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Work+Sans:wght@400;500;600;700&display=swap";
 
 @import "scss/_variables";
 @import "scss/_base.scss";
@@ -289,6 +290,10 @@ textarea.form-control { height: 120px }
   }
 }
 
+.navbar .nav-item::before {
+  content: none;
+}
+
 .navbar .nav-item .nav-link {
   padding: 15px
 }
@@ -320,6 +325,14 @@ textarea.form-control { height: 120px }
 .hero-area h1 {
   position: relative;
   z-index: 1;
+}
+
+@media (max-width: 767px) {
+  #parallax {
+    .layer {
+      display: none;
+    }
+  }
 }
 
 .layer-bg {
@@ -737,6 +750,9 @@ blockquote {
         list-style: none;
         margin-right: 16px;
       }
+    }
+    ul li::before {
+      content: none;
     }
     a {
       color: $color-gray-04;

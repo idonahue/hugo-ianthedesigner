@@ -1,6 +1,6 @@
 body {
   line-height: 1.2;
-  font-family: var(--font-secondary);
+  font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
   font-size: 20px;
   color: #798A93;
@@ -111,15 +111,35 @@ body {
   justify-content: center
 }
 
-ol,
+// ol,
+// ul {
+//   list-style-type: none;
+//   margin: 0
+// }
 ul {
-  list-style-type: none;
-  margin: 0
+  list-style: none; /* Remove default bullets */
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li::before {
+  content: "\2022";
+  color: $yg-color-black;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
 
 img {
   vertical-align: middle;
-  border: 0
+  border: 0;
+}
+
+p strong {
+  color: $yg-color-black;
 }
 
 a,

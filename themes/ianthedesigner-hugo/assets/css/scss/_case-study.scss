@@ -145,7 +145,25 @@
   }
 }
 
+.persona-container {
+  .persona {
+    .persona-content {
+      padding: 48px;
+      background-color: #FAFAFA;
+      flex-direction: column;
+    }
+    img {
+      width: 100%;
+    }
+    ul li {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+  }
+}
 
+
+// Dave Case Study
 .ian-davemoji {
   position: relative;
   border: 281px;
@@ -202,5 +220,45 @@
   background-repeat: no-repeat;
   background-position: right bottom;
 }
+
+.thumbnails {
+  margin-top: 27px;
+  img {
+    width: 100%;
+    border: 1px solid #E7EFF7;
+  }
+  .thumnail-item {
+    margin-top: 24px;
+
+  }
+}
+
+.phone-frame-container {
+  height: 840px;
+  width: 100%;
+  position: relative;
+  .phone-frame {
+    height: 840px;
+    width: 540px;
+    position: absolute;
+    background-image: url("/images/portfolio/meetloaf/screens/meetloaf-phone-frame@2x.png");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    .phone-screen {
+      height: 532px;
+      width: 301px;
+      position: absolute;
+      left: 111px;
+      top: 136px;
+      border-radius: 2px;
+      background-size: cover;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
 
 // /Meetloaf

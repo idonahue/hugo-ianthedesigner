@@ -123,3 +123,10 @@
 .inline-block {
   display: inline-block;
 }
+
+.list-unstyled {
+  padding-left: 0;
+  li::before {
+    content: none;
+  }
+}
