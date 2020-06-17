@@ -751,6 +751,10 @@ a:hover .graphic-container {
     width: 100%;
     border-radius: 6px; }
 
+@media (max-width: 414px) {
+  .content-image {
+    padding-left: 24px;
+    padding-right: 24px; } }
 .case-study-section {
   background-color: #FAFAFA; }
 
@@ -760,14 +764,9 @@ a:hover .graphic-container {
 
 @media (max-width: 991px) {
   .cs-meta-container {
-    position: relative; }
-
-  .cs-meta-container {
+    position: relative;
     display: flex;
-    flex-wrap: wrap; }
-
-  .meta-item {
-    width: 33%; } }
+    flex-wrap: wrap; } }
 .meta-item {
   margin-bottom: 16px;
   font-size: 20px; }

@@ -122,6 +122,13 @@
   }
 }
 
+@media (max-width: 414px) {
+  .content-image {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
 .case-study-section { background-color: #FAFAFA }
 
 .cs-meta-container {
@@ -131,15 +138,17 @@
 @media (max-width: 991px) {
   .cs-meta-container {
     position: relative;
-  }
-  .cs-meta-container {
     display: flex;
     flex-wrap: wrap;
   }
   .meta-item {
-    width: 33%;
+    // width: 33%;
   }
-
+}
+@media (max-width: 991px) {
+  .meta-item {
+    // width: 33%;
+  }
 }
 
 
