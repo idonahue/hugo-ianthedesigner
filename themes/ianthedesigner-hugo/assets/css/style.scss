@@ -736,9 +736,19 @@ blockquote {
         bottom: 3px;
       }
     }
-
   }
 }
+
+@media(max-width:414px) {
+  .footer-section {
+    .container {
+      &.flexbox {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
 
 // END Footer Module
 
