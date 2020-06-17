@@ -165,23 +165,7 @@ a.text-dark:hover { color: var(--primary-color) !important }
 
 a:hover { color: var(--primary-color) }
 
-.page-title {
-  padding: 250px 0 150px;
-  .text-white {
-    h1 {
-      line-height: 110%;
-    }
-  }
-}
 
-@media (max-width: 414px) {
-  .page-title {
-    padding-top: 150px;
-    h1 {
-      margin-bottom: 24px;
-    }
-  }
-}
 
 .hero-area .text-white {
   color: #D9E2EA !important;
