@@ -192,6 +192,17 @@
   }
 }
 
+@media (max-width: 414px) {
+  .persona-container {
+    .persona {
+      .persona-content {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+    }
+  }
+}
+
 
 // Dave Case Study
 .ian-davemoji {
@@ -251,6 +262,12 @@
   background-position: right bottom;
 }
 
+@media (max-width: 414px) {
+  .bg-meetloaf {
+    background-size: 100%;
+  }
+}
+
 .thumbnails {
   margin-top: 27px;
   img {
@@ -285,6 +302,24 @@
       background-size: cover;
       img {
         width: 100%;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 414px) {
+  .phone-frame-container {
+    height: 630px;
+    .phone-frame {
+      height: 100%;
+      width: 100%;
+      background-position: center center;
+      .phone-screen {
+
+        width: 223px;
+        top: 105px;
+        left: 54px;
       }
     }
   }

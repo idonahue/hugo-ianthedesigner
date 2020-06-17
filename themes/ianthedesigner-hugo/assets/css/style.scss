@@ -263,53 +263,6 @@ textarea.form-control { height: 120px }
 .card-footer { border: 0; }
 
 
-// ========================================== //
-// Top Navigation Module
-// ========================================== //
-
-.navigation {
-  padding: 40px 130px;
-  transition: .3s ease;
-}
-
-.navigation.nav-bg {
-  background-color: var(--primary-color);
-  padding: 15px 100px;
-}
-
-@media(max-width:991px) {
-  .navigation.nav-bg {
-    padding: 15px 20px;
-  }
-}
-
-@media(max-width:991px) {
-  .navigation {
-    padding: 20px;
-    background: var(--primary-color);
-  }
-}
-
-.navbar .nav-item::before {
-  content: none;
-}
-
-.navbar .nav-item .nav-link {
-  padding: 15px
-}
-
-.navbar .nav-item.active .nav-link{
-  color: $color-secondary;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-  color: #fff;
-}
-
-// END Top Navigation Module
-
-
-
 .hero-area {
   padding: 190px 0 30px;
   position: relative;
