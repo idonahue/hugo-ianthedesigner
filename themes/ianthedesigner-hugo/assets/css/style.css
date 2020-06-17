@@ -185,6 +185,9 @@ a:hover {
       -ms-animation-iteration-count: infinite;
       -ms-transform-origin: 50% 50%; }
 
+@media (max-width: 445px) {
+  .alert.alert-info .icon {
+    width: 108px; } }
 .shadow {
   box-shadow: 0 36px 100px rgba(33, 68, 104, 0.12), 0 12px 32px rgba(25, 28, 31, 0.08) !important; }
 
@@ -758,7 +761,11 @@ a:hover .graphic-container {
       .case-study-hero.case-study-dave .hero.dave {
         height: 0; }
         .case-study-hero.case-study-dave .hero.dave .ian-davemoji {
-          display: none; } }
+          display: none; }
+
+  .page-title-meetloaf .bg-meetloaf {
+    padding-top: 170px;
+    padding-bottom: 490px; } }
 .artwork {
   height: 100%;
   width: 100%; }

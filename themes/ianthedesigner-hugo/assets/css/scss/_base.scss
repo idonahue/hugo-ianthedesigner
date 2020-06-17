@@ -223,6 +223,12 @@ a:hover { color: var(--primary-color) }
   }
 }
 
+@media(max-width: 445px) {
+  .alert.alert-info .icon {
+    width: 108px;
+  }
+}
+
 // /Alerts
 
 // Shadow
