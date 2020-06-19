@@ -275,6 +275,19 @@ textarea.form-control { height: 120px }
   }
 }
 
+@media(max-width: 445px) {
+  .hero-area {
+    padding-top: 150px;
+    padding-bottom: 0;
+    .container {
+      padding-bottom: 150px;
+      h3 {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
 .hero-area h1 {
   position: relative;
   z-index: 1;
