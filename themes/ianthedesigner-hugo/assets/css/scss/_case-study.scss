@@ -300,11 +300,11 @@
     background-size: contain;
     background-repeat: no-repeat;
     .phone-screen {
-      height: 532px;
-      width: 301px;
+      height: 534px;
+      width: 304px;
       position: absolute;
-      left: 111px;
-      top: 136px;
+      left: 119px;
+      top: 129px;
       border-radius: 2px;
       background-size: cover;
       img {
@@ -319,18 +319,25 @@
   .phone-frame-container {
     height: 630px;
     .phone-frame {
+      background-image: url("/images/portfolio/meetloaf/screens/meetloaf-phone-frame-mobile-size@2x.png");
       height: 100%;
       width: 100%;
       background-position: center center;
       .phone-screen {
-
-        width: 223px;
-        top: 105px;
-        left: 54px;
+        display: none;
+        width: 228px;
+        top: 97px;
+        left: 77px;
       }
     }
   }
 }
 
+
+.video-container {
+  width: 390px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 // /Meetloaf

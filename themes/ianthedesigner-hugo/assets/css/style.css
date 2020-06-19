@@ -928,11 +928,11 @@ a:hover .graphic-container {
     background-size: contain;
     background-repeat: no-repeat; }
     .phone-frame-container .phone-frame .phone-screen {
-      height: 532px;
-      width: 301px;
+      height: 534px;
+      width: 304px;
       position: absolute;
-      left: 111px;
-      top: 136px;
+      left: 119px;
+      top: 129px;
       border-radius: 2px;
       background-size: cover; }
       .phone-frame-container .phone-frame .phone-screen img {
@@ -942,13 +942,20 @@ a:hover .graphic-container {
   .phone-frame-container {
     height: 630px; }
     .phone-frame-container .phone-frame {
+      background-image: url("/images/portfolio/meetloaf/screens/meetloaf-phone-frame-mobile-size@2x.png");
       height: 100%;
       width: 100%;
       background-position: center center; }
       .phone-frame-container .phone-frame .phone-screen {
-        width: 223px;
-        top: 105px;
-        left: 54px; } }
+        display: none;
+        width: 228px;
+        top: 97px;
+        left: 77px; } }
+.video-container {
+  width: 390px;
+  margin-left: auto;
+  margin-right: auto; }
+
 @keyframes handWave {
   0% {
     transform: translate(0px, 0px) rotate(0deg); }
@@ -1232,9 +1239,7 @@ body.lb-disable-scrolling {
   text-align: center;
   line-height: 0;
   font-weight: normal;
-  outline: none;
-  display: flex;
-  flex-direction: column-reverse; }
+  outline: none; }
 
 .lightbox .lb-image {
   display: block;
@@ -1333,6 +1338,7 @@ body.lb-disable-scrolling {
   opacity: 1; }
 
 .lb-dataContainer {
+  height: 48px;
   margin: 0 auto;
   padding-top: 5px;
   *zoom: 1;
