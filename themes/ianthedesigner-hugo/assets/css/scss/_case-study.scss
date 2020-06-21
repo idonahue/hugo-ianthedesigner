@@ -245,7 +245,6 @@
 // Meetloaf
 .page-title-meetloaf {
   background-image: url("/images/portfolio/meetloaf/bg-meetloaf.svg");
-  // background-color: #EC4039;
   background-color: #fafafa;
   background-position: bottom right;
   background-repeat: no-repeat;
@@ -255,7 +254,6 @@
   }
 }
 .hero.meetloaf {
-  // background-image: url("/images/portfolio/meetloaf/bg-meetloaf.svg");
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
@@ -267,6 +265,27 @@
   background-size: 63%;
   background-repeat: no-repeat;
   background-position: right bottom;
+}
+
+#full-size {
+  &.image-1 .phone-screen {
+    background-image: url("../images/portfolio/meetloaf/screens/meetloaf-screens-12@3x.png");
+  }
+  &.image-2 .phone-screen {
+    background-image: url("../images/portfolio/meetloaf/screens/meetloaf-screens-7@3x.png");
+  }
+  &.image-3 .phone-screen {
+    background-image: url("../images/portfolio/meetloaf/screens/meetloaf-screens-1@3x.png");
+  }
+  &.image-4 .phone-screen {
+    background-image: url("../images/portfolio/meetloaf/screens/meetloaf-screens-13@3x.png");
+  }
+  &.image-5 .phone-screen {
+    background-image: url("../images/portfolio/meetloaf/screens/meetloaf-screens-2@3x.png");
+  }
+  &.image-6 .phone-screen {
+    background-image: url("../images/portfolio/meetloaf/screens/meetloaf-screens-14@3x.png");
+  }
 }
 
 @media (max-width: 414px) {
@@ -283,7 +302,7 @@
   }
   .thumnail-item {
     margin-top: 24px;
-
+    cursor: pointer;
   }
 }
 
@@ -301,9 +320,9 @@
     background-repeat: no-repeat;
     .phone-screen {
       height: 534px;
-      width: 304px;
+      width: 305px;
       position: absolute;
-      left: 119px;
+      left: 118px;
       top: 129px;
       border-radius: 2px;
       background-size: cover;
