@@ -148,14 +148,10 @@
     display: flex;
     flex-wrap: wrap;
   }
-  .meta-item {
-    // width: 33%;
-  }
+  .meta-item {}
 }
 @media (max-width: 991px) {
-  .meta-item {
-    // width: 33%;
-  }
+  .meta-item {}
 }
 
 
@@ -267,6 +263,13 @@
   background-position: right bottom;
 }
 
+@media (max-width: 414px) {
+  .bg-meetloaf {
+    background-size: 100%;
+  }
+}
+
+
 #full-size {
   &.image-1 .phone-screen {
     background-image: url("../images/portfolio/meetloaf/screens/meetloaf-screens-12@3x.png");
@@ -285,12 +288,6 @@
   }
   &.image-6 .phone-screen {
     background-image: url("../images/portfolio/meetloaf/screens/meetloaf-screens-14@3x.png");
-  }
-}
-
-@media (max-width: 414px) {
-  .bg-meetloaf {
-    background-size: 100%;
   }
 }
 
@@ -319,7 +316,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     .phone-screen {
-      height: 534px;
+      height: 541px;
       width: 305px;
       position: absolute;
       left: 118px;

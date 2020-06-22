@@ -1,0 +1,119 @@
+@keyframes handWave{
+  0% {
+    transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+  3% {
+    transform:  translate(-25px,0px)  rotate(-5deg) ;
+  }
+  6% {
+    transform:  translate(20px,0px)  rotate(3deg) ;
+  }
+  10% {
+    transform:  translate(-15px,0px)  rotate(-3deg) ;
+  }
+  13% {
+    transform:  translate(10px,0px)  rotate(2deg) ;
+  }
+  17% {
+    transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+  100% {
+    transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+}
+
+@-moz-keyframes handWave{
+  0% {
+    -moz-transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+  3% {
+    -moz-transform:  translate(-25px,0px)  rotate(-5deg) ;
+  }
+  6% {
+    -moz-transform:  translate(20px,0px)  rotate(3deg) ;
+  }
+  10% {
+    -moz-transform:  translate(-15px,0px)  rotate(-3deg) ;
+  }
+  13% {
+    -moz-transform:  translate(10px,0px)  rotate(2deg) ;
+  }
+  17% {
+    -moz-transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+  100% {
+    -moz-transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+}
+
+@-webkit-keyframes handWave {
+  0% {
+    -webkit-transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+  3% {
+    -webkit-transform:  translate(-25px,0px)  rotate(-5deg) ;
+  }
+  6% {
+    -webkit-transform:  translate(20px,0px)  rotate(3deg) ;
+  }
+  10% {
+    -webkit-transform:  translate(-15px,0px)  rotate(-3deg) ;
+  }
+  13% {
+    -webkit-transform:  translate(10px,0px)  rotate(2deg) ;
+  }
+  17% {
+    -webkit-transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+  100% {
+    -webkit-transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+}
+
+@-o-keyframes handWave {
+  0% {
+    -o-transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+  3% {
+    -o-transform:  translate(-25px,0px)  rotate(-5deg) ;
+  }
+  6% {
+    -o-transform:  translate(20px,0px)  rotate(3deg) ;
+  }
+  10% {
+    -o-transform:  translate(-15px,0px)  rotate(-3deg) ;
+  }
+  13% {
+    -o-transform:  translate(10px,0px)  rotate(2deg) ;
+  }
+  17% {
+    -o-transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+  100% {
+    -o-transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+}
+
+@-ms-keyframes handWave {
+  0% {
+    -ms-transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+  3% {
+    -ms-transform:  translate(-25px,0px)  rotate(-5deg) ;
+  }
+  6% {
+    -ms-transform:  translate(20px,0px)  rotate(3deg) ;
+  }
+  10% {
+    -ms-transform:  translate(-15px,0px)  rotate(-3deg) ;
+  }
+  13% {
+    -ms-transform:  translate(10px,0px)  rotate(2deg) ;
+  }
+  17% {
+    -ms-transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+  100% {
+    -ms-transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+}
