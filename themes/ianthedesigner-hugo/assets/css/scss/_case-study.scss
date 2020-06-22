@@ -1,0 +1,343 @@
+.page-title.page-title-dave,
+.page-title.page-title-ubermedia {
+  padding-bottom: 350px;
+}
+.hero {
+  height: 300px;
+  background: #fafafa;
+  &.dave {
+    height: 364px;
+  }
+  &.ubermedia {
+    height: 170px;
+  }
+  &.gents-guide {
+    height: 364px;
+  }
+}
+.content {
+  position: relative;
+  bottom: 300px;
+}
+
+.case-study-hero {
+  position: relative;
+  bottom: 370px;
+  width: calc(100% - 48px);
+  max-width: 1200px;
+  height: 696px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #858D99;
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: 0px 36px 100px rgba(33, 68, 104, 0.12), 0px 12px 32px rgba(25, 28, 31, 0.08);
+  border-radius: 8px;
+}
+
+.case-study-dave {
+  height: 734px;
+  background-image: url('/images/portfolio/dave/dave-hero.png');
+  background-color: transparent;
+  background-position: left bottom;
+  background-size: cover;
+  overflow: hidden;
+}
+.case-study-ubermedia {
+  height: 558px;
+  margin-top: 70px;
+  background-image: url('/images/portfolio/ubermedia/case-study-hero-ubermedia.png');
+  background-color: #4a90e2;
+  background-position: center -27px;
+  background-size: cover;
+}
+.case-study-gents-guide {
+  height: 630px;
+  bottom: 266px;
+  padding-top: 24px;
+  padding-bottom: 32px;
+  background: linear-gradient(180deg, #FBFDFF 0%, #F9FBFD 3.65%, #EAEBF1 65.1%, #DFE0E6 67.71%, #ECEDF2 75.52%, #DBDCE3 100%);
+  box-shadow: none;
+}
+.case-study-gents-guide-alt {
+  height: 630px;
+  bottom: 266px;
+  padding-top: 24px;
+  padding-bottom: 32px;
+  background-image: url('/images/portfolio/gents-guide/gents-guide-artwork-2.jpg');
+  box-shadow: none;
+  background-position: center center;
+  background-size: cover;
+}
+
+@media (max-width: 414px) {
+  .hero.dave {
+    height: 0;
+  }
+  .case-study-hero {
+    background-position: center bottom;
+    margin-left: -15px;
+    margin-right: -15px;
+    width: calc(100% + 30px);
+    &.case-study-dave {
+      background-position: center bottom;
+      height: 400px;
+      .hero.dave {
+        height: 0;
+        .ian-davemoji {
+          display: none;
+        }
+      }
+    }
+  }
+  .page-title-meetloaf {
+    .bg-meetloaf {
+      padding-top: 170px;
+      padding-bottom: 490px;
+    }
+  }
+
+}
+
+.artwork {
+  height: 100%;
+  width: 100%;
+
+  &.artwork-gents-guide {
+    background-image: url('/images/portfolio/gents-guide/gents-guide-artwork.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+.caption {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.content-image {
+  width: 100%;
+  padding: 64px;
+  margin-top: 40px;
+  margin-bottom: 96px;
+  text-align: center;
+  background-color: #FAFAFA;
+  img {
+    width: 100%;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 414px) {
+  .content-image {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.case-study-section { background-color: #FAFAFA }
+
+.cs-meta-container {
+  position: absolute;
+  margin-top: 32px;
+}
+@media (max-width: 991px) {
+  .cs-meta-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .meta-item {
+    // width: 33%;
+  }
+}
+@media (max-width: 991px) {
+  .meta-item {
+    // width: 33%;
+  }
+}
+
+
+.meta-item {
+  margin-bottom: 16px;
+  font-size: 20px;
+  .label {
+    color: $yg-color-black;
+    font-weight: bold;
+    line-height: 28px;
+  }
+  .value {
+    font-weight: normal;
+    line-height: 28px;
+    a {
+      color: $yg-color-black;
+      transition: 0.5s;
+      border-bottom: 2px solid transparent;
+      &:hover {
+        border-bottom: 2px solid $color-secondary;
+        transition: 0.5s;
+      }
+    }
+  }
+}
+
+.persona-container {
+  .persona {
+    .persona-content {
+      padding: 48px;
+      background-color: #FAFAFA;
+      flex-direction: column;
+    }
+    img {
+      width: 100%;
+    }
+    ul li {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  .persona-container {
+    .persona {
+      .persona-content {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+    }
+  }
+}
+
+
+// Dave Case Study
+.ian-davemoji {
+  position: relative;
+  border: 281px;
+  height: 276px;
+  width: 100%;
+  display: inline-block;
+  top: 458px;
+  left: 0;
+  img {
+    width: 387px;
+    position: relative;
+    top: 280px;
+    left: 32px;
+    transition: 0.5s;
+  }
+}
+.ian-davemoji:hover img {
+  top: -119px;
+  transition: 0.5s;
+}
+
+.thumbnail-section {
+  .thumbnail {
+    margin-bottom: 32px;
+    img {
+      border-radius: 2;
+    }
+  }
+}
+
+// Meetloaf
+.page-title-meetloaf {
+  background-image: url("/images/portfolio/meetloaf/bg-meetloaf.svg");
+  // background-color: #EC4039;
+  background-color: #fafafa;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  p, a {
+    color: white;
+  }
+}
+.hero.meetloaf {
+  // background-image: url("/images/portfolio/meetloaf/bg-meetloaf.svg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+}
+.bg-meetloaf {
+  padding-top: 280px;
+  padding-bottom: 450px;
+  background-image: url("/images/portfolio/meetloaf/meetloaf-background.png");
+  background-size: 63%;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+@media (max-width: 414px) {
+  .bg-meetloaf {
+    background-size: 100%;
+  }
+}
+
+.thumbnails {
+  margin-top: 27px;
+  img {
+    width: 100%;
+    border: 1px solid #E7EFF7;
+  }
+  .thumnail-item {
+    margin-top: 24px;
+
+  }
+}
+
+.phone-frame-container {
+  height: 840px;
+  width: 100%;
+  position: relative;
+  .phone-frame {
+    height: 840px;
+    width: 540px;
+    position: absolute;
+    background-image: url("/images/portfolio/meetloaf/screens/meetloaf-phone-frame@2x.png");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    .phone-screen {
+      height: 534px;
+      width: 304px;
+      position: absolute;
+      left: 119px;
+      top: 129px;
+      border-radius: 2px;
+      background-size: cover;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 414px) {
+  .phone-frame-container {
+    height: 630px;
+    .phone-frame {
+      background-image: url("/images/portfolio/meetloaf/screens/meetloaf-phone-frame-mobile-size@2x.png");
+      height: 100%;
+      width: 100%;
+      background-position: center center;
+      .phone-screen {
+        display: none;
+        width: 228px;
+        top: 97px;
+        left: 77px;
+      }
+    }
+  }
+}
+
+
+.video-container {
+  width: 390px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// /Meetloaf

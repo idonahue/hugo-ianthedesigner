@@ -1,0 +1,51 @@
+{{ define "main" }}
+
+  <!-- hero area -->
+  <section class="hero-area bg-primary overflow-hidden"  id="parallax">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <h1 class="text-white font-tertiary">{{ .Site.Data.homepage.banner.title | safeHTML }}</h1>
+          <h3 class="text-white mt-8 mb-32">{{ .Site.Data.homepage.banner.sub_title | safeHTML }}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="layer" id="l2">
+      <img src="{{`images/illustrations/dots-cyan.svg` | relURL}}" alt="bg-shape">
+    </div>
+    <div class="layer" id="l3">
+      <a href="https://bit.ly/2Bpnfjf" alt="Photo of my dog, Mao" title="Go to Mao's Instagram" target="_blank"><img src="{{`images/mao-photo/mao-3.png` | relURL}}" alt="bg-shape" width="210px" class="shadow"></a>
+    </div>
+    <div class="layer" id="l4">
+      <img src="{{`images/about/ian-donahue.png` | relURL}}" alt="bg-shape" width="400px" class="shadow ian">
+    </div>
+    <div class="layer" id="l5">
+      <a href="https://bit.ly/2Bpnfjf" alt="Photo of my dog, Mao" title="Go to Mao's Instagram" target="_blank"><img src="{{`images/mao-photo/mao-1.png` | relURL}}" alt="bg-shape" width="100px" class="shadow"></a>
+    </div>
+    <div class="layer" id="l6">
+      <a href="https://bit.ly/2Bpnfjf" alt="Photo of my dog, Mao" title="Go to Mao's Instagram" target="_blank"><img src="{{`images/mao-photo/mao-4.png` | relURL}}" alt="bg-shape" width="200px" class="shadow"></a>
+    </div>
+    <div class="layer" id="l7">
+      <a href="https://bit.ly/2Bpnfjf" alt="Photo of my dog, Mao" title="Go to Mao's Instagram" target="_blank"><img src="{{`images/mao-photo/mao-5.png` | relURL}}" alt="bg-shape" width="100px" class="shadow"></a>
+    </div>
+    <div class="layer" id="l8">
+      <a href="https://bit.ly/2Bpnfjf" alt="Photo of my dog, Mao" title="Go to Mao's Instagram" target="_blank"><img src="{{`images/mao-photo/mao-2.png` | relURL}}" alt="bg-shape" width="220px" class="shadow"></a>
+    </div>
+    <div class="layer" id="l9">
+      <a href="https://bit.ly/2Bpnfjf" alt="Photo of my dog, Mao" title="Go to Mao's Instagram" target="_blank"><img src="{{`images/mao-photo/mao-6.png` | relURL}}" alt="bg-shape" width="300px" class="shadow"></a>
+    </div>
+    <!-- social icon -->
+    <ul class="hero-social-links">
+      {{ range .Site.Params.social }}
+      <li class="mb-3"><a class="text-white" href="{{.URL | safeURL }}"><i class="{{.icon}}"></i></a></li>
+      {{ end }}
+    </ul>
+    <!-- /social icon -->
+  </section>
+  <!-- /hero area -->
+
+  <!-- portfolio -->
+  {{ partial "projects.html" . }}
+  <!-- /portfolio -->
+
+{{ end }}

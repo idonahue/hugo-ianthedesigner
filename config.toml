@@ -1,0 +1,98 @@
+# default configuration
+baseURL = "https://ianthedesigner.netlify.app"
+languageCode = "en-us"
+summaryLength = "10"
+theme = "ianthedesigner-hugo"
+title = "Ian Donahue - Product Designer"
+relativeURLs = true
+
+# css plugins
+[[params.plugins.css]]
+URL = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+URL = "plugins/slick/slick.css"
+[[params.plugins.css]]
+URL = "plugins/themify-icons/themify-icons.css"
+[[params.plugins.css]]
+URL = "css/style.css"
+
+
+# js plugin
+[[params.plugins.js]]
+URL = "plugins/jQuery/jquery.min.js"
+[[params.plugins.js]]
+URL = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+URL = "plugins/slick/slick.min.js"
+[[params.plugins.js]]
+URL = "plugins/shuffle/shuffle.min.js"
+[[params.plugins.js]]
+URL = "plugins/lightbox2/js/lightbox.min.js"
+
+
+# menu
+[[menu.main]]
+URL = "about"
+name = "About"
+weight = 2
+
+# [[menu.main]]
+# URL = "blog"
+# name = "Blog"
+# weight = 3
+
+[[menu.main]]
+URL = "portfolio"
+name = "Portfolio"
+weight = 4
+
+# [[menu.main]]
+# URL = "contact"
+# name = "Contact"
+# weight = 5
+
+
+# default parameters
+[params]
+home = "Home"
+logo = "images/logo.png"
+# theme color
+# theme_color = "#41228e"
+theme_color = "#22262C"
+# contact info
+email = "donahue.ian@gmail.com"
+# meta description
+author = "Ian Donahue"
+description = "Product Designer with +9 years of professional experience"
+# google analytics
+google_analytics_id = "34429936" # Your ID
+# copyright
+copyright = "Copyright &copy; 2020 Ian Donahue"
+
+
+# contact
+[params.contact]
+enable = true
+form_action = "#" # contact form works with : https://formspree.io
+
+# preloader
+[params.preloader]
+enable = true
+preloader = "" # use png, jpg, svg or gif format
+
+# social site
+[[params.social]]
+icon = "ti-facebook"
+URL = "https://www.facebook.com/iandonahue"
+
+[[params.social]]
+icon = "ti-instagram"
+URL = "https://www.instagram.com/iandonahue/"
+
+[[params.social]]
+icon = "ti-dribbble"
+URL = "https://dribbble.com/iandonahue"
+
+[[params.social]]
+icon = "ti-twitter-alt"
+URL = "https://twitter.com/iandonahue"
