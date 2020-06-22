@@ -1,4 +1,4 @@
-// Preloader js    
+// Preloader js
 $(window).on('load', function () {
 	$('.preloader').fadeOut(100);
 });
@@ -42,7 +42,7 @@ $(window).on('load', function () {
 
 		var parallaxBox = document.getElementById('parallax');
 		/*
-		 Fix js error, occurred at pages other than the home page. 
+		 Fix js error, occurred at pages other than the home page.
 		 When there're no parallax, just ignore the below
 		 other operations, as below elements are bingding to the parallax.
 		*/
@@ -168,3 +168,16 @@ $(window).on('load', function () {
 
 
 })(jQuery);
+
+// Tumbnail Swapping
+$(document).ready(function() {
+		$("img").click(function(e) {
+				var newclass = $(this).attr("id");
+				var oldclass = $("#full-size").attr('class');
+				console.log("Image Clicked");
+				console.log(newclass);
+				$("#full-size").fadeOut(function() {
+						$("#full-size").removeClass(oldclass).addClass(newclass).fadeIn('slow');
+				})
+		})
+});

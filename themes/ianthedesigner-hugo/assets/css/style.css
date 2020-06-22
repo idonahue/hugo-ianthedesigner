@@ -907,13 +907,27 @@ a:hover .graphic-container {
 @media (max-width: 414px) {
   .bg-meetloaf {
     background-size: 100%; } }
+#full-size.image-1 .phone-screen {
+  background-image: url("../images/portfolio/meetloaf/screens/meetloaf-screens-12@3x.png"); }
+#full-size.image-2 .phone-screen {
+  background-image: url("../images/portfolio/meetloaf/screens/meetloaf-screens-7@3x.png"); }
+#full-size.image-3 .phone-screen {
+  background-image: url("../images/portfolio/meetloaf/screens/meetloaf-screens-1@3x.png"); }
+#full-size.image-4 .phone-screen {
+  background-image: url("../images/portfolio/meetloaf/screens/meetloaf-screens-13@3x.png"); }
+#full-size.image-5 .phone-screen {
+  background-image: url("../images/portfolio/meetloaf/screens/meetloaf-screens-2@3x.png"); }
+#full-size.image-6 .phone-screen {
+  background-image: url("../images/portfolio/meetloaf/screens/meetloaf-screens-14@3x.png"); }
+
 .thumbnails {
   margin-top: 27px; }
   .thumbnails img {
     width: 100%;
     border: 1px solid #E7EFF7; }
   .thumbnails .thumnail-item {
-    margin-top: 24px; }
+    margin-top: 24px;
+    cursor: pointer; }
 
 .phone-frame-container {
   height: 840px;
@@ -929,9 +943,9 @@ a:hover .graphic-container {
     background-repeat: no-repeat; }
     .phone-frame-container .phone-frame .phone-screen {
       height: 534px;
-      width: 304px;
+      width: 305px;
       position: absolute;
-      left: 119px;
+      left: 118px;
       top: 129px;
       border-radius: 2px;
       background-size: cover; }
