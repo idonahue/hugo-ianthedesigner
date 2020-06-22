@@ -34,7 +34,7 @@
     <img src="{{`images/mao-photo/mao-6.png` | relURL}}" alt="bg-shape" width="300px" class="shadow">
   </div>
   <!-- social icon -->
-  <ul class="inline-block list-unstyled ml-5 mt-3 position-relative zindex-1">
+  <ul class="hero-social-links">
     {{ range .Site.Params.social }}
     <li class="mb-3"><a class="text-white" href="{{.URL | safeURL }}"><i class="{{.icon}}"></i></a></li>
     {{ end }}
@@ -75,18 +75,27 @@
         {{ with .Site.Data.about.cv_experience }}
           {{ range .item }}
           <div class="job">
-            <div class="primary">
-              {{ .title }}
-            </div>
-            <div class="job-overview">
-              <div class="secondary">
-                {{ .company }}
+            <div class="job-details">
+              <div class="primary">
+                {{ .title }}
               </div>
-              <div class="date-range">
-                {{ .duration }}
-              </div>
-            </div>
+              <div class="job-overview">
+                <div class="secondary">
+                  {{ .company }}
+                </div>
+                <div class="date-range">
+                  {{ .duration }}
+                </div>
 
+              </div>
+            </div>
+            {{ if eq .case_study true}}
+            <div class="link-overlay">
+              <a class="button" href="{{ .case_study_url }}">
+                View Case Study
+              </a>
+            </div>
+            {{ end }}
             <!-- <div class="job-description"></div> -->
           </div>
           {{ end }}
@@ -94,7 +103,7 @@
         {{ end }}
         <div class="link-linkedin">
           <a class="button button-invert" target="_blank" href="https://www.linkedin.com/in/ianmdonahue/">
-            View All
+            View More
           </a>
         </div>
 

@@ -1,0 +1,82 @@
+# client logo slider
+clients_logo_slider:
+  enable : false
+  title : "My Clients"
+  # clients logo comes from 'data/homepage.yml' file
+
+
+# CV experience
+cv_experience:
+  enable : true
+  title : "Experience"
+  item:
+    - logo : "images/experience/icon-1.png"
+      title : "Senior Product Designer"
+      company : "Dave"
+      company_site : "https://dave.com"
+      case_study: true
+      case_study_url: "../dave-customer-success-workspace/"
+      duration : "Dec 2018 — Jan 2020"
+      description_short: ""
+      description_long : "Join Dave as the first product designer outside of Dave's CPO. Lead Designer on the Customer Support workspace and helped prepare it for the rollout. Design a scalable workspace, designed UX paradigms with usability as the focus. Established the internal tools design system."
+
+    - logo : "images/experience/icon-2.png"
+      title : "Senior Product Designer"
+      company : "UberMedia"
+      company_site : "https://compucom.com"
+      case_study: true
+      case_study_url: "../ubermedia-vista-measurement/"
+      duration : "Dec 2017 — Jan 2020"
+      description_short: ""
+      description_long : "Cintric join UberMedia in 2017. Supported the company as the sole Product designer, which allowed for working on +10 projects. Primarily focused on 'Vista by UberMedia,' which launched UberMedia into a product-focused company. Additionally, was the product manager on Vista Measurement and established the design system for all of the products within 'Vista by UberMedia.'"
+
+    - logo : "images/experience/icon-1.png"
+      title : "Co-founder & VP, User Experience"
+      company : "Cintric"
+      company_site : "https://cintric.com"
+      case_study: false
+      case_study_url: ""
+      duration : "Jan 2015 — Apr 2017"
+      description_short: ""
+      description_long : "Co-founded a Location Data Analysis company in San Francisco bay. Cintric turns existing mobile user-bases into location and consumer intelligence. Cross-disciplinary roles included working product, marketing, front-end development, and business strategy. Product-specific responsibilities included building and maintaining a design system, UI Engineering, HTML/CSS frameworks, prototyping, and usability testing."
+
+    - logo : "images/experience/icon-1.png"
+      title : "Co-founder & Designer"
+      company : Venn
+      company_site : ""
+      case_study: true
+      case_study_url: "/meetloaf/"
+      duration : "Jan 2014 — Jan 2015"
+      description_short: ""
+      description_long : "Venn is an API solution for connecting users in the real world safely. With use cases in p2p commerce, dating, and networking, Venn converts online interactions into convenient and safe offline connections for products, people, and professionals."
+
+    - logo : "images/experience/icon-1.png"
+      title : "Product Designer"
+      company : "CompuCom"
+      company_site : "https://compucom.com"
+      case_study: false
+      case_study_url: "#"
+      duration : "Mar 2013 — Feb 2015"
+      description_short: ""
+      description_long : "Venn is an API solution for connecting users in the real world safely. With use cases in p2p commerce, dating, and networking, Venn converts online interactions into convenient and safe offline connections for products, people, and professionals."
+
+    - logo : "images/experience/icon-1.png"
+      title : "Digital Designer"
+      company : "Frontgate"
+      company_site : "https://frontgate.com"
+      case_study: false
+      case_study_url: "#"
+      duration : "Dec 2012 — Feb 2013"
+      description_short: ""
+      description_long : ""
+
+
+    - logo : "images/experience/icon-1.png"
+      title : "Digital Designer"
+      company : "Luxottica Retail - Sunglass Hut"
+      company_site : "https://sunglasshut.com"
+      case_study: false
+      case_study_url: "#"
+      duration : "Jul 2011 — Jun 2012"
+      description_short: ""
+      description_long : ""

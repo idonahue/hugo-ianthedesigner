@@ -3,7 +3,8 @@
 PROJECT: Project Name
 VERSION: Versoin Number
 -------------------------------------------------------------------*/
-@import "https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap";
+// @import "https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Work+Sans:wght@400;500;600;700&display=swap";
 
 @import "scss/_variables";
 @import "scss/_base.scss";
@@ -13,6 +14,7 @@ VERSION: Versoin Number
 @import "scss/_case-study";
 @import "scss/_animations";
 @import "scss/_about";
+@import "scss/_lightbox";
 
 
 @font-face {
@@ -262,49 +264,6 @@ textarea.form-control { height: 120px }
 .card-footer { border: 0; }
 
 
-// ========================================== //
-// Top Navigation Module
-// ========================================== //
-
-.navigation {
-  padding: 40px 130px;
-  transition: .3s ease;
-}
-
-.navigation.nav-bg {
-  background-color: var(--primary-color);
-  padding: 15px 100px;
-}
-
-@media(max-width:991px) {
-  .navigation.nav-bg {
-    padding: 15px 20px;
-  }
-}
-
-@media(max-width:991px) {
-  .navigation {
-    padding: 20px;
-    background: var(--primary-color);
-  }
-}
-
-.navbar .nav-item .nav-link {
-  padding: 15px
-}
-
-.navbar .nav-item.active .nav-link{
-  color: $color-secondary;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-  color: #fff;
-}
-
-// END Top Navigation Module
-
-
-
 .hero-area {
   padding: 190px 0 30px;
   position: relative;
@@ -317,9 +276,30 @@ textarea.form-control { height: 120px }
   }
 }
 
+@media(max-width: 445px) {
+  .hero-area {
+    padding-top: 150px;
+    padding-bottom: 0;
+    .container {
+      padding-bottom: 150px;
+      h3 {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
 .hero-area h1 {
   position: relative;
   z-index: 1;
+}
+
+@media (max-width: 767px) {
+  #parallax {
+    .layer {
+      display: none;
+    }
+  }
 }
 
 .layer-bg {
@@ -648,19 +628,38 @@ blockquote {
   position: absolute;
   left: 90px;
   bottom: -50px;
-  transform: rotate(180deg)
+  transform: rotate(180deg);
 }
 
 .page-title .bg-shape-6 {
   position: absolute;
   right: 20%;
-  bottom: -20px
+  bottom: -20px;
 }
 
 .page-title .bg-shape-7 {
   position: absolute;
   right: -220px;
-  bottom: -100px
+  bottom: -100px;
+}
+
+
+.page-title {
+  padding: 250px 0 150px;
+  .text-white {
+    h1 {
+      line-height: 110%;
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  .page-title {
+    padding-top: 150px;
+    h1 {
+      margin-bottom: 24px;
+    }
+  }
 }
 
 .filter-controls li {
@@ -701,130 +700,6 @@ blockquote {
 
 
 
-.section-cv {}
-.section-cv .intro,
-.job .job-title {
-  // color: $color-gray-03;
-}
-.section-cv h3 {}
-.section-cv .intro {
-  margin-bottom: 54px;
-}
-.section-cv .larger {
-  margin-top: 24px;
-  margin-bottom: 24px;
-  font-size: 21px;
-  line-height: 30px;
-}
-.job-overview {
-  display: flex;
-  justify-content: space-between;
-}
-.date-range {
-  color: $yg-color-gray-01;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 34px;
-  text-align: right;
-}
-.job {
-  padding: 24px 0;
-  border-top: 1px solid rgba(#798A93, 0.4);
-  color: $yg-color-black;
-  font-family: var(--font-secondary);
-  font-style: normal;
-  font-weight: bold;
-}
-.job .primary {
-  font-size: 27px;
-  font-family: var(--font-secondary);
-  font-weight: 600;
-  line-height: 34px;
-  .note {
-    margin-left: 16px;
-    color: $yg-color-gray-01;
-    font-size: 15px;
-    font-weight: normal;
-    line-height: 34px;
-  }
-}
-.job .secondary {
-  margin-top: 8px;
-  margin-bottom: 8px;
-  color: $yg-color-gray-01;
-  font-weight: normal;
-  font-size: 22px;
-  line-height: 22px;
-}
-.job .job-description {
-  max-width: 480px;
-  margin-top: 8px;
-  color: $color-gray-05;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 150%;
-}
-
-
-.stats-container {
-  padding: 48px;
-  color: $color-gray-05;
-  background-color: #F3F8F7;
-  .header {
-    margin-bottom: 32px;
-    color: $yg-color-black;
-    font-family: var(--font-primary);
-    font-weight: 600;
-    font-size: 31px;
-    line-height: 37px;
-  }
-  .stats {
-    .stat {
-      margin-bottom: 24px;
-    }
-    .label {
-      color: $yg-color-black;
-      font-weight: bold;
-      font-size: 19px;
-      line-height: 26px;
-      text-decoration: uppercase;
-      font-weight: 500;
-      font-size: 19px;
-      line-height: 22px;
-      text-transform: uppercase;
-      padding-right: 16px;
-    }
-    .value {
-      a {
-        padding: 8px;
-        margin-right: 8px;
-        color: $yg-color-gray-01;
-
-
-        font-weight: 500;
-        font-size: 19px;
-        line-height: 26px;
-        background-color: #D9E2EA;
-        border-radius: 7px;
-        // Hover Position Settings
-        position: relative;
-        bottom: 0;
-        &:hover {
-          box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.08);
-          bottom: 3px;
-        }
-      }
-    }
-  }
-}
-
-.section-experience {}
-.job {}
-.job-company {
-  font-weight: 600;
-  font-size: 27px;
-  line-height: 34px;
-}
 
 .link-linkedin {
   margin-top: 48px;
@@ -862,6 +737,9 @@ blockquote {
         margin-right: 16px;
       }
     }
+    ul li::before {
+      content: none;
+    }
     a {
       color: $color-gray-04;
       text-decoration-line: underline;
@@ -872,9 +750,19 @@ blockquote {
         bottom: 3px;
       }
     }
-
   }
 }
+
+@media(max-width:414px) {
+  .footer-section {
+    .container {
+      &.flexbox {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
 
 // END Footer Module
 
