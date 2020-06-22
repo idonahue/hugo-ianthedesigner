@@ -21,7 +21,7 @@ cv_experience:
       description_long : "Join Dave as the first product designer outside of Dave's CPO. Lead Designer on the Customer Support workspace and helped prepare it for the rollout. Design a scalable workspace, designed UX paradigms with usability as the focus. Established the internal tools design system."
 
     - logo : "images/experience/icon-2.png"
-      title : "Senior Product Designer"
+      title : "Lead Product Designer"
       company : "UberMedia"
       company_site : "https://compucom.com"
       case_study: true
@@ -44,7 +44,7 @@ cv_experience:
       title : "Co-founder & Designer"
       company : Venn
       company_site : ""
-      case_study: true
+      case_study: false
       case_study_url: "/meetloaf/"
       duration : "Jan 2014 — Jan 2015"
       description_short: ""
@@ -59,24 +59,3 @@ cv_experience:
       duration : "Mar 2013 — Feb 2015"
       description_short: ""
       description_long : "Venn is an API solution for connecting users in the real world safely. With use cases in p2p commerce, dating, and networking, Venn converts online interactions into convenient and safe offline connections for products, people, and professionals."
-
-    - logo : "images/experience/icon-1.png"
-      title : "Digital Designer"
-      company : "Frontgate"
-      company_site : "https://frontgate.com"
-      case_study: false
-      case_study_url: "#"
-      duration : "Dec 2012 — Feb 2013"
-      description_short: ""
-      description_long : ""
-
-
-    - logo : "images/experience/icon-1.png"
-      title : "Digital Designer"
-      company : "Luxottica Retail - Sunglass Hut"
-      company_site : "https://sunglasshut.com"
-      case_study: false
-      case_study_url: "#"
-      duration : "Jul 2011 — Jun 2012"
-      description_short: ""
-      description_long : ""
