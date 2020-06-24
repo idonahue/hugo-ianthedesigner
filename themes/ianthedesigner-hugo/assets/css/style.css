@@ -206,6 +206,20 @@ a:hover {
   .navigation {
     padding: 20px;
     background: var(--primary-color); } }
+.navigation.full-size .navbar-collapse {
+  height: calc(100vh - 96px);
+  justify-content: center;
+  align-items: center; }
+  .navigation.full-size .navbar-collapse.show {
+    display: flex; }
+  .navigation.full-size .navbar-collapse .navbar-nav {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center; }
+  .navigation.full-size .navbar-collapse .nav-item {
+    font-size: 70px; }
+
 .navbar .nav-item::before {
   content: none; }
 
@@ -590,6 +604,9 @@ b {
   padding-left: 0; }
   .list-unstyled li::before {
     content: none; }
+
+.vh-100 {
+  height: 100vh; }
 
 .page-portfolio {
   padding-top: 64px;
