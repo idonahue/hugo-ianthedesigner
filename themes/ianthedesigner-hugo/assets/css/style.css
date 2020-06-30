@@ -1050,7 +1050,6 @@ a:hover .graphic-container {
 
 .layer img {
   opacity: 0.1;
-  border-radius: 50%;
   transition: 0.5s; }
 
 .layer:hover img {
@@ -1782,6 +1781,9 @@ textarea.form-control {
   position: absolute;
   left: 100px;
   top: -50px; }
+
+.svg-path.path-1 {
+  clip-path: url(#svgPath1); }
 
 .testimonial-bg-shapes .bg-shape-2 {
   position: absolute;
