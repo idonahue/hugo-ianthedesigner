@@ -1050,6 +1050,7 @@ a:hover .graphic-container {
 
 .layer img {
   opacity: 0.1;
+  border-radius: 1px;
   transition: 0.5s; }
 
 .layer:hover img {
