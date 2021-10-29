@@ -14,7 +14,7 @@ cv_experience:
       title : "Director of Design"
       company : "Qunomedical"
       company_site : "https://dave.com"
-      case_study: true
+      case_study: false
       case_study_url: ""
       duration : "Sept 2020 - Present"
       description_short: ""
