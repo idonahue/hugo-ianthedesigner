@@ -5,16 +5,19 @@ VERSION: Versoin Number
 -------------------------------------------------------------------*/
 // @import "https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Work+Sans:wght@400;500;600;700&display=swap";
+/* terest  s*/
 
-@import "scss/_variables";
-@import "scss/_base.scss";
-@import "scss/_typography";
-@import "scss/_utility-classes";
-@import "scss/_portfolio";
-@import "scss/_case-study";
-@import "scss/_animations";
-@import "scss/_about";
-@import "scss/_lightbox";
+// Imported SCSS
+@import "_variables";
+@import "_base.scss";
+@import "_typography";
+@import "_utility-classes";
+@import "_portfolio";
+@import "_case-study";
+@import "_animations";
+@import "_about";
+@import "_lightbox";
+
 
 
 @font-face {

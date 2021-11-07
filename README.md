@@ -4,6 +4,13 @@
 If you are on macOS and using Homebrew, you can install Hugo with the following one-liner:
 ```brew install hugo```
 
+
+## Hugo Local developing
+To run locally, go to the Hugo root directory. Run command `hugo server` which will output some files and give you a port to view the develpment. When a change is made, Hugo will automatically rebuild and update the browser.
+
+Local port: `http://localhost:1313/`
+
+
 ## The hugo Command
 The most common usage is probably to run `hugo` with your current directory being the input directory.
 
@@ -25,6 +32,7 @@ in 90 ms
 
 ## Deployment
 Site is hosted on Netlify.com. Commit changes to `Production` branch and Netlify will fetch the changes and automatically build the site to https://ianthedesigner.com . No need for complex deployment. It is automatic.
+
 
 ## LiveReload
 Hugo comes with LiveReload built in. There are no additional packages to install. A common way to use Hugo while developing a site is to have Hugo run a server with the `hugo server` command and watch for changes:
@@ -59,3 +67,9 @@ config
 Whenever you make changes, Hugo will simultaneously rebuild the site and continue to serve content. As soon as the build is finished, LiveReload tells the browser to silently reload the page.
 
 Most Hugo builds are so fast that you may not notice the change unless looking directly at the site in your browser. This means that keeping the site open on a second monitor (or another half of your current monitor) allows you to see the most up-to-date version of your website without the need to leave your text editor.
+
+
+## Compiling SCSS/SASS
+Go to the SCSS/ Folder and run `sass --watch .:..` to have the SCSS compile to CSS in the parent director.
+
+Navigate to: `hugo-ianthedesigner/themes/ianthedesigner-hugo/assets/css/scss/style.scss`

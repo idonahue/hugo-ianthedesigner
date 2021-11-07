@@ -19,7 +19,7 @@
     color: $yg-color-gray-01;
     font-style: normal;
     font-weight: normal;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 26px;
   }
   .project-header {
@@ -100,10 +100,19 @@ a:hover .graphic-container {
 
 
 // Custom Graphics for each project
+.qunomedical-section {
+  .graphic-container {
+    background-color: white;
+    background-image: url('/images/portfolio/qunomedical/project-qunomedical-hero-tinified.png');
+    background-size: cover;
+  }
+}
+
+
 .dave-section {
   .graphic-container {
     background-color: white;
-    background-image: url('/images/portfolio/dave/project-dave-hero.png');
+    background-image: url('/images/portfolio/dave/project-dave-hero-tinified.png');
     background-size: 1440px;
     background-position: center bottom;
   }
@@ -112,7 +121,7 @@ a:hover .graphic-container {
 .ubermedia-section .graphic-container {
   background-color: #4A90E2;
   color: white;
-  background-image: url('/images/portfolio/ubermedia/ubermedia-project-preview.png');
+  background-image: url('/images/portfolio/ubermedia/ubermedia-project-preview-tinified.png');
   background-repeat: no-repeat;
   background-size: 950px;
   background-position: center center;
@@ -120,7 +129,7 @@ a:hover .graphic-container {
 
 .cintric-section .graphic-container {
   background-color: #394B59;
-  background-image: url('/images/portfolio/cintric/thumbnail-cintric-analyst.png');
+  background-image: url('/images/portfolio/cintric/thumbnail-cintric-analyst-tinified.png');
   background-repeat: no-repeat;
   background-size: 530px;
   background-position: 0px bottom;
@@ -128,7 +137,7 @@ a:hover .graphic-container {
 
 .meetloaf-section .graphic-container {
   background-color: white;
-  background-image: url('/images/portfolio/meetloaf/thumbmail-venn-meetloaf.png');
+  background-image: url('/images/portfolio/meetloaf/thumbmail-venn-meetloaf-tinified.png');
   background-repeat: no-repeat;
   background-size: 650px;
   background-position: top right;
@@ -136,7 +145,7 @@ a:hover .graphic-container {
 
 .gents-section .graphic-container {
   background-color: white;
-  background-image: url('/images/portfolio/gents-guide/thumbnail-gents-guide.png');
+  background-image: url('/images/portfolio/gents-guide/thumbnail-gents-guide-tinified.png');
   background-repeat: no-repeat;
   background-position: center left;
 }
