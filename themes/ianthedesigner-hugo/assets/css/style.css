@@ -251,8 +251,9 @@ a:hover {
 }
 
 .navigation {
-  padding: 40px 130px;
   transition: 0.3s ease;
+  background-color: var(--primary-color);
+  padding: 15px 100px;
 }
 
 .navigation.nav-bg {
@@ -1114,6 +1115,38 @@ a:hover .graphic-container {
     padding-right: 24px;
   }
 }
+.page-title-qunomedical {
+  background-image: url("/images/portfolio/qunomedical/bg-qunomedical@2x.png");
+  background-color: #155263;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 1790px;
+}
+.page-title-qunomedical.page-title {
+  padding: 250px 0 680px;
+}
+.page-title-qunomedical p {
+  color: #A5CAD5;
+}
+.page-title-qunomedical a {
+  color: white;
+}
+
+.hero.qunomedical {
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+@media (max-width: 967px) {
+  .page-title-qunomedical {
+    background-size: 1320px;
+    background-position: -140px bottom;
+  }
+  .page-title-qunomedical.page-title {
+    padding-bottom: 500px;
+  }
+}
 .ian-davemoji {
   position: relative;
   border: 281px;
@@ -1438,6 +1471,10 @@ a:hover .graphic-container {
 #l9 {
   bottom: 100px;
   right: -10px;
+}
+
+.section-cv.section {
+  padding-top: 144px;
 }
 
 .section-cv .intro {

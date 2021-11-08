@@ -76,8 +76,9 @@
 }
 
 
-
-.section-cv {}
+.section-cv.section {
+  padding-top: 144px;
+}
 .section-cv .intro,
 .job .job-title {
   // color: $color-gray-03;

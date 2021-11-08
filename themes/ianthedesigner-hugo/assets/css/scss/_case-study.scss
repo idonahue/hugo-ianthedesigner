@@ -209,6 +209,38 @@
   }
 }
 
+// Qunomedical Case Study
+.page-title-qunomedical {
+  background-image: url("/images/portfolio/qunomedical/bg-qunomedical@2x.png");
+  background-color: #155263;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 1790px;
+  &.page-title {
+    padding: 250px 0 680px;
+  }
+  p {
+    color: #A5CAD5;
+  }
+  a {
+    color: white;
+  }
+}
+.hero.qunomedical {
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+@media (max-width: 967px) {
+  .page-title-qunomedical {
+    background-size: 1320px;
+    background-position: -140px bottom;
+    &.page-title {
+      padding-bottom: 500px;
+    }
+  }
+}
 
 // Dave Case Study
 .ian-davemoji {
