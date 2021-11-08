@@ -284,6 +284,9 @@
     color: white;
   }
 }
+.page-title-meetloaf ~ .navigation {
+    background-color: #fafafa;
+}
 .hero.meetloaf {
   background-repeat: no-repeat;
   background-position: bottom center;

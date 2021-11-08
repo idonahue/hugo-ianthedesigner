@@ -252,7 +252,6 @@ a:hover {
 
 .navigation {
   transition: 0.3s ease;
-  background-color: var(--primary-color);
   padding: 15px 100px;
 }
 
@@ -1187,6 +1186,10 @@ a:hover .graphic-container {
   color: white;
 }
 
+.page-title-meetloaf ~ .navigation {
+  background-color: #fafafa;
+}
+
 .hero.meetloaf {
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -1473,8 +1476,23 @@ a:hover .graphic-container {
   right: -10px;
 }
 
+.spacer-cv {
+  background-color: var(--primary-color);
+  width: 100%;
+  padding: 100px 0 40px;
+}
+.spacer-cv h2.header {
+  color: white !important;
+}
+.spacer-cv a {
+  color: white;
+}
+.spacer-cv a:hover {
+  color: pink;
+}
+
 .section-cv.section {
-  padding-top: 144px;
+  padding-top: 54px;
 }
 
 .section-cv .intro {
@@ -1546,9 +1564,10 @@ a:hover .graphic-container {
   padding: 48px;
   color: #798A93;
   background-color: #F3F8F7;
+  font-size: 18px;
 }
 .stats-container .header {
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   color: #143757;
   font-family: var(--font-primary);
   font-weight: 600;
@@ -1561,13 +1580,12 @@ a:hover .graphic-container {
 .stats-container .stats .label {
   color: #143757;
   font-weight: bold;
-  font-size: 19px;
+  font-size: 18px;
   line-height: 26px;
-  text-decoration: uppercase;
-  font-weight: 500;
-  font-size: 19px;
-  line-height: 22px;
   text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
   padding-right: 16px;
 }
 .stats-container .stats .value a {
@@ -1575,7 +1593,7 @@ a:hover .graphic-container {
   margin-right: 8px;
   color: #798A93;
   font-weight: 500;
-  font-size: 19px;
+  font-size: 18px;
   line-height: 26px;
   background-color: #D9E2EA;
   border-radius: 7px;
