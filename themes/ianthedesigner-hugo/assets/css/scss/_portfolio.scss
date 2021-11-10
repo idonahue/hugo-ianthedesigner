@@ -14,7 +14,7 @@
   margin-top: 24px;
   .project-graphic {}
   .company-name {
-    margin-top: 32px;
+    margin-top: 16px;
     margin-bottom: 16px;
     color: $yg-color-gray-01;
     font-style: normal;
@@ -93,6 +93,10 @@ a:hover .graphic-container {
     color: $yg-color-gray-01;
     background-color: #DFEBF2;
   }
+  &.dark {
+    color: white;
+    background-color: #155263;
+  }
 }
 .note .preview {}
 
@@ -103,7 +107,7 @@ a:hover .graphic-container {
 .qunomedical-section {
   .graphic-container {
     background-color: white;
-    background-image: url('/images/portfolio/qunomedical/project-qunomedical-hero-tinified.png');
+    background-image: url('/images/portfolio/qunomedical/project-qunomedical-hero-yellow-tinified.jpg');
     background-size: cover;
   }
 }
