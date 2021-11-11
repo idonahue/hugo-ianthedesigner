@@ -287,7 +287,10 @@ a:hover { color: var(--primary-color) }
   }
 }
 
-.navigation {}
+.navbar {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
 .navbar .nav-item::before {
   content: none;
 }

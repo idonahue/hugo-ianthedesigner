@@ -271,6 +271,11 @@ a:hover {
     background: var(--primary-color);
   }
 }
+.navbar {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 .navbar .nav-item::before {
   content: none;
 }

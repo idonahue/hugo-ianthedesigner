@@ -44,10 +44,10 @@ URL = "portfolio"
 name = "Portfolio"
 weight = 4
 
-# [[menu.main]]
-# URL = "contact"
-# name = "Contact"
-# weight = 5
+[[menu.main]]
+URL = "tools"
+name = "Tools"
+weight = 5
 
 
 # default parameters
