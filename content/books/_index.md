@@ -1,6 +1,6 @@
 ---
-title: "Tools"
-description: "Tools"
+title: "Books"
+description: "52 books in 52 weeks"
 draft: false
 case-study-title: ""
 client: ""
