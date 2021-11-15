@@ -1,6 +1,6 @@
 ---
 title: "Zalando"
-description: "Hello Zalando"
+description: "Zalando"
 draft: false
 case-study-title: "Gent's Guide to Style"
 client: "UberMedia"

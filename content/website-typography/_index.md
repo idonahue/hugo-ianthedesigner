@@ -1,6 +1,6 @@
 ---
 title: "Website Typography"
-description: "Ian Donahue is really great"
+description: "Website Typography"
 draft: true
 background-color: "#6f5499"
 ---
