@@ -1,6 +1,6 @@
 ---
-title: "Vist Measurement"
-description: "Vista Measurement"
+title: "Dave's Customer Success Tool"
+description: "Dave's Customer Success Tool"
 draft: false
 case-study-title: "Blah Blah Blah UberMedia Vista info goes here."
 client: "UberMedia"

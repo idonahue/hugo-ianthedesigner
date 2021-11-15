@@ -1,6 +1,6 @@
 ---
 title: "About"
-description: "Ian Donahue is really great"
+description: "About"
 author_image : "images/about/author.jpg"
 author_signature : "images/about/signature.png"
 draft: false
