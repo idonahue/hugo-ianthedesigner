@@ -37,17 +37,17 @@ weight = 2
 [[menu.main]]
 URL = "portfolio"
 name = "Portfolio"
-weight = 3
+weight = 1
 
 [[menu.main]]
 URL = "tools"
 name = "Tools"
-weight = 4
+weight = 3
 
 [[menu.main]]
 URL = "books"
 name = "Books"
-weight = 5
+weight = 4
 
 # default parameters
 [params]
