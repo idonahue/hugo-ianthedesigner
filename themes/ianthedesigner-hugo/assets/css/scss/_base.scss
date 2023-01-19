@@ -1,8 +1,9 @@
 body {
-  line-height: 1.2;
+  
   font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
-  font-size: 20px;
+  font-size: $font-size-global;
+  line-height: 1.2;
   color: #798A93;
 }
 
@@ -214,6 +215,8 @@ a:hover { color: var(--primary-color) }
   }
   .message {
     padding-left: 24px;
+    font-size: 20px;
+    line-height: 140%;
   }
   &.alert-info {
     background-color: white;
@@ -222,7 +225,7 @@ a:hover { color: var(--primary-color) }
     border-radius: 6px;
     .icon {
       height: 58px;
-      width: 58px;
+      width: 64px;
       background-image: url('../images/components/wave-tinified.png');
       background-size: 58px;
       background-repeat: no-repeat;
@@ -243,6 +246,9 @@ a:hover { color: var(--primary-color) }
       -ms-animation: handWave linear 6s;
       -ms-animation-iteration-count: infinite;
       -ms-transform-origin: 50% 50%;
+    }
+    .message {
+      width: 100%;
     }
   }
 }

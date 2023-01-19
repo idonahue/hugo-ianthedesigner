@@ -15,20 +15,21 @@
   .project-graphic {}
   .company-name {
     margin-top: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 0;
     color: $yg-color-gray-01;
+    font-family: var(--font-secondary);
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 26px;
   }
   .project-header {
-    margin-top: 16px;
+    margin-top: 0px;
     margin-bottom: 16px;
     color: $yg-color-black;
     font-weight: 600;
-    font-size: 42px;
-    line-height: 49px;
+    font-size: 32px;
+    line-height: 39px;
   }
   .project-subtitle {
     color: $yg-color-gray-01;
@@ -104,6 +105,15 @@ a:hover .graphic-container {
 
 
 // Custom Graphics for each project
+.shopify-forms-section {
+  .graphic-container {
+    background-color: #F8BBA1;
+    background-image: url('/images/portfolio/shopify/shopify-hero@2x.jpg');
+    background-size: cover;
+  }
+}
+
+
 .qunomedical-section {
   .graphic-container {
     background-color: #FFCA58;

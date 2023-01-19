@@ -1,5 +1,10 @@
 # hugo-ianthedesigner
 
+## Install homebrew
+If you don't have homebrew, install that. 
+https://docs.brew.sh/Installation
+```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"```
+
 ## Install Hugo
 If you are on macOS and using Homebrew, you can install Hugo with the following one-liner:
 ```brew install hugo```
@@ -70,6 +75,9 @@ Most Hugo builds are so fast that you may not notice the change unless looking d
 
 
 ## Compiling SCSS/SASS
+Install SASS
+`brew install sass/sass/sass`
+
 Go to the SCSS/ Folder and run `sass --watch .:..` to have the SCSS compile to CSS in the parent director.
 
 Navigate to: `hugo-ianthedesigner/themes/ianthedesigner-hugo/assets/css/scss/style.scss`

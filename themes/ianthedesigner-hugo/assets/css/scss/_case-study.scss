@@ -35,6 +35,15 @@
   border-radius: 8px;
 }
 
+.case-study-shopify-forms {
+  height: 675px;
+  // background-image: url('/images/portfolio/dave/bg-shopify-forms-tinified.png');
+  background-color: white;
+  background-position: left bottom;
+  background-size: cover;
+  overflow: hidden;
+}
+
 .case-study-dave {
   height: 734px;
   background-image: url('/images/portfolio/dave/dave-hero-tinified.png');
@@ -159,14 +168,15 @@
 
 
 .meta-item {
-  margin-bottom: 16px;
-  font-size: 20px;
+  margin-bottom: 16px; 
+  font-size: $font-size-global;
   .label {
     color: $yg-color-black;
     font-weight: bold;
     line-height: 28px;
   }
   .value {
+    font-family: var(--font-secondary);
     font-weight: normal;
     line-height: 28px;
     a {
@@ -208,6 +218,44 @@
     }
   }
 }
+
+
+// Shopify Forms Case Study
+.page-title-shopify-forms {
+  background-image: url("/images/portfolio/shopify/bg-shopify-forms-tinified.jpg");
+  background-color: #F8BBA1;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 1790px;
+  &.page-title {
+    padding: 250px 0 430px;
+  }
+  .text-shopify-default-color {
+    color: #202223;
+  }
+  p {
+    color: #202223;
+  }
+  a {
+    color: white;
+  }
+}
+.hero.shopify-forms {
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+@media (max-width: 967px) {
+  .page-title-shopify-forms {
+    background-size: 1320px;
+    background-position: -140px bottom;
+    &.page-title {
+      padding-bottom: 500px;
+    }
+  }
+}
+
 
 // Qunomedical Case Study
 .page-title-qunomedical {

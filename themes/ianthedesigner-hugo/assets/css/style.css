@@ -7,10 +7,10 @@ VERSION: Versoin Number
 @import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Work+Sans:wght@400;500;600;700&display=swap";
 /* terest  s*/
 body {
-  line-height: 1.2;
   font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 1.2;
   color: #798A93;
 }
 
@@ -73,7 +73,7 @@ p a:hover {
 
 @media (max-width: 991px) {
   h1,
-.h1 {
+  .h1 {
     font-size: 45px;
   }
 }
@@ -87,7 +87,7 @@ h2, .h2 {
 
 @media (max-width: 991px) {
   h2,
-.h2 {
+  .h2 {
     font-size: 34px;
     line-height: 40px;
   }
@@ -137,8 +137,7 @@ body {
 }
 
 ul {
-  list-style: none;
-  /* Remove default bullets */
+  list-style: none; /* Remove default bullets */
 }
 
 ul {
@@ -213,6 +212,8 @@ a:hover {
 }
 .alert .message {
   padding-left: 24px;
+  font-size: 20px;
+  line-height: 140%;
 }
 .alert.alert-info {
   background-color: white;
@@ -222,7 +223,7 @@ a:hover {
 }
 .alert.alert-info .icon {
   height: 58px;
-  width: 58px;
+  width: 64px;
   background-image: url("../images/components/wave-tinified.png");
   background-size: 58px;
   background-repeat: no-repeat;
@@ -242,6 +243,9 @@ a:hover {
   -ms-animation: handWave linear 6s;
   -ms-animation-iteration-count: infinite;
   -ms-transform-origin: 50% 50%;
+}
+.alert.alert-info .message {
+  width: 100%;
 }
 
 @media (max-width: 445px) {
@@ -802,20 +806,21 @@ b {
 }
 .project-section .company-name {
   margin-top: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 0;
   color: #798A93;
+  font-family: var(--font-secondary);
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 26px;
 }
 .project-section .project-header {
-  margin-top: 16px;
+  margin-top: 0px;
   margin-bottom: 16px;
   color: #143757;
   font-weight: 600;
-  font-size: 42px;
-  line-height: 49px;
+  font-size: 32px;
+  line-height: 39px;
 }
 .project-section .project-subtitle {
   color: #798A93;
@@ -878,6 +883,12 @@ a:hover .graphic-container {
 .note.dark {
   color: white;
   background-color: #155263;
+}
+
+.shopify-forms-section .graphic-container {
+  background-color: #F8BBA1;
+  background-image: url("/images/portfolio/shopify/shopify-hero@2x.jpg");
+  background-size: cover;
 }
 
 .qunomedical-section .graphic-container {
@@ -964,6 +975,14 @@ a:hover .graphic-container {
   border-radius: 8px;
 }
 
+.case-study-shopify-forms {
+  height: 675px;
+  background-color: white;
+  background-position: left bottom;
+  background-size: cover;
+  overflow: hidden;
+}
+
 .case-study-dave {
   height: 734px;
   background-image: url("/images/portfolio/dave/dave-hero-tinified.png");
@@ -1006,7 +1025,6 @@ a:hover .graphic-container {
   .hero.dave {
     height: 0;
   }
-
   .case-study-hero {
     background-position: center bottom;
     margin-left: -15px;
@@ -1023,7 +1041,6 @@ a:hover .graphic-container {
   .case-study-hero.case-study-dave .hero.dave .ian-davemoji {
     display: none;
   }
-
   .page-title-meetloaf .bg-meetloaf {
     padding-top: 170px;
     padding-bottom: 490px;
@@ -1086,7 +1103,7 @@ a:hover .graphic-container {
 }
 .meta-item {
   margin-bottom: 16px;
-  font-size: 20px;
+  font-size: 18px;
 }
 .meta-item .label {
   color: #143757;
@@ -1094,6 +1111,7 @@ a:hover .graphic-container {
   line-height: 28px;
 }
 .meta-item .value {
+  font-family: var(--font-secondary);
   font-weight: normal;
   line-height: 28px;
 }
@@ -1124,6 +1142,41 @@ a:hover .graphic-container {
   .persona-container .persona .persona-content {
     padding-left: 24px;
     padding-right: 24px;
+  }
+}
+.page-title-shopify-forms {
+  background-image: url("/images/portfolio/shopify/bg-shopify-forms-tinified.jpg");
+  background-color: #F8BBA1;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 1790px;
+}
+.page-title-shopify-forms.page-title {
+  padding: 250px 0 430px;
+}
+.page-title-shopify-forms .text-shopify-default-color {
+  color: #202223;
+}
+.page-title-shopify-forms p {
+  color: #202223;
+}
+.page-title-shopify-forms a {
+  color: white;
+}
+
+.hero.shopify-forms {
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+@media (max-width: 967px) {
+  .page-title-shopify-forms {
+    background-size: 1320px;
+    background-position: -140px bottom;
+  }
+  .page-title-shopify-forms.page-title {
+    padding-bottom: 500px;
   }
 }
 .page-title-qunomedical {
