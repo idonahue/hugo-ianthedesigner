@@ -945,6 +945,9 @@ a:hover .graphic-container {
   height: 300px;
   background: #fafafa;
 }
+.hero.shopify-forms {
+  height: 364px;
+}
 .hero.dave {
   height: 364px;
 }
@@ -1025,11 +1028,21 @@ a:hover .graphic-container {
   .hero.dave {
     height: 0;
   }
+  .hero.shopify-forms {
+    height: 0;
+  }
   .case-study-hero {
     background-position: center bottom;
     margin-left: -15px;
     margin-right: -15px;
     width: calc(100% + 30px);
+  }
+  .case-study-hero.case-study-shopify-forms {
+    bottom: 170px;
+    height: 194px;
+    width: calc(100% - 30px);
+    margin-left: 15px;
+    margin-right: 15px;
   }
   .case-study-hero.case-study-dave {
     background-position: center bottom;
@@ -1044,6 +1057,9 @@ a:hover .graphic-container {
   .page-title-meetloaf .bg-meetloaf {
     padding-top: 170px;
     padding-bottom: 490px;
+  }
+  .page-title-shopify-forms.page-title {
+    padding-bottom: 140px;
   }
 }
 .artwork {
@@ -1176,7 +1192,16 @@ a:hover .graphic-container {
     background-position: -140px bottom;
   }
   .page-title-shopify-forms.page-title {
-    padding-bottom: 500px;
+    padding-bottom: 390px;
+  }
+}
+@media (max-width: 414px) {
+  .page-title-shopify-forms {
+    background-size: 1320px;
+    background-position: -140px bottom;
+  }
+  .page-title-shopify-forms.page-title {
+    padding-bottom: 190px;
   }
 }
 .page-title-qunomedical {
@@ -2585,6 +2610,9 @@ blockquote {
   }
   .page-title h1 {
     margin-bottom: 24px;
+  }
+  .page-title .page-title-shopify-forms {
+    bottom: 200px;
   }
 }
 .filter-controls li {
