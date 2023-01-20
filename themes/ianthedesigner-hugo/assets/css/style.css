@@ -6,6 +6,22 @@ VERSION: Versoin Number
 -------------------------------------------------------------------*/
 @import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Work+Sans:wght@400;500;600;700&display=swap";
 /* terest  s*/
+.button-group {
+  margin-bottom: 50px;
+  width: 100%;
+  text-align: center;
+  align-content: space-around;
+  flex-wrap: wrap-reverse;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
+  justify-content: center;
+}
+.button-group .button {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
 body {
   font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
@@ -31,7 +47,6 @@ h6 {
   font-style: normal;
   font-weight: 600;
   line-height: 1.2;
-  letter-spacing: -0.7px;
 }
 
 h1, .h1 {
@@ -795,6 +810,22 @@ b {
   content: none;
 }
 
+.button-group {
+  margin-bottom: 50px;
+  width: 100%;
+  text-align: center;
+  align-content: space-around;
+  flex-wrap: wrap-reverse;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
+  justify-content: center;
+}
+.button-group .button {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
 .page-portfolio {
   padding-top: 64px;
   padding-bottom: 96px;
@@ -946,6 +977,9 @@ a:hover .graphic-container {
   height: 300px;
   background: #fafafa;
 }
+.hero.shopify-forms {
+  height: 364px;
+}
 .hero.dave {
   height: 364px;
 }
@@ -1026,11 +1060,21 @@ a:hover .graphic-container {
   .hero.dave {
     height: 0;
   }
+  .hero.shopify-forms {
+    height: 0;
+  }
   .case-study-hero {
     background-position: center bottom;
     margin-left: -15px;
     margin-right: -15px;
     width: calc(100% + 30px);
+  }
+  .case-study-hero.case-study-shopify-forms {
+    bottom: 170px;
+    height: 194px;
+    width: calc(100% - 30px);
+    margin-left: 15px;
+    margin-right: 15px;
   }
   .case-study-hero.case-study-dave {
     background-position: center bottom;
@@ -1045,6 +1089,9 @@ a:hover .graphic-container {
   .page-title-meetloaf .bg-meetloaf {
     padding-top: 170px;
     padding-bottom: 490px;
+  }
+  .page-title-shopify-forms.page-title {
+    padding-bottom: 140px;
   }
 }
 .artwork {
@@ -1177,7 +1224,16 @@ a:hover .graphic-container {
     background-position: -140px bottom;
   }
   .page-title-shopify-forms.page-title {
-    padding-bottom: 500px;
+    padding-bottom: 390px;
+  }
+}
+@media (max-width: 414px) {
+  .page-title-shopify-forms {
+    background-size: 1320px;
+    background-position: -140px bottom;
+  }
+  .page-title-shopify-forms.page-title {
+    padding-bottom: 190px;
   }
 }
 .page-title-qunomedical {
@@ -2159,6 +2215,12 @@ textarea.form-control {
   font-size: 18px;
   line-height: 25px;
 }
+
+.button-group .button {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
 .flexbox {
   display: flex;
 }
@@ -2586,6 +2648,9 @@ blockquote {
   }
   .page-title h1 {
     margin-bottom: 24px;
+  }
+  .page-title .page-title-shopify-forms {
+    bottom: 200px;
   }
 }
 .filter-controls li {

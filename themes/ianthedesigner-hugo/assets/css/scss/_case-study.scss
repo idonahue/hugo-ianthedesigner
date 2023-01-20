@@ -5,6 +5,9 @@
 .hero {
   height: 300px;
   background: #fafafa;
+  &.shopify-forms {
+    height: 364px;
+  }
   &.dave {
     height: 364px;
   }
@@ -37,7 +40,6 @@
 
 .case-study-shopify-forms {
   height: 675px;
-  // background-image: url('/images/portfolio/dave/bg-shopify-forms-tinified.png');
   background-color: white;
   background-position: left bottom;
   background-size: cover;
@@ -83,11 +85,21 @@
   .hero.dave {
     height: 0;
   }
+  .hero.shopify-forms {
+    height: 0;
+  }
   .case-study-hero {
     background-position: center bottom;
     margin-left: -15px;
     margin-right: -15px;
     width: calc(100% + 30px);
+    &.case-study-shopify-forms {
+      bottom: 170px;
+      height: 194px;
+      width: calc(100% - 30px);
+      margin-left: 15px;
+      margin-right: 15px;
+    }
     &.case-study-dave {
       background-position: center bottom;
       height: 400px;
@@ -104,6 +116,9 @@
       padding-top: 170px;
       padding-bottom: 490px;
     }
+  }
+  .page-title-shopify-forms.page-title {
+    padding-bottom: 140px;
   }
 
 }
@@ -160,11 +175,11 @@
     display: flex;
     flex-wrap: wrap;
   }
-  .meta-item {}
+  // .meta-item {}
 }
-@media (max-width: 991px) {
-  .meta-item {}
-}
+// @media (max-width: 991px) {
+//   .meta-item {}
+// }
 
 
 .meta-item {
@@ -251,7 +266,16 @@
     background-size: 1320px;
     background-position: -140px bottom;
     &.page-title {
-      padding-bottom: 500px;
+      padding-bottom: 390px;
+    }
+  }
+}
+@media (max-width: 414px) {
+  .page-title-shopify-forms {
+    background-size: 1320px;
+    background-position: -140px bottom;
+    &.page-title {
+      padding-bottom: 190px;
     }
   }
 }
