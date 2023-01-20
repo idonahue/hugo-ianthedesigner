@@ -794,6 +794,14 @@ b {
   content: none;
 }
 
+.button-group {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 0 24px;
+  width: 100%;
+}
+
 .page-portfolio {
   padding-top: 64px;
   padding-bottom: 96px;
