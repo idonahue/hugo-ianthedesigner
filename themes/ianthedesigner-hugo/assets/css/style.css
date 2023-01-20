@@ -1197,7 +1197,7 @@ a:hover .graphic-container {
   background-color: #F8BBA1;
   background-position: bottom center;
   background-repeat: no-repeat;
-  background-size: 1790px;
+  background-size: cover;
 }
 .page-title-shopify-forms.page-title {
   padding: 250px 0 430px;
