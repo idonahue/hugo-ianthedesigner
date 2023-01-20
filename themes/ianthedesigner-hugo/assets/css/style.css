@@ -6,6 +6,22 @@ VERSION: Versoin Number
 -------------------------------------------------------------------*/
 @import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Work+Sans:wght@400;500;600;700&display=swap";
 /* terest  s*/
+.button-group {
+  margin-bottom: 50px;
+  width: 100%;
+  text-align: center;
+  align-content: space-around;
+  flex-wrap: wrap-reverse;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
+  justify-content: center;
+}
+.button-group .button {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
 body {
   font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
@@ -795,11 +811,19 @@ b {
 }
 
 .button-group {
+  margin-bottom: 50px;
+  width: 100%;
+  text-align: center;
+  align-content: space-around;
+  flex-wrap: wrap-reverse;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
-  padding: 0 24px;
-  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+}
+.button-group .button {
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 .page-portfolio {
@@ -2191,6 +2215,12 @@ textarea.form-control {
   font-size: 18px;
   line-height: 25px;
 }
+
+.button-group .button {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
 .flexbox {
   display: flex;
 }

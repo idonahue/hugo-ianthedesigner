@@ -135,9 +135,17 @@
 // Buttons
 
 .button-group {
+  margin-bottom: 50px;
+  width: 100%;
+  text-align: center;
+  align-content: space-around;
+  flex-wrap: wrap-reverse;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
-  padding: 0 24px;
-  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  .button{
+    margin-left: 8px;
+    margin-right: 8px;
+  }
 }
