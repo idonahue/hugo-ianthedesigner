@@ -5,6 +5,7 @@ PROJECT: Project Name
 VERSION: Versoin Number
 -------------------------------------------------------------------*/
 @import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Work+Sans:wght@400;500;600;700&display=swap";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap");
 /* terest  s*/
 .button-group {
   margin-bottom: 50px;
@@ -978,7 +979,7 @@ a:hover .graphic-container {
   background: #fafafa;
 }
 .hero.shopify-forms {
-  height: 364px;
+  height: 305px;
 }
 .hero.dave {
   height: 364px;
@@ -1092,6 +1093,14 @@ a:hover .graphic-container {
   }
   .page-title-shopify-forms.page-title {
     padding-bottom: 140px;
+  }
+}
+@media (max-width: 767px) {
+  .hero.shopify-forms {
+    height: 0;
+  }
+  .case-study-shopify-forms {
+    height: 405px;
   }
 }
 .artwork {

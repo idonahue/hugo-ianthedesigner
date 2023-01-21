@@ -6,7 +6,7 @@
   height: 300px;
   background: #fafafa;
   &.shopify-forms {
-    height: 364px;
+    height: 305px;
   }
   &.dave {
     height: 364px;
@@ -121,6 +121,15 @@
     padding-bottom: 140px;
   }
 
+}
+
+@media (max-width: 767px) {
+  .hero.shopify-forms {
+    height: 0;
+  }
+  .case-study-shopify-forms {
+    height: 405px;;
+  }
 }
 
 .artwork {
