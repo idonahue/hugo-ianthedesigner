@@ -1676,7 +1676,7 @@ a:hover .graphic-container {
 }
 
 .job .primary {
-  font-size: 27px;
+  font-size: 1.5rem;
   font-family: var(--font-secondary);
   font-weight: 600;
   line-height: 34px;
@@ -1684,7 +1684,7 @@ a:hover .graphic-container {
 .job .primary .note {
   margin-left: 16px;
   color: #798A93;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: normal;
   line-height: 34px;
 }
@@ -1694,7 +1694,7 @@ a:hover .graphic-container {
   margin-bottom: 8px;
   color: #798A93;
   font-weight: normal;
-  font-size: 22px;
+  font-size: 1rem;
   line-height: 22px;
 }
 
@@ -1711,14 +1711,14 @@ a:hover .graphic-container {
   padding: 48px;
   color: #798A93;
   background-color: #F3F8F7;
-  font-size: 18px;
+  font-size: 1rem;
 }
 .stats-container .header {
   margin-bottom: 16px;
   color: #143757;
   font-family: var(--font-primary);
   font-weight: 600;
-  font-size: 31px;
+  font-size: 1.5rem;
   line-height: 37px;
 }
 .stats-container .stats .stat {
@@ -1727,11 +1727,10 @@ a:hover .graphic-container {
 .stats-container .stats .label {
   color: #143757;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 26px;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 18px;
   line-height: 22px;
   padding-right: 16px;
 }
