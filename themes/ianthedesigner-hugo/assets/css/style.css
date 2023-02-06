@@ -26,7 +26,7 @@ VERSION: Versoin Number
 body {
   font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.2;
   color: #798A93;
 }
@@ -222,14 +222,13 @@ a:hover {
 
 .alert {
   padding: 24px;
+  font-size: 16px;
 }
 .alert p {
   margin-bottom: 0;
-  font-size: 18px;
 }
 .alert .message {
   padding-left: 24px;
-  font-size: 20px;
   line-height: 140%;
 }
 .alert.alert-info {
@@ -1128,6 +1127,14 @@ a:hover .graphic-container {
   text-align: center;
   background-color: #FAFAFA;
 }
+.content-image .container {
+  padding-left: 0;
+  padding-right: 0;
+  flex-direction: row;
+  display: flex;
+  flex-grow: 1;
+  gap: 40px;
+}
 .content-image img {
   width: 100%;
   border-radius: 6px;
@@ -1140,6 +1147,15 @@ a:hover .graphic-container {
   .content-image {
     padding-left: 24px;
     padding-right: 24px;
+  }
+}
+@media (max-width: 414px) {
+  .content-image {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .content-image .container {
+    flex-direction: column;
   }
 }
 .case-study-section {
@@ -1160,7 +1176,7 @@ a:hover .graphic-container {
 }
 .meta-item {
   margin-bottom: 16px;
-  font-size: 18px;
+  font-size: 16px;
 }
 .meta-item .label {
   color: #143757;
