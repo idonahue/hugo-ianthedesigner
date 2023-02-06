@@ -209,13 +209,12 @@ a:hover { color: var(--primary-color) }
 // Alerts
 .alert {
   padding: 24px;
+  font-size: $font-size-global;
   p {
     margin-bottom: 0;
-    font-size: 18px;
   }
   .message {
     padding-left: 24px;
-    font-size: 20px;
     line-height: 140%;
   }
   &.alert-info {

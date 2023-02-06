@@ -156,6 +156,14 @@
   margin-bottom: 96px;
   text-align: center;
   background-color: #FAFAFA;
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+    flex-direction: row;
+    display: flex; 
+    flex-grow: 1; 
+    gap: 40px;
+  }
   img {
     width: 100%;
     border-radius: 6px;
@@ -169,6 +177,16 @@
   .content-image {
     padding-left: 24px;
     padding-right: 24px;
+  }
+}
+
+@media (max-width: 414px) {
+  .content-image {
+    padding-left: 24px;
+    padding-right: 24px;
+    .container {
+      flex-direction: column;
+    }
   }
 }
 
