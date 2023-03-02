@@ -10,6 +10,18 @@ cv_experience:
   enable : true
   title : "Experience"
   item:
+    # - logo : "images/experience/icon-1.png"
+    #   title : "Lead Product Designer"
+    #   company : "GitButler"
+    #   company_site : "https://gitbutler.com "
+    #   case_study: false
+    #   case_study_url: "../shopify/"
+    #   duration : "March 2023 - Present"
+    #   description_short: ""
+    #   description_long : "Oversaw all aspects of design. Directed a small team of designer to improver our implement a global Design System, Design Ops, Marketing Ops, and as well as individually contributed to as a Product Designer. Released numerous products to push the company to a fully digitalized post sales experience."
+
+
+
     - logo : "images/experience/icon-1.png"
       title : "Senior Product Designer"
       company : "Shopify"
