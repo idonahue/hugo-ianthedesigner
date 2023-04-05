@@ -2,9 +2,9 @@
 title: "Meetloaf"
 description: "Meetloaf"
 draft: false
-case-study-title: "Blah Blah Blah UberMedia Vista info goes here."
+case-study-title: "Meetloaf, helping those to meet in real life."
 client: "Venn"
-industry: "Mobile Location Data"
+industry: "Peer to Peer App"
 project-type: "B2B, Product Design"
 responsabilities: ['Product Manager', 'Design', 'UI Development']
 deliverables: ['Design system', 'Design']
