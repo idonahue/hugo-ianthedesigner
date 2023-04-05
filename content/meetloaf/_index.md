@@ -4,7 +4,7 @@ description: "Meetloaf"
 draft: false
 case-study-title: "Blah Blah Blah UberMedia Vista info goes here."
 client: "Venn"
-industry: "Mobile Location Data"
+industry: "Consumer app"
 project-type: "B2B, Product Design"
 responsabilities: ['Product Manager', 'Design', 'UI Development']
 deliverables: ['Design system', 'Design']
