@@ -12,23 +12,24 @@
 .project-section {
   margin-bottom: 48px;
   margin-top: 24px;
-  .project-graphic {}
+  // .project-graphic {}
   .company-name {
-    margin-top: 32px;
-    margin-bottom: 16px;
+    margin-top: 16px;
+    margin-bottom: 0;
     color: $yg-color-gray-01;
+    font-family: var(--font-secondary);
     font-style: normal;
     font-weight: normal;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 26px;
   }
   .project-header {
-    margin-top: 16px;
+    margin-top: 0px;
     margin-bottom: 16px;
     color: $yg-color-black;
     font-weight: 600;
-    font-size: 42px;
-    line-height: 49px;
+    font-size: 32px;
+    line-height: 39px;
   }
   .project-subtitle {
     color: $yg-color-gray-01;
@@ -93,17 +94,39 @@ a:hover .graphic-container {
     color: $yg-color-gray-01;
     background-color: #DFEBF2;
   }
+  &.dark {
+    color: white;
+    background-color: #155263;
+  }
 }
-.note .preview {}
+// .note .preview {}
 
 
 
 
 // Custom Graphics for each project
+.shopify-forms-section {
+  .graphic-container {
+    background-color: #F8BBA1;
+    background-image: url('/images/portfolio/shopify/shopify-hero@2x.jpg');
+    background-size: cover;
+  }
+}
+
+
+.qunomedical-section {
+  .graphic-container {
+    background-color: #FFCA58;
+    background-image: url('/images/portfolio/qunomedical/project-qunomedical-hero-yellow-tinified.jpg');
+    background-size: cover;
+  }
+}
+
+
 .dave-section {
   .graphic-container {
     background-color: white;
-    background-image: url('/images/portfolio/dave/project-dave-hero.png');
+    background-image: url('/images/portfolio/dave/project-dave-hero-tinified.png');
     background-size: 1440px;
     background-position: center bottom;
   }
@@ -112,7 +135,7 @@ a:hover .graphic-container {
 .ubermedia-section .graphic-container {
   background-color: #4A90E2;
   color: white;
-  background-image: url('/images/portfolio/ubermedia/ubermedia-project-preview.png');
+  background-image: url('/images/portfolio/ubermedia/ubermedia-project-preview-tinified.png');
   background-repeat: no-repeat;
   background-size: 950px;
   background-position: center center;
@@ -120,7 +143,7 @@ a:hover .graphic-container {
 
 .cintric-section .graphic-container {
   background-color: #394B59;
-  background-image: url('/images/portfolio/cintric/thumbnail-cintric-analyst.png');
+  background-image: url('/images/portfolio/cintric/thumbnail-cintric-analyst-tinified.png');
   background-repeat: no-repeat;
   background-size: 530px;
   background-position: 0px bottom;
@@ -128,7 +151,7 @@ a:hover .graphic-container {
 
 .meetloaf-section .graphic-container {
   background-color: white;
-  background-image: url('/images/portfolio/meetloaf/thumbmail-venn-meetloaf.png');
+  background-image: url('/images/portfolio/meetloaf/thumbmail-venn-meetloaf-tinified.png');
   background-repeat: no-repeat;
   background-size: 650px;
   background-position: top right;
@@ -136,7 +159,7 @@ a:hover .graphic-container {
 
 .gents-section .graphic-container {
   background-color: white;
-  background-image: url('/images/portfolio/gents-guide/thumbnail-gents-guide.png');
+  background-image: url('/images/portfolio/gents-guide/thumbnail-gents-guide-tinified.jpg');
   background-repeat: no-repeat;
   background-position: center left;
 }

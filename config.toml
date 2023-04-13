@@ -13,8 +13,6 @@ URL = "plugins/bootstrap/bootstrap.min.css"
 URL = "plugins/slick/slick.css"
 [[params.plugins.css]]
 URL = "plugins/themify-icons/themify-icons.css"
-[[params.plugins.css]]
-URL = "css/style.css"
 
 
 # js plugin
@@ -36,21 +34,20 @@ URL = "about"
 name = "About"
 weight = 2
 
-# [[menu.main]]
-# URL = "blog"
-# name = "Blog"
-# weight = 3
-
 [[menu.main]]
 URL = "portfolio"
 name = "Portfolio"
+weight = 1
+
+[[menu.main]]
+URL = "tools"
+name = "Tools"
+weight = 3
+
+[[menu.main]]
+URL = "books"
+name = "Books"
 weight = 4
-
-# [[menu.main]]
-# URL = "contact"
-# name = "Contact"
-# weight = 5
-
 
 # default parameters
 [params]
@@ -67,7 +64,7 @@ description = "Product Designer with +10 years of professional experience"
 # google analytics
 google_analytics_id = "34429936" # Your ID
 # copyright
-copyright = "Copyright &copy; 2020 Ian Donahue"
+copyright = "Copyright &copy; 2021 Ian Donahue"
 
 
 # contact

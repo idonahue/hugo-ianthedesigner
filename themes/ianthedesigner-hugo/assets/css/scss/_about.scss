@@ -9,7 +9,6 @@
 
 .layer img {
   opacity: 0.1;
-  border-radius: 50%;
   transition: 0.5s;
 }
 .layer:hover img{
@@ -76,9 +75,23 @@
   right: -10px
 }
 
-
-
-.section-cv {}
+.spacer-cv {
+  background-color: var(--primary-color);
+  width: 100%;
+  padding: 100px 0 40px;
+  h2.header {
+    color: white !important;
+  }
+  a {
+    color: white;
+    &:hover {
+      color: pink;
+    }
+  }
+}
+.section-cv.section {
+  padding-top: 54px;
+}
 .section-cv .intro,
 .job .job-title {
   // color: $color-gray-03;
@@ -113,14 +126,14 @@
   font-weight: bold;
 }
 .job .primary {
-  font-size: 27px;
+  font-size: 1.5rem;
   font-family: var(--font-secondary);
   font-weight: 600;
   line-height: 34px;
   .note {
     margin-left: 16px;
     color: $yg-color-gray-01;
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: normal;
     line-height: 34px;
   }
@@ -130,7 +143,7 @@
   margin-bottom: 8px;
   color: $yg-color-gray-01;
   font-weight: normal;
-  font-size: 22px;
+  font-size: 1rem;
   line-height: 22px;
 }
 .job .job-description {
@@ -145,14 +158,16 @@
 
 .stats-container {
   padding: 48px;
+  margin-bottom: 32px;
   color: $color-gray-05;
   background-color: #F3F8F7;
+  font-size: 1rem;
   .header {
-    margin-bottom: 32px;
+    margin-bottom: 16px;
     color: $yg-color-black;
     font-family: var(--font-primary);
     font-weight: 600;
-    font-size: 31px;
+    font-size: 1.5rem;
     line-height: 37px;
   }
   .stats {
@@ -161,14 +176,11 @@
     }
     .label {
       color: $yg-color-black;
-      font-weight: bold;
-      font-size: 19px;
+      font-weight: bold !important;
+      font-size: 1rem;
       line-height: 26px;
-      text-decoration: uppercase;
       font-weight: 500;
-      font-size: 19px;
       line-height: 22px;
-      text-transform: uppercase;
       padding-right: 16px;
     }
     .value {
@@ -176,10 +188,8 @@
         padding: 8px;
         margin-right: 8px;
         color: $yg-color-gray-01;
-
-
         font-weight: 500;
-        font-size: 19px;
+        font-size: 18px;
         line-height: 26px;
         background-color: #D9E2EA;
         border-radius: 7px;
@@ -238,3 +248,35 @@
   border-width: 2px;
   font-weight: 500;
 }
+
+
+
+.bar-container {
+  height: 20px;
+  width: 100%;
+  position: relative;
+  .value, .background {
+    width: 100%;
+    height: 16px;
+    border-radius: 5px;
+    position: absolute;
+  }
+  .value {
+    background-color: $yg-color-black;
+    width: 0;
+  }
+  .background {
+    background-color: $color-gray-03;
+  }
+  &.value-10 .value { width: 10%; }
+  &.value-20 .value { width: 20%; }
+  &.value-30 .value { width: 30%; }
+  &.value-40 .value { width: 40%; }
+  &.value-50 .value { width: 50%; }
+  &.value-60 .value { width: 60%; }
+  &.value-70 .value { width: 70%; }
+  &.value-80 .value { width: 80%; }
+  &.value-90 .value { width: 90%; }
+}
+
+

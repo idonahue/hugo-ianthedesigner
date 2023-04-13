@@ -1,6 +1,6 @@
 ---
 title: "The Gent's Guide to Style"
-description: "Ian Donahue is really great"
+description: "The Gent's Guide to Style"
 draft: false
 case-study-title: "The Gent's Guide to Style"
 client: "UberMedia"

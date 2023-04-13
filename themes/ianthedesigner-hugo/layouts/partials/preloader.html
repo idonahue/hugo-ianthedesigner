@@ -2,9 +2,6 @@
 {{ "<!-- preloader start -->" | safeHTML }}
 <div class="preloader">
   {{ if ne .Site.Params.preloader.preloader "" }}
-  <div class="pre-loader-text">
-    Hellow
-  </div>
   <img src="{{ .Site.Params.preloader.preloader | relURL }} " alt="preloader">
   {{ end }}
 </div>

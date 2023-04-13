@@ -5,6 +5,9 @@
 .hero {
   height: 300px;
   background: #fafafa;
+  &.shopify-forms {
+    height: 305px;
+  }
   &.dave {
     height: 364px;
   }
@@ -35,9 +38,17 @@
   border-radius: 8px;
 }
 
+.case-study-shopify-forms {
+  height: 675px;
+  background-color: white;
+  background-position: left bottom;
+  background-size: cover;
+  overflow: hidden;
+}
+
 .case-study-dave {
   height: 734px;
-  background-image: url('/images/portfolio/dave/dave-hero.png');
+  background-image: url('/images/portfolio/dave/dave-hero-tinified.png');
   background-color: transparent;
   background-position: left bottom;
   background-size: cover;
@@ -46,7 +57,7 @@
 .case-study-ubermedia {
   height: 558px;
   margin-top: 70px;
-  background-image: url('/images/portfolio/ubermedia/case-study-hero-ubermedia.png');
+  background-image: url('/images/portfolio/ubermedia/case-study-hero-ubermedia-tinified.png');
   background-color: #4a90e2;
   background-position: center -27px;
   background-size: cover;
@@ -74,11 +85,21 @@
   .hero.dave {
     height: 0;
   }
+  .hero.shopify-forms {
+    height: 0;
+  }
   .case-study-hero {
     background-position: center bottom;
     margin-left: -15px;
     margin-right: -15px;
     width: calc(100% + 30px);
+    &.case-study-shopify-forms {
+      bottom: 170px;
+      height: 194px;
+      width: calc(100% - 30px);
+      margin-left: 15px;
+      margin-right: 15px;
+    }
     &.case-study-dave {
       background-position: center bottom;
       height: 400px;
@@ -96,7 +117,19 @@
       padding-bottom: 490px;
     }
   }
+  .page-title-shopify-forms.page-title {
+    padding-bottom: 140px;
+  }
 
+}
+
+@media (max-width: 767px) {
+  .hero.shopify-forms {
+    height: 0;
+  }
+  .case-study-shopify-forms {
+    height: 405px;;
+  }
 }
 
 .artwork {
@@ -123,9 +156,20 @@
   margin-bottom: 96px;
   text-align: center;
   background-color: #FAFAFA;
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+    flex-direction: row;
+    display: flex; 
+    flex-grow: 1; 
+    gap: 40px;
+  }
   img {
     width: 100%;
     border-radius: 6px;
+    &.mobile-device {
+      border-radius: 25px;
+    }
   }
 }
 
@@ -133,6 +177,16 @@
   .content-image {
     padding-left: 24px;
     padding-right: 24px;
+  }
+}
+
+@media (max-width: 414px) {
+  .content-image {
+    padding-left: 24px;
+    padding-right: 24px;
+    .container {
+      flex-direction: column;
+    }
   }
 }
 
@@ -148,26 +202,23 @@
     display: flex;
     flex-wrap: wrap;
   }
-  .meta-item {
-    // width: 33%;
-  }
+  // .meta-item {}
 }
-@media (max-width: 991px) {
-  .meta-item {
-    // width: 33%;
-  }
-}
+// @media (max-width: 991px) {
+//   .meta-item {}
+// }
 
 
 .meta-item {
-  margin-bottom: 16px;
-  font-size: 20px;
+  margin-bottom: 16px; 
+  font-size: $font-size-global;
   .label {
     color: $yg-color-black;
     font-weight: bold;
     line-height: 28px;
   }
   .value {
+    font-family: var(--font-secondary);
     font-weight: normal;
     line-height: 28px;
     a {
@@ -211,6 +262,85 @@
 }
 
 
+// Shopify Forms Case Study
+.page-title-shopify-forms {
+  background-image: url("/images/portfolio/shopify/bg-shopify-forms-tinified.jpg");
+  background-color: #F8BBA1;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &.page-title {
+    padding: 250px 0 430px;
+  }
+  .text-shopify-default-color {
+    color: #202223;
+  }
+  p {
+    color: #202223;
+  }
+  a {
+    color: white;
+  }
+}
+.hero.shopify-forms {
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+@media (max-width: 967px) {
+  .page-title-shopify-forms {
+    background-size: 1320px;
+    background-position: -140px bottom;
+    &.page-title {
+      padding-bottom: 390px;
+    }
+  }
+}
+@media (max-width: 414px) {
+  .page-title-shopify-forms {
+    background-size: 1320px;
+    background-position: -140px bottom;
+    &.page-title {
+      padding-bottom: 190px;
+    }
+  }
+}
+
+
+// Qunomedical Case Study
+.page-title-qunomedical {
+  background-image: url("/images/portfolio/qunomedical/bg-qunomedical@2x-tinified.png");
+  background-color: #155263;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 1790px;
+  &.page-title {
+    padding: 250px 0 680px;
+  }
+  p {
+    color: #A5CAD5;
+  }
+  a {
+    color: white;
+  }
+}
+.hero.qunomedical {
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+@media (max-width: 967px) {
+  .page-title-qunomedical {
+    background-size: 1320px;
+    background-position: -140px bottom;
+    &.page-title {
+      padding-bottom: 500px;
+    }
+  }
+}
+
 // Dave Case Study
 .ian-davemoji {
   position: relative;
@@ -253,6 +383,9 @@
     color: white;
   }
 }
+.page-title-meetloaf ~ .navigation {
+    background-color: #fafafa;
+}
 .hero.meetloaf {
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -261,11 +394,18 @@
 .bg-meetloaf {
   padding-top: 280px;
   padding-bottom: 450px;
-  background-image: url("/images/portfolio/meetloaf/meetloaf-background.png");
+  background-image: url("/images/portfolio/meetloaf/meetloaf-background-tinified.png");
   background-size: 63%;
   background-repeat: no-repeat;
   background-position: right bottom;
 }
+
+@media (max-width: 414px) {
+  .bg-meetloaf {
+    background-size: 100%;
+  }
+}
+
 
 #full-size {
   &.image-1 .phone-screen {
@@ -285,12 +425,6 @@
   }
   &.image-6 .phone-screen {
     background-image: url("../images/portfolio/meetloaf/screens/meetloaf-screens-14@3x.png");
-  }
-}
-
-@media (max-width: 414px) {
-  .bg-meetloaf {
-    background-size: 100%;
   }
 }
 
@@ -319,7 +453,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     .phone-screen {
-      height: 534px;
+      height: 541px;
       width: 305px;
       position: absolute;
       left: 118px;

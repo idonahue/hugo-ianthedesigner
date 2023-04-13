@@ -1,8 +1,9 @@
 body {
-  line-height: 1.2;
+  
   font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
-  font-size: 20px;
+  font-size: $font-size-global;
+  line-height: 1.2;
   color: #798A93;
 }
 
@@ -38,6 +39,30 @@ p a {
   &:hover {
     color: $yg-color-black;
     border-bottom: 2px solid $color-secondary;
+  }
+}
+
+.content-image a .caption {
+  color: $yg-color-black;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    color: $yg-color-black;
+    text-decoration: underline;
+    // border-bottom: 2px solid $color-secondary;
+  }
+}
+.content-image a img {
+  position: relative;
+  bottom: 0;
+  transition: 0.3s;
+  &:hover {
+    // bottom: 16px;
+    transition: 0.5s;
+    transform: scale(1.1);
+    box-shadow: 0px 36px 100px rgba(33, 68, 104, 0.12), 0px 12px 32px rgba(25, 28, 31, 0.08);
+    z-index: 1000;
   }
 }
 
@@ -184,12 +209,13 @@ a:hover { color: var(--primary-color) }
 // Alerts
 .alert {
   padding: 24px;
+  font-size: $font-size-global;
   p {
     margin-bottom: 0;
-    font-size: 18px;
   }
   .message {
     padding-left: 24px;
+    line-height: 140%;
   }
   &.alert-info {
     background-color: white;
@@ -198,8 +224,8 @@ a:hover { color: var(--primary-color) }
     border-radius: 6px;
     .icon {
       height: 58px;
-      width: 58px;
-      background-image: url('../images/components/wave.png');
+      width: 64px;
+      background-image: url('../images/components/wave-tinified.png');
       background-size: 58px;
       background-repeat: no-repeat;
       background-position: center center;
@@ -219,6 +245,9 @@ a:hover { color: var(--primary-color) }
       -ms-animation: handWave linear 6s;
       -ms-animation-iteration-count: infinite;
       -ms-transform-origin: 50% 50%;
+    }
+    .message {
+      width: 100%;
     }
   }
 }
@@ -243,8 +272,10 @@ a:hover { color: var(--primary-color) }
 // ========================================== //
 
 .navigation {
-  padding: 40px 130px;
+  // padding: 40px 130px;
   transition: .3s ease;
+  // background-color: var(--primary-color);
+  padding: 15px 100px;
 }
 
 .navigation.nav-bg {
@@ -265,7 +296,10 @@ a:hover { color: var(--primary-color) }
   }
 }
 
-.navigation {}
+.navbar {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
 .navbar .nav-item::before {
   content: none;
 }
@@ -284,7 +318,7 @@ a:hover { color: var(--primary-color) }
   color: #fff;
 }
 .navigation .navbar .navbar-toggler .navbar-toggler-icon {
-  background-image: url('../images/icons/hamburger.png');
+  background-image: url('../images/icons/hamburger-tinified.png');
 }
 
 // /Navbar

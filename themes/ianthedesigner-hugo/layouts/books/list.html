@@ -1,0 +1,1812 @@
+{{ define "main" }}
+
+<style media="screen">
+  /* cspell:disable-file */
+  /* webkit printing magic: print all background colors */
+  .udpated {
+    font-size: 14px;
+    padding-top: 16px;
+    padding-bottom: 48px;
+  }
+  .year {
+    color: white;
+    padding-top: 48px;
+    font-size: 48px;
+  }
+
+  html {
+    -webkit-print-color-adjust: exact;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+  }
+
+  /* a,
+  a.visited {
+    color: inherit;
+    text-decoration: underline;
+  } */
+
+  .pdf-relative-link-path {
+    font-size: 80%;
+    color: #444;
+  }
+
+  /* h1,
+  h2,
+  h3 {
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 0;
+  } */
+
+  /* .page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0.75em;
+  } */
+
+  /* h1 {
+    font-size: 1.875rem;
+    margin-top: 1.875rem;
+  } */
+
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+  }
+
+  .source {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 1.5em;
+    word-break: break-all;
+  }
+
+  .callout {
+    border-radius: 3px;
+    padding: 1rem;
+  }
+
+  figure {
+    margin: 1.25em 0;
+    page-break-inside: avoid;
+  }
+
+  figcaption {
+    opacity: 0.5;
+    font-size: 85%;
+    margin-top: 0.5em;
+  }
+
+  mark {
+    background-color: transparent;
+  }
+
+  .indented {
+    padding-left: 1.5em;
+  }
+
+  hr {
+    background: transparent;
+    display: block;
+    width: 100%;
+    height: 1px;
+    visibility: visible;
+    border: none;
+    border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  @media only print {
+    img {
+      max-height: 100vh;
+      object-fit: contain;
+    }
+  }
+
+  @page {
+    margin: 1in;
+  }
+
+  .collection-content {
+    font-size: 0.875rem;
+  }
+
+  .column-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .column {
+    padding: 0 1em;
+  }
+
+  .column:first-child {
+    padding-left: 0;
+  }
+
+  .column:last-child {
+    padding-right: 0;
+  }
+
+  .table_of_contents-item {
+    display: block;
+    font-size: 0.875rem;
+    line-height: 1.3;
+    padding: 0.125rem;
+  }
+
+  .table_of_contents-indent-1 {
+    margin-left: 1.5rem;
+  }
+
+  .table_of_contents-indent-2 {
+    margin-left: 3rem;
+  }
+
+  .table_of_contents-indent-3 {
+    margin-left: 4.5rem;
+  }
+
+  .table_of_contents-link {
+    text-decoration: none;
+    opacity: 0.7;
+    border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+  }
+
+  table,
+  th,
+  td {
+    /* border: 1px solid rgba(55, 53, 47, 0.09); */
+    border: 1px solid rgba(121, 138, 147, 0.08);
+    border-collapse: collapse;
+    border-left-width: 0;
+    border-right-width: 0;
+  }
+
+
+  table {
+    border-left: none;
+    border-right: none;
+  }
+
+  th,
+  td {
+    font-weight: normal;
+    padding: 0.25em 0.5em;
+    line-height: 1.5;
+    min-height: 1.5em;
+    text-align: left;
+  }
+
+  th {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 16px inherit;
+  }
+
+  ol,
+  ul {
+    margin: 0;
+    margin-block-start: 0.6em;
+    margin-block-end: 0.6em;
+  }
+
+  li > ol:first-child,
+  li > ul:first-child {
+    margin-block-start: 0.6em;
+  }
+
+  /* ul > li {
+   list-style: disc;
+  } */
+
+  ul.to-do-list {
+    text-indent: -1.7em;
+  }
+
+  ul.to-do-list > li {
+    list-style: none;
+  }
+
+  .to-do-children-checked {
+    text-decoration: line-through;
+    opacity: 0.375;
+  }
+
+  ul.toggle > li {
+    list-style: none;
+  }
+
+  ul {
+    padding-inline-start: 1.7em;
+  }
+
+  ul > li {
+    padding-left: 0.1em;
+  }
+
+  ol {
+    padding-inline-start: 1.6em;
+  }
+
+  ol > li {
+    padding-left: 0.2em;
+  }
+
+  .mono ol {
+    padding-inline-start: 2em;
+  }
+
+  .mono ol > li {
+    text-indent: -0.4em;
+  }
+
+  .toggle {
+    padding-inline-start: 0em;
+    list-style-type: none;
+  }
+
+  /* Indent toggle children */
+  .toggle > li > details {
+    padding-left: 1.7em;
+  }
+
+  .toggle > li > details > summary {
+    margin-left: -1.1em;
+  }
+
+  .collection-content a,
+  .collection-content .cell-title {
+    pointer-events: none;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+  }
+
+  .selected-value {
+    display: inline-block;
+    padding: 0 0.5em;
+    background: rgba(206, 205, 202, 0.5);
+    border-radius: 3px;
+    margin-right: 0.5em;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    white-space: nowrap;
+  }
+
+  .collection-title {
+    display: inline-block;
+    margin-right: 1em;
+  }
+
+  .simple-table {
+    margin-top: 1em;
+    font-size: 0.875rem;
+  }
+
+  .simple-table-header {
+    background: rgb(247, 246, 243);
+    color: black;
+    font-weight: 500;
+  }
+
+  /* time {
+    opacity: 0.8;
+  } */
+
+  .icon {
+    display: inline-block;
+    max-width: 1.2em;
+    max-height: 1.2em;
+    text-decoration: none;
+    vertical-align: text-bottom;
+    margin-right: 0.5em;
+    display: none;
+  }
+  .icon svg {
+    fill: white !important;
+  }
+
+  img.icon {
+    border-radius: 3px;
+  }
+
+  .user-icon {
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 100%;
+    margin-right: 0.5rem;
+  }
+
+  .user-icon-inner {
+    font-size: 0.8em;
+  }
+
+  .text-icon {
+    border: 1px solid #000;
+    text-align: center;
+  }
+
+  .page-cover-image {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 30vh;
+  }
+
+  .page-header-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .page-header-icon-with-cover {
+    margin-top: -0.72em;
+    margin-left: 0.07em;
+  }
+
+  .page-header-icon img {
+    border-radius: 3px;
+  }
+
+  .link-to-page {
+    margin: 1em 0;
+    padding: 0;
+    border: none;
+    font-weight: 500;
+  }
+
+  p > .user {
+    opacity: 0.5;
+  }
+
+  td > .user,
+  td > time {
+    white-space: nowrap;
+  }
+
+  input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-right: 0.6em;
+    vertical-align: middle;
+  }
+
+  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .image {
+    border: none;
+    margin: 1.5em 0;
+    padding: 0;
+    border-radius: 0;
+    text-align: center;
+  }
+
+  .code,
+  code {
+    background: rgba(135, 131, 120, 0.15);
+    border-radius: 3px;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 85%;
+    tab-size: 2;
+  }
+
+  code {
+    color: #eb5757;
+  }
+
+  .code {
+    padding: 1.5em 1em;
+  }
+
+  .code-wrap {
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+
+  .code > code {
+    background: none;
+    padding: 0;
+    font-size: 100%;
+    color: inherit;
+  }
+
+  blockquote {
+    font-size: 1.25em;
+    margin: 1em 0;
+    padding-left: 1em;
+    border-left: 3px solid rgb(55, 53, 47);
+  }
+
+  .bookmark {
+    text-decoration: none;
+    max-height: 8em;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .bookmark-title {
+    font-size: 0.85em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 1.75em;
+    white-space: nowrap;
+  }
+
+  .bookmark-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bookmark-info {
+    flex: 4 1 180px;
+    padding: 12px 14px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .bookmark-image {
+    width: 33%;
+    flex: 1 1 180px;
+    display: block;
+    position: relative;
+    object-fit: cover;
+    border-radius: 1px;
+  }
+
+  .bookmark-description {
+    color: rgba(55, 53, 47, 0.6);
+    font-size: 0.75em;
+    overflow: hidden;
+    max-height: 4.5em;
+    word-break: break-word;
+  }
+
+  .bookmark-href {
+    font-size: 0.75em;
+    margin-top: 0.25em;
+  }
+
+  .sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+  .code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+  .serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+  .mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+  .pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+  .pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+  .pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+  .pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+  .pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+  .pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+  .pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+  .pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+  .pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+  .pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+  .pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+  .pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+  .pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+  .pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+  .pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+  .pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+  .highlight-default {
+    color: rgba(55, 53, 47, 1);
+  }
+  .highlight-gray {
+    color: rgba(120, 119, 116, 1);
+    fill: rgba(145, 145, 142, 1);
+  }
+  .highlight-brown {
+    color: rgba(159, 107, 83, 1);
+    fill: rgba(187, 132, 108, 1);
+  }
+  .highlight-orange {
+    color: rgba(217, 115, 13, 1);
+    fill: rgba(215, 129, 58, 1);
+  }
+  .highlight-yellow {
+    color: rgba(203, 145, 47, 1);
+    fill: rgba(203, 148, 51, 1);
+  }
+  .highlight-teal {
+    color: rgba(68, 131, 97, 1);
+    fill: rgba(108, 155, 125, 1);
+  }
+  .highlight-blue {
+    color: rgba(51, 126, 169, 1);
+    fill: rgba(91, 151, 189, 1);
+  }
+  .highlight-purple {
+    color: rgba(144, 101, 176, 1);
+    fill: rgba(167, 130, 195, 1);
+  }
+  .highlight-pink {
+    color: rgba(193, 76, 138, 1);
+    fill: rgba(205, 116, 159, 1);
+  }
+  .highlight-red {
+    color: rgba(212, 76, 71, 1);
+    fill: rgba(225, 111, 100, 1);
+  }
+  .highlight-gray_background {
+    background: rgba(241, 241, 239, 1);
+  }
+  .highlight-brown_background {
+    background: rgba(244, 238, 238, 1);
+  }
+  .highlight-orange_background {
+    background: rgba(251, 236, 221, 1);
+  }
+  .highlight-yellow_background {
+    background: rgba(251, 243, 219, 1);
+  }
+  .highlight-teal_background {
+    background: rgba(237, 243, 236, 1);
+  }
+  .highlight-blue_background {
+    background: rgba(231, 243, 248, 1);
+  }
+  .highlight-purple_background {
+    background: rgba(244, 240, 247, 0.8);
+  }
+  .highlight-pink_background {
+    background: rgba(249, 238, 243, 0.8);
+  }
+  .highlight-red_background {
+    background: rgba(253, 235, 236, 1);
+  }
+  .block-color-default {
+    color: inherit;
+    fill: inherit;
+  }
+  .block-color-gray {
+    color: rgba(120, 119, 116, 1);
+    fill: rgba(145, 145, 142, 1);
+  }
+  .block-color-brown {
+    color: rgba(159, 107, 83, 1);
+    fill: rgba(187, 132, 108, 1);
+  }
+  .block-color-orange {
+    color: rgba(217, 115, 13, 1);
+    fill: rgba(215, 129, 58, 1);
+  }
+  .block-color-yellow {
+    color: rgba(203, 145, 47, 1);
+    fill: rgba(203, 148, 51, 1);
+  }
+  .block-color-teal {
+    color: rgba(68, 131, 97, 1);
+    fill: rgba(108, 155, 125, 1);
+  }
+  .block-color-blue {
+    color: rgba(51, 126, 169, 1);
+    fill: rgba(91, 151, 189, 1);
+  }
+  .block-color-purple {
+    color: rgba(144, 101, 176, 1);
+    fill: rgba(167, 130, 195, 1);
+  }
+  .block-color-pink {
+    color: rgba(193, 76, 138, 1);
+    fill: rgba(205, 116, 159, 1);
+  }
+  .block-color-red {
+    color: rgba(212, 76, 71, 1);
+    fill: rgba(225, 111, 100, 1);
+  }
+  .block-color-gray_background {
+    background: rgba(241, 241, 239, 1);
+  }
+  .block-color-brown_background {
+    background: rgba(244, 238, 238, 1);
+  }
+  .block-color-orange_background {
+    background: rgba(251, 236, 221, 1);
+  }
+  .block-color-yellow_background {
+    background: rgba(251, 243, 219, 1);
+  }
+  .block-color-teal_background {
+    background: rgba(237, 243, 236, 1);
+  }
+  .block-color-blue_background {
+    background: rgba(231, 243, 248, 1);
+  }
+  .block-color-purple_background {
+    background: rgba(244, 240, 247, 0.8);
+  }
+  .block-color-pink_background {
+    background: rgba(249, 238, 243, 0.8);
+  }
+  .block-color-red_background {
+    background: rgba(253, 235, 236, 1);
+  }
+
+  .selected-value {
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  }
+  /* COMPLETE */
+  .select-value-color-green {
+    color: #244724;
+    background-color: rgba(82, 167, 82, 1);
+    background: linear-gradient(360deg, #109710 0%, #52A752 100%);
+  }
+  /* TO READ */
+  .select-value-color-red {
+    color: #851300;
+    background-color: rgba(255, 98, 71, 1);
+    background: linear-gradient(180deg, #FF6247 0%, #E53314 100%);
+  }
+  /* IN PROGRESS STYLE */
+  .select-value-color-yellow {
+    color: #9D6D06;
+    background-color: rgba(249, 202, 102, 1);
+    background: linear-gradient(180deg, #F1C76E 0%, #D6A234 100%);
+  }
+  /* ON HOLD STYLE */
+  .select-value-color-pink {
+    color: #3730B5;
+    background-color: rgba(146, 142, 225, 1);
+    background: linear-gradient(180deg, #928EE1 0%, #6C66DB 100%);
+  }
+
+  .checkbox {
+    display: inline-flex;
+    vertical-align: text-bottom;
+    width: 16;
+    height: 16;
+    background-size: 16px;
+    margin-left: 2px;
+    margin-right: 5px;
+  }
+
+  .checkbox-on {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+  }
+
+  .checkbox-off {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+  }
+
+</style>
+
+<!-- page title -->
+<section class="page-title bg-primary position-relative overflow-hidden">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-10 col-lg-8">
+        <h1 class="text-white font-tertiary">52 books in 52 weeks</h1>
+        <p>
+          During COVID lockdown in Berlin, people didn't leave their flats. I couldn't stay cooped up especially with a <a href="https://instagram.com/maothedachshund/" target="_blank">dog</a>. So I would listen to an audiobook and go on a two hour walk each night. In 2020 I listen to 43 audiobooks. So in 2021, my goal was a minimum one a week, or "<strong class="text-white">52 books in 52 weeks</strong>."
+        </p>
+        <div class="udpated">Updated: Nov 24, 2021</div>
+      </div>
+      <div class="col-4"></div>
+    </div>
+
+      <div class="container">
+         <div class="row">
+
+           <!-- NOTION STUFF -->
+
+            <article id="27fb5cc6-4077-4b40-9757-3c1356f242e6" class="page sans">
+                <div class="page-body">
+                    <table class="collection-content">
+                        <thead>
+                            <tr>
+                                <th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesTitle"><path d="M7.73943662,8.6971831 C7.77640845,8.7834507 7.81338028,8.8943662 7.81338028,9.00528169 C7.81338028,9.49823944 7.40669014,9.89260563 6.91373239,9.89260563 C6.53169014,9.89260563 6.19894366,9.64612676 6.08802817,9.30105634 L5.75528169,8.33978873 L2.05809859,8.33978873 L1.72535211,9.30105634 C1.61443662,9.64612676 1.2693662,9.89260563 0.887323944,9.89260563 C0.394366197,9.89260563 0,9.49823944 0,9.00528169 C0,8.8943662 0.0246478873,8.7834507 0.0616197183,8.6971831 L2.46478873,2.48591549 C2.68661972,1.90669014 3.24119718,1.5 3.90669014,1.5 C4.55985915,1.5 5.12676056,1.90669014 5.34859155,2.48591549 L7.73943662,8.6971831 Z M2.60035211,6.82394366 L5.21302817,6.82394366 L3.90669014,3.10211268 L2.60035211,6.82394366 Z M11.3996479,3.70598592 C12.7552817,3.70598592 14,4.24823944 14,5.96126761 L14,9.07922535 C14,9.52288732 13.6549296,9.89260563 13.2112676,9.89260563 C12.8169014,9.89260563 12.471831,9.59683099 12.4225352,9.19014085 C12.028169,9.6584507 11.3257042,9.95422535 10.5492958,9.95422535 C9.60035211,9.95422535 8.47887324,9.31338028 8.47887324,7.98239437 C8.47887324,6.58978873 9.60035211,6.08450704 10.5492958,6.08450704 C11.3380282,6.08450704 12.040493,6.33098592 12.4348592,6.81161972 L12.4348592,5.98591549 C12.4348592,5.38204225 11.9172535,4.98767606 11.1285211,4.98767606 C10.6602113,4.98767606 10.2411972,5.11091549 9.80985915,5.38204225 C9.72359155,5.43133803 9.61267606,5.46830986 9.50176056,5.46830986 C9.18133803,5.46830986 8.91021127,5.1971831 8.91021127,4.86443662 C8.91021127,4.64260563 9.0334507,4.44542254 9.19366197,4.34683099 C9.87147887,3.90316901 10.6232394,3.70598592 11.3996479,3.70598592 Z M11.1778169,8.8943662 C11.6830986,8.8943662 12.1760563,8.72183099 12.4348592,8.37676056 L12.4348592,7.63732394 C12.1760563,7.29225352 11.6830986,7.11971831 11.1778169,7.11971831 C10.5616197,7.11971831 10.056338,7.45246479 10.056338,8.0193662 C10.056338,8.57394366 10.5616197,8.8943662 11.1778169,8.8943662 Z M0.65625,11.125 L13.34375,11.125 C13.7061869,11.125 14,11.4188131 14,11.78125 C14,12.1436869 13.7061869,12.4375 13.34375,12.4375 L0.65625,12.4375 C0.293813133,12.4375 4.43857149e-17,12.1436869 0,11.78125 C-4.43857149e-17,11.4188131 0.293813133,11.125 0.65625,11.125 Z"></path></svg></span>Book Title</th>
+                                <th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M7,4.56818 C7,4.29204 6.77614,4.06818 6.5,4.06818 L0.5,4.06818 C0.223858,4.06818 0,4.29204 0,4.56818 L0,5.61364 C0,5.88978 0.223858,6.11364 0.5,6.11364 L6.5,6.11364 C6.77614,6.11364 7,5.88978 7,5.61364 L7,4.56818 Z M0.5,1 C0.223858,1 0,1.223858 0,1.5 L0,2.54545 C0,2.8216 0.223858,3.04545 0.5,3.04545 L12.5,3.04545 C12.7761,3.04545 13,2.8216 13,2.54545 L13,1.5 C13,1.223858 12.7761,1 12.5,1 L0.5,1 Z M0,8.68182 C0,8.95796 0.223858,9.18182 0.5,9.18182 L11.5,9.18182 C11.7761,9.18182 12,8.95796 12,8.68182 L12,7.63636 C12,7.36022 11.7761,7.13636 11.5,7.13636 L0.5,7.13636 C0.223858,7.13636 0,7.36022 0,7.63636 L0,8.68182 Z M0,11.75 C0,12.0261 0.223858,12.25 0.5,12.25 L9.5,12.25 C9.77614,12.25 10,12.0261 10,11.75 L10,10.70455 C10,10.4284 9.77614,10.20455 9.5,10.20455 L0.5,10.20455 C0.223858,10.20455 0,10.4284 0,10.70455 L0,11.75 Z"></path></svg></span>Author</th>
+                                <th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesMultipleSelect"><path d="M4,3 C4,2.447715 4.447715,2 5,2 L12,2 C12.5523,2 13,2.447716 13,3 C13,3.55228 12.5523,4 12,4 L5,4 C4.447715,4 4,3.55228 4,3 Z M4,7 C4,6.447715 4.447715,6 5,6 L12,6 C12.5523,6 13,6.447716 13,7 C13,7.55228 12.5523,8 12,8 L5,8 C4.447715,8 4,7.55228 4,7 Z M4,11 C4,10.447715 4.447715,10 5,10 L12,10 C12.5523,10 13,10.447716 13,11 C13,11.55228 12.5523,12 12,12 L5,12 C4.447715,12 4,11.55228 4,11 Z M2,4 C1.44771525,4 1,3.55228475 1,3 C1,2.44771525 1.44771525,2 2,2 C2.55228475,2 3,2.44771525 3,3 C3,3.55228475 2.55228475,4 2,4 Z M2,8 C1.44771525,8 1,7.55228475 1,7 C1,6.44771525 1.44771525,6 2,6 C2.55228475,6 3,6.44771525 3,7 C3,7.55228475 2.55228475,8 2,8 Z M2,12 C1.44771525,12 1,11.5522847 1,11 C1,10.4477153 1.44771525,10 2,10 C2.55228475,10 3,10.4477153 3,11 C3,11.5522847 2.55228475,12 2,12 Z"></path></svg></span>Status</th>
+                                <th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesDate"><path d="M10.8889,5.5 L3.11111,5.5 L3.11111,7.05556 L10.8889,7.05556 L10.8889,5.5 Z M12.4444,1.05556 L11.6667,1.05556 L11.6667,0 L10.1111,0 L10.1111,1.05556 L3.88889,1.05556 L3.88889,0 L2.33333,0 L2.33333,1.05556 L1.55556,1.05556 C0.692222,1.05556 0.00777777,1.75556 0.00777777,2.61111 L0,12.5 C0,13.3556 0.692222,14 1.55556,14 L12.4444,14 C13.3,14 14,13.3556 14,12.5 L14,2.61111 C14,1.75556 13.3,1.05556 12.4444,1.05556 Z M12.4444,12.5 L1.55556,12.5 L1.55556,3.94444 L12.4444,3.94444 L12.4444,12.5 Z M8.55556,8.61111 L3.11111,8.61111 L3.11111,10.1667 L8.55556,10.1667 L8.55556,8.61111 Z"></path></svg></span>Start</th>
+                                <th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesDate"><path d="M10.8889,5.5 L3.11111,5.5 L3.11111,7.05556 L10.8889,7.05556 L10.8889,5.5 Z M12.4444,1.05556 L11.6667,1.05556 L11.6667,0 L10.1111,0 L10.1111,1.05556 L3.88889,1.05556 L3.88889,0 L2.33333,0 L2.33333,1.05556 L1.55556,1.05556 C0.692222,1.05556 0.00777777,1.75556 0.00777777,2.61111 L0,12.5 C0,13.3556 0.692222,14 1.55556,14 L12.4444,14 C13.3,14 14,13.3556 14,12.5 L14,2.61111 C14,1.75556 13.3,1.05556 12.4444,1.05556 Z M12.4444,12.5 L1.55556,12.5 L1.55556,3.94444 L12.4444,3.94444 L12.4444,12.5 Z M8.55556,8.61111 L3.11111,8.61111 L3.11111,10.1667 L8.55556,10.1667 L8.55556,8.61111 Z"></path></svg></span>Completed</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="book">
+                              <td class="cell-title">Cytonic</td>
+                              <td class="cell-author">Brandon Sanderson</td>
+                              <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                              <td class="cell-start">Nov 24, 2021</td>
+                              <td class="cell-completed"></td>
+                          </tr>
+                          <tr class="book">
+                              <td class="cell-title">Kitchen Confidential</td>
+                              <td class="cell-author">Anthony Bourdain</td>
+                              <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                              <td class="cell-start">Nov 21, 2021</td>
+                              <td class="cell-completed">Nov 24, 2021</td>
+                          </tr>
+                            <tr class="book">
+                                <td class="cell-title">Later</td>
+                                <td class="cell-author">Stephen King</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Nov 16, 2021</td>
+                                <td class="cell-completed">Nov 19, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title">Local Woman Missing</td>
+                                <td class="cell-author">Mary Kubica</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start">Nov 14, 2021</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title">Quench Your Own Thirst</td>
+                                <td class="cell-author">Jim Kock</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Nov 4, 2021</td>
+                                <td class="cell-completed">Nov 13, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title">The Stranger in the Mirror</td>
+                                <td class="cell-author">Liv Constantine</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Oct 29, 2021</td>
+                                <td class="cell-completed">Nov 7, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title">Mythos</td>
+                                <td class="cell-author">Stephen Fry</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start">Oct 29, 2021</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title">Born to Run</td>
+                                <td class="cell-author">Christopher McDougall</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Oct 21, 2021</td>
+                                <td class="cell-completed">Oct 28, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title">A Touch of Jen</td>
+                                <td class="cell-author">Morgen Beth</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Oct 13, 2021</td>
+                                <td class="cell-completed">Oct 19, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title">Falling</td>
+                                <td class="cell-author">T.J. Newman</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Oct 3, 2021</td>
+                                <td class="cell-completed">Oct 13, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title">The Black Echo</td>
+                                <td class="cell-author">Michale Connelly</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Sep 15, 2021</td>
+                                <td class="cell-completed">Sep 24, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Legacies-A-Repairman-Jack-Novel-Book-2-bac788362f544b15a71b6adfdf109157">Legacies: A Repairman Jack Novel, Book 2</a></td>
+                                <td class="cell-author">F. Paul Wilson</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start">Sep 15, 2021</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Fluent-in-3-Months-How-Anyone-at-Any-Age-Can-Learn-to-Speak-Any-Language-from-Anywhere-in-the-World-893b7f1aed9548928846c9e06f55fc28">Fluent in 3 Months: How Anyone at Any Age Can Learn to Speak Any Language from Anywhere in the World</a></td>
+                                <td class="cell-author">Benny Lewis</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start">Sep 15, 2021</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Law-of-Innocence-2cc277c56ff945e5abb0c57f72638623">The Law of Innocence</a></td>
+                                <td class="cell-author">Michael Connelly</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Sep 8, 2021</td>
+                                <td class="cell-completed">Sep 11, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title">The Crossing</td>
+                                <td class="cell-author">Michael Connelly</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Sep 6, 2021</td>
+                                <td class="cell-completed">Sep 8, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Brief-Answers-to-the-Big-Questions-f5dfbb204bea4bdaa366e15f6ff69272">Brief Answers to the Big Questions</a></td>
+                                <td class="cell-author"></td>
+                                <td class="cell-status"><span class="selected-value select-value-color-red">To Read</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Alienist-5e8d30b1a2fd4d31b170ebd882246c4a">The Alienist</a></td>
+                                <td class="cell-author">George Guidall</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start">Sep 13, 2021</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Talented-Mr-Ripley-c02fbfd373224be398bb1374b885d116">The Talented Mr. Ripley</a></td>
+                                <td class="cell-author">Patricia Highsmith</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start">Sep 6, 2021</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Okay-Fine-Whatever-The-Year-I-Went-from-Being-Afraid-of-Everything-to-Only-Being-Afraid-of-Most-Thi-7529bd3905ba4bdb813cdb3af5451dbc">Okay Fine Whatever: The Year I Went from Being Afraid of Everything to Only Being Afraid of Most Things</a></td>
+                                <td class="cell-author">Courtneay Hameister</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start">Sep 2, 2021</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/A-Good-Deed-a7c687dc4cdb49859c6e2b8948a75f56">A Good Deed</a></td>
+                                <td class="cell-author">David Baldacci</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Aug 27, 2021</td>
+                                <td class="cell-completed">Sep 6, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Gods-of-Guilt-bc8fc25d13ac4ff280e04bb8ac0edd27">The Gods of Guilt</a></td>
+                                <td class="cell-author">David Baldacci</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Aug 19, 2021</td>
+                                <td class="cell-completed">Aug 27, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Power-of-Habits-3260e5c295354e8bae066b6f3a978856">The Power of Habits</a></td>
+                                <td class="cell-author">Charles Duhigg</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Aug 15, 2021</td>
+                                <td class="cell-completed">Aug 18, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Fifth-Witness-0ae9a84279d6434a9ed9222bfaffa5e7">The Fifth Witness</a></td>
+                                <td class="cell-author">Michael Connelly</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Jul 28, 2021</td>
+                                <td class="cell-completed">Aug 11, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Kill-Artist-98a9ff84070d499999d9b5cb1faefd7b">The Kill Artist</a></td>
+                                <td class="cell-author">David Silva</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Jul 21, 2021</td>
+                                <td class="cell-completed">Jul 28, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Tomb-8eae7310a04e4697bb6d466bd228202f">The Tomb</a></td>
+                                <td class="cell-author">F. Paul Wilson</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Jul 17, 2021</td>
+                                <td class="cell-completed">Jul 21, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Gone-Girl-a5a2ff7f650445ebb63d156afe217be3">Gone Girl</a></td>
+                                <td class="cell-author">Gillian Flyn</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Jul 12, 2021</td>
+                                <td class="cell-completed">Jul 17, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Less-1e32f30b1cd5437580d372d4b521241a">Less</a></td>
+                                <td class="cell-author">Andrew Sean Greer</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Jul 7, 2021</td>
+                                <td class="cell-completed">Jul 14, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Paddle-Your-Own-Canoe-a9c79e23c6a4457bb0b38b56bd302b0f">Paddle Your Own Canoe</a></td>
+                                <td class="cell-author">Nick Offerman</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start">Jul 6, 2021</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Cold-Morning-f3fd891f0d8548c19ef387a59a061609">Cold Morning</a></td>
+                                <td class="cell-author">Brenda Chapman</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-red">To Read</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-First-Conspiracy-b7f7bf86f1454dc693fb2db71b70ae4b">The First Conspiracy</a></td>
+                                <td class="cell-author">Brad Meltzer, Josh Mensch</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start">Jul 4, 2021</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/They-Both-Die-at-the-End-cdfa817f0f664b5cbaf4dc70a9016c6e">They Both Die at the End</a></td>
+                                <td class="cell-author">Adam Silvera</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Jun 30, 2021</td>
+                                <td class="cell-completed">Jul 4, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Reversal-f43b382be27545559f2f766387e3dc2a">The Reversal</a></td>
+                                <td class="cell-author">Michael Connelly</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Jun 30, 2021</td>
+                                <td class="cell-completed">Jul 4, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/1984-f98f02b7b9f4411dacd41eb77346fa6b">1984</a></td>
+                                <td class="cell-author">George Orwell</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Jun 11, 2021</td>
+                                <td class="cell-completed">Jun 23, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/I-Let-You-Go-c0178cd50b40479ab5ee30bc2e651c59">I Let You Go</a></td>
+                                <td class="cell-author">Clare Mackintosh</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Jun 5, 2021</td>
+                                <td class="cell-completed">Jun 15, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/I-See-You-95442785ff9f4eb8801ba626849cf863">I See You</a></td>
+                                <td class="cell-author">Clare Mackintosh</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Jun 1, 2021</td>
+                                <td class="cell-completed">Jun 5, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Silkworm-7f3c91196f314af6b0fab27995a2c2d5">The Silkworm</a></td>
+                                <td class="cell-author">Robert Galbraith</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">May 20, 2021</td>
+                                <td class="cell-completed">Jun 1, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Late-Show-11e4ab78c85d4d6b9462f021b509a419">The Late Show</a></td>
+                                <td class="cell-author">Michael Connelly</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">May 9, 2021</td>
+                                <td class="cell-completed">May 20, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Lincoln-Lawyer-145cb7e221f34f4e87e96829a5989822">The Lincoln Lawyer</a></td>
+                                <td class="cell-author">Michael Connelly</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">May 2, 2021</td>
+                                <td class="cell-completed">May 12, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Cuckoos-Calling-f3cf9c6cd2ee41a5b9c7c97a92c11633">Cuckoos Calling</a></td>
+                                <td class="cell-author">Robert Galbraith</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">May 1, 2021</td>
+                                <td class="cell-completed">May 16, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Starsight-64faf887131349d78ebdabbd18fe30e8">Starsight</a></td>
+                                <td class="cell-author">Brandon Sanderson</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Apr 14, 2021</td>
+                                <td class="cell-completed">Apr 22, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Elevation-a73f62caa1a5499e8cd62d206442608c">Elevation</a></td>
+                                <td class="cell-author">Stephen King</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Apr 9, 2021</td>
+                                <td class="cell-completed">May 17, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Lost-World-9d451e59deb84ec5878150f7c7ec365e">The Lost World</a></td>
+                                <td class="cell-author">Michal Critchton</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start">Apr 5, 2021</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Queens-Gambit-882ec876c0434fa19a2f0c5d1d59f308">Queens Gambit</a></td>
+                                <td class="cell-author">WAlter Tevis</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start">Apr 5, 2021</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Career-of-Evil-4adcb2a840db484ebd69833fb7c70cfb">Career of Evil</a></td>
+                                <td class="cell-author">Robert Galbraith</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start">Apr 5, 2021</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Guest-List-a2ecdb0af5684b6284c26416e8bfd39a">The Guest List</a></td>
+                                <td class="cell-author">Lucy Foley</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Mar 26, 2021</td>
+                                <td class="cell-completed">Apr 3, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Institute-88706811cb0c438d9eae42c80cc48deb">The Institute</a></td>
+                                <td class="cell-author">Stephen King</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Mar 22, 2021</td>
+                                <td class="cell-completed">Apr 2, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Dutch-House-8158001a07634c3cad4b2983b7e2e6fb">The Dutch House</a></td>
+                                <td class="cell-author">Ann Patchett</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Mar 22, 2021</td>
+                                <td class="cell-completed">Apr 5, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Gray-Mountain-31643c0779e94ca28ebe3613b62b7afe">Gray Mountain</a></td>
+                                <td class="cell-author">John Grisham</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Mar 18, 2021</td>
+                                <td class="cell-completed">Mar 21, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Atomic-Habits-4199d8ed0ec240fabbaff2542ce8aa59">Atomic Habits</a></td>
+                                <td class="cell-author">James Clear</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start">Feb 25, 2021</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Ready-Player-Two-88bcb2cb363d49698d0f56230787c2f4">Ready Player Two</a></td>
+                                <td class="cell-author">Ernest Cline</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Feb 19, 2021</td>
+                                <td class="cell-completed">Feb 24, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Daylight-bff3268762e7402a8eb049e0ab7a2135">Daylight</a></td>
+                                <td class="cell-author">David Baldacci</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Feb 17, 2021</td>
+                                <td class="cell-completed">Feb 28, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/After-Dark-6811417c4c0d402e8c3b8d878741a799">After Dark</a></td>
+                                <td class="cell-author">Haruki Marakami</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start">Feb 17, 2021</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Interior-Chinatown-0593e5c756714755ae9f3327049c6536">Interior Chinatown</a></td>
+                                <td class="cell-author">Charles Yu</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start">Feb 10, 2021</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Long-Road-to-Mercy-326bc91847934fea9419a613431b5f90">Long Road to Mercy</a></td>
+                                <td class="cell-author">David Baldacci</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Feb 4, 2021</td>
+                                <td class="cell-completed">Feb 4, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/A-Minute-to-Midnight-45b96444c3774717898c95b04d8690f8">A Minute to Midnight</a></td>
+                                <td class="cell-author">David Baldacci</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Feb 4, 2021</td>
+                                <td class="cell-completed">Feb 16, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Everywhere-That-Mary-Went-6f5a7f26384f4660a7aeb10e4e7927d4">Everywhere That Mary Went</a></td>
+                                <td class="cell-author">Lisa Scottoline</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-pink">On Hold</span></td>
+                                <td class="cell-start">Feb 1, 2021</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Educated-93d36badad4d4416a1955bcbeef7c731">Educated</a></td>
+                                <td class="cell-author">Tara Westover</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-pink">On Hold</span></td>
+                                <td class="cell-start">Jan 31, 2021</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Talking-to-Strangers-39e41b620d414b54801eb43e97712734">Talking to Strangers</a></td>
+                                <td class="cell-author">Malcom Gladwell</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Jan 31, 2021</td>
+                                <td class="cell-completed">Jan 31, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Nine-Perfect-Strangers-38c0094f9b6f4260a82d52f5a0fafd06">Nine Perfect Strangers</a></td>
+                                <td class="cell-author">Liane Moriarty</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Jan 26, 2021</td>
+                                <td class="cell-completed">Jan 26, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Templar-Legacy-b5591e15e7cf4eb0aebc7ce6d3bd2fcd">The Templar Legacy</a></td>
+                                <td class="cell-author">Steve Berry</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-red">To Read</span></td>
+                                <td class="cell-start">Jan 19, 2021</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Last-Joror-6ae587aeff464f0db6312f7cc3b6d233">The Last Joror</a></td>
+                                <td class="cell-author">John Grisham</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-red">To Read</span></td>
+                                <td class="cell-start">Jan 19, 2021</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Subtle-Art-of-Not-Giving-a-Fuck-bbd319c2b2d043e3841d3bb53dc95587">The Subtle Art of Not Giving a Fuck</a></td>
+                                <td class="cell-author">Mark Manson</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start">Jan 18, 2021</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Dune-2a06807d1f9c48539c55ef2830011105">Dune</a></td>
+                                <td class="cell-author">Franke Herbert</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-pink">On Hold</span></td>
+                                <td class="cell-start">Jan 18, 2021</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Whistler-400027703cab4abca7205138780df977">The Whistler</a></td>
+                                <td class="cell-author">John Grisham</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start">Jan 15, 2021</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Rogue-Lawyer-dbcc1e0421b445c5bf2b6497957c4d6e">Rogue Lawyer</a></td>
+                                <td class="cell-author">John Grisham</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Jan 14, 2021</td>
+                                <td class="cell-completed">Jan 14, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Modern-Romance-b37853a48409449d8fddf0426c393387">Modern Romance</a></td>
+                                <td class="cell-author">Aziz Ansari</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Jan 6, 2021</td>
+                                <td class="cell-completed">Jan 9, 2021</td>
+                            </tr>
+
+
+
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/You-are-a-Badass-ab13aab2eba1419884aa656cc6662331">You are a Badass</a></td>
+                                <td class="cell-author">Jen Sincero</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-pink">On Hold</span></td>
+                                <td class="cell-start">Jan 6, 2021</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+
+                            <!-- 2020 -->
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Split-Second-fb24fe66217446e5bbce97a1d39e64de">Split Second</a></td>
+                                <td class="cell-author">David Baldacci</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start">Dec 27, 2020</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/How-to-Win-Friends-and-Influence-People-9e3c461e50bd4c6a8906ea04d5964efd">How to Win Friends and Influence People</a></td>
+                                <td class="cell-author"></td>
+                                <td class="cell-status"><span class="selected-value select-value-color-pink">On Hold</span></td>
+                                <td class="cell-start">Dec 24, 2020</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Overkill-0608837678184b6c9b20e278580316cd">Overkill</a></td>
+                                <td class="cell-author">Ted Bell</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-pink">On Hold</span></td>
+                                <td class="cell-start">Dec 4, 2020</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Ready-Player-One-2a3ab54dbeca4d448f30d8ce09b47254">Ready Player One</a></td>
+                                <td class="cell-author">Ernest Cline</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Mar 1, 2018</td>
+                                <td class="cell-completed">Mar 11, 2018</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Project-Hail-Mary-689e5c5e33c04ec4bf2ecde2068bb37e">Project Hail Mary</a></td>
+                                <td class="cell-author">Andy Weir</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">May 20, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Circle-0e40d84c728c427ba6b31c03a2fff424">The Circle</a></td>
+                                <td class="cell-author">David Egger</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Mar 7, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Sapiens-A-brief-history-of-humankind-2c2b16799c8a45ac9f0a4cd58f12b34b">Sapiens: A brief history of humankind</a></td>
+                                <td class="cell-author">Yuval Noah Harari</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Jan 14, 2021</td>
+                                <td class="cell-completed">Jan 22, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Paddle-Your-Own-Canoe-da6076011b3c49bba1182d3768ff229a">Paddle Your Own Canoe</a></td>
+                                <td class="cell-author">Nick Offerman</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Dec 27, 2020</td>
+                                <td class="cell-completed">Jan 4, 2021</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Walk-The-Wire-0453b83b4cae4e36aae2231253c358ca">Walk The Wire</a></td>
+                                <td class="cell-author">David Baldacci</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Dec 20, 2020</td>
+                                <td class="cell-completed">Dec 27, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Billion-Dollar-Loser-ff5c180492f147da863e20aab544562d">Billion Dollar Loser</a></td>
+                                <td class="cell-author"></td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Dec 8, 2020</td>
+                                <td class="cell-completed">Dec 20, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Rich-People-Problems-1e456f43b4fc4eb3bac7bca12f144c07">Rich People Problems</a></td>
+                                <td class="cell-author">Kevin Kwan</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Nov 30, 2020</td>
+                                <td class="cell-completed">Dec 8, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Singapore-Sapphire-46351c9426274c00b685c755199441f1">Singapore Sapphire</a></td>
+                                <td class="cell-author">A. M. Stuart</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-pink">On Hold</span></td>
+                                <td class="cell-start">Dec 7, 2020</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/China-Rich-Girlfriend-6c54c640622449d19f43633eaba8ab16">China Rich Girlfriend</a></td>
+                                <td class="cell-author">Kevin Kwan</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Nov 19, 2020</td>
+                                <td class="cell-completed">Nov 30, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Unorthodox-e6f89cf85dcc432ead1f84ce9958482d">Unorthodox</a></td>
+                                <td class="cell-author">Deborah Feldman</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-pink">On Hold</span></td>
+                                <td class="cell-start">Nov 19, 2020</td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Jurrassic-Park-0347a574bba044c4ad12216b431a027f">Jurrassic Park</a></td>
+                                <td class="cell-author">Michael Crichton</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Nov 12, 2020</td>
+                                <td class="cell-completed">Nov 19, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Stillhouse-Lake-003e2fdf5b234875864b9e74f4fa1004">Stillhouse Lake</a></td>
+                                <td class="cell-author">Rachel Caine</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Nov 6, 2020</td>
+                                <td class="cell-completed">Nov 12, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Grip-of-It-43b50a5d6eed455e918f0e428bbc9130">The Grip of It</a></td>
+                                <td class="cell-author">Jac Jemc</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Nov 1, 2020</td>
+                                <td class="cell-completed">Nov 6, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Democracy-in-One-Book-or-less-51251a248ea04ceb802e0bff80289d38">Democracy in One Book or less</a></td>
+                                <td class="cell-author">David Litt</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Oct 20, 2020</td>
+                                <td class="cell-completed">Nov 2, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/A-Hero-Born-236acfc0289545b3bdf2cae8e36001dd">A Hero Born</a></td>
+                                <td class="cell-author">Jin Yong</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Oct 22, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Caverns-Creatures-Book-4-21a1851244824b8c8072defc44453a86">Caverns &amp; Creatures (Book 4)</a></td>
+                                <td class="cell-author">Robert Bevan</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Oct 14, 2020</td>
+                                <td class="cell-completed">Oct 20, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Outsider-3fe4a0b3f6b248a08e535fcaae0d90ee">The Outsider</a></td>
+                                <td class="cell-author">Steven King</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Oct 20, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Caverns-Creatures-Book-3-e38d647d02d84276a4aade1abbe9d32e">Caverns &amp; Creatures (Book 3)</a></td>
+                                <td class="cell-author">Robert Bevan</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Oct 7, 2020</td>
+                                <td class="cell-completed">Oct 14, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Caverns-Creatures-Book-2-3ff090bde5da4f748648aff65126de77">Caverns &amp; Creatures (Book 2)</a></td>
+                                <td class="cell-author">Robert Bevan</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Oct 2, 2020</td>
+                                <td class="cell-completed">Oct 7, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Caverns-Creatures-Book-1-9b980740ffb54d00afc28a3d929fdd48">Caverns &amp; Creatures (Book 1)</a></td>
+                                <td class="cell-author">Robert Bevan</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start">Sep 24, 2020</td>
+                                <td class="cell-completed">Oct 2, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Irresitible-de4584d765334fe4a3819a8717410ffc">Irresitible</a></td>
+                                <td class="cell-author">Adam Alter</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Sep 28, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Blood-and-Bone-8fbec71c6d95429797521f153d345869">Blood and Bone</a></td>
+                                <td class="cell-author">Nora Roberts</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Sep 24, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Fear-6ec593b77ed841f6b10dd590ecc731e4">Fear</a></td>
+                                <td class="cell-author">Bob Woodworth</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Sep 23, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Fix-d2b1c2c951bd4520bbbb467552455fbe">The Fix</a></td>
+                                <td class="cell-author">David Baldacci</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Sep 9, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Last-Mile-f9eb71af6c394a9eaa76325b0986a8f7">The Last Mile</a></td>
+                                <td class="cell-author">David Baldacci</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Aug 24, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Memory-Man-47be898fb6fd41db840c239568b81b0b">Memory Man</a></td>
+                                <td class="cell-author">David Baldacci</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Aug 5, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Redemption-4bb1070d47c2460d8a379517f8206a78">Redemption</a></td>
+                                <td class="cell-author">David Baldacci</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Jul 31, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Camino-Island-33ff0d94925048c5b306a588863a7209">Camino Island</a></td>
+                                <td class="cell-author">John Grisham</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Jul 17, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Kremlin-s-Canidate-b58d41ba3a504dc2a82a8a5cdc0af98e">The Kremlin&#x27;s Canidate</a></td>
+                                <td class="cell-author">Jason Matthews</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Jul 8, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Consuming-Fire-5d71640c53b54b6ea0a9d3c0ea2c0794">The Consuming Fire</a></td>
+                                <td class="cell-author">John Scalzi</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Jun 26, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Catch-and-Kill-7f06529b7abc40bf9c80877f1c49de67">Catch and Kill</a></td>
+                                <td class="cell-author">Ronan Farrow</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Jun 22, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Misery-0060c22d18644b4ea93e55f4cb53b315">Misery</a></td>
+                                <td class="cell-author">Stephen King</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Jun 17, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Cockroaches-0680e761888443d2b226d912b01bac35">Cockroaches</a></td>
+                                <td class="cell-author">Jo Nesbo</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Jun 9, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Snowman-2db6e4e5f0584996a3eac7fe63f5fcb0">The Snowman</a></td>
+                                <td class="cell-author">Jo Nesbo</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">May 26, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Reckoning-a0220d2e712d47a798f60188ad5cb0c1">The Reckoning</a></td>
+                                <td class="cell-author">John Grisham</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">May 22, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Force-of-Nature-687d691f866449378c7da1dd033a0227">Force of Nature</a></td>
+                                <td class="cell-author">Jane Harper</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Apr 21, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Collapsing-Empire-37ac38e174ed4ce7b0584b5acb2d0f8a">The Collapsing Empire</a></td>
+                                <td class="cell-author">John Scalzi</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Apr 21, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Crazy-Rich-Asians-c1f011cc6ffe4a99a055d45425f8cb3c">Crazy Rich Asians</a></td>
+                                <td class="cell-author">Kevin Kwan</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Apr 16, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Road-to-Jonestown-89e13dc4e83b43e3bb2fbe852cef9f0c">The Road to Jonestown</a></td>
+                                <td class="cell-author">Jeff Guinn</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Apr 15, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Stranger-in-the-Woods-64250f23228046e3a52c21e7226425a3">The Stranger in the Woods</a></td>
+                                <td class="cell-author">Michael Finkel</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Apr 15, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-President-is-Missing-2551b73037624f65936bf39b19fc0ff4">The President is Missing</a></td>
+                                <td class="cell-author">Bill Clinton &amp; James Patterson</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Apr 5, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Dry-c00688e518984a4489f6d70e41c1190c">The Dry</a></td>
+                                <td class="cell-author">Jane Harper</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Mar 30, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Kid-Lawyer-638fc64b658d44499154468968e9a51c">Kid Lawyer</a></td>
+                                <td class="cell-author">John Grisham</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Mar 17, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Bad-Blood-49f9c12057d043dba0bba475bc5557b6">Bad Blood</a></td>
+                                <td class="cell-author">John Carreyrou</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Feb 24, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Racketeer-dd9015241f79489ea7aea7308ecd433f">The Racketeer</a></td>
+                                <td class="cell-author">John Grisham</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Jan 24, 2020</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Pelican-Brief-29db60756ff74b2e8c506fb3fffdbc99">The Pelican Brief</a></td>
+                                <td class="cell-author">John Grisham</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Jan 16, 2020</td>
+                            </tr>
+
+                            <!-- 2019 -->
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Interview-with-the-Vampire-8d91699af02b42ffa0a98690189afe46">Interview with the Vampire</a></td>
+                                <td class="cell-author">Anne Rice</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Dec 14, 2019</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Unfu-k-Yourself-60e294e94c704f20bdd51c0b0edaea2e">Unfu*k Yourself</a></td>
+                                <td class="cell-author">Gary John Bishop</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Dec 5, 2019</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Sycamore-Row-644fee48f6a94b33b1ec94658902f9b6">Sycamore Row</a></td>
+                                <td class="cell-author">John Grisham</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Dec 3, 2019</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Firm-03c0e02eca9146ef83e716bbe9d278cd">The Firm</a></td>
+                                <td class="cell-author">John Grisham</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Nov 25, 2019</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-King-of-Torts-a6f205fef6c5456f8073af73b65873db">The King of Torts</a></td>
+                                <td class="cell-author">John Grisham</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Nov 21, 2019</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/A-Time-to-Kill-a52ccb58a4554361bdfa2555304b86a4">A Time to Kill</a></td>
+                                <td class="cell-author">John Grisham</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Nov 13, 2019</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Talent-Code-7146ed64fa3f40658bd26554d6504e6f">The Talent Code</a></td>
+                                <td class="cell-author">Daniel Coyle</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Nov 11, 2019</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Guardians-5aad7967e47d4a25b99d7e05dd8823da">The Guardians</a></td>
+                                <td class="cell-author">John Grisham</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Nov 10, 2019</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Super-Pumped-91200916ea4b414198a71544c38d2a2e">Super Pumped</a></td>
+                                <td class="cell-author">Mike Isaac</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Sep 6, 2019</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Man-who-knew-the-way-to-the-moon-5eeb846d6ef04e7aae65adeb2c240067">The Man who knew the way to the moon</a></td>
+                                <td class="cell-author">Todd Zwillich</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Jul 26, 2019</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Fall-and-Rise-of-China-8b989be09103418591c08a9b7e090360">The Fall and Rise of China</a></td>
+                                <td class="cell-author">Richard Baum</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Jun 25, 2019</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Story-of-Human-Language-54ebb7b68d29495da6ae09bbe113901e">The Story of Human Language</a></td>
+                                <td class="cell-author">John McWorter</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Jun 25, 2019</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Never-Split-the-Difference-bd86fe6c78454ef8b284707c3f436874">Never Split the Difference</a></td>
+                                <td class="cell-author">Chris Voss</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Mar 28, 2019</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Disrupted-e6f413e28ed54f44818a4913b9e3b3bf">Disrupted</a></td>
+                                <td class="cell-author">Dan Lyons</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Feb 7, 2019</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Singularity-Trap-901b44eb5646407aa7ad920854b719b0">The Singularity Trap</a></td>
+                                <td class="cell-author">Dennis E. Taylor</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Feb 4, 2019</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Killer-by-Nature-4e8feb36811a44ea85b68e4927ff6c5e">Killer by Nature</a></td>
+                                <td class="cell-author">Jan Smith</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Feb 1, 2019</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Last-Days-of-August-92321fd5ac5e42f684fbbed13fc8114d">The Last Days of August</a></td>
+                                <td class="cell-author">Jon Ronson</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Jan 4, 2019</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Columbus-Day-628a15f8aaf447e98977637dcd7042f3">Columbus Day</a></td>
+                                <td class="cell-author">Craig Alanson</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Dec 28, 2018</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Old-Man-s-War-73e78f8d77864b44aa1d44f97653bdd4">Old Man&#x27;s War</a></td>
+                                <td class="cell-author">John Scalzi</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Dec 16, 2018</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-History-of-the-World-in-6-Glasses-9e1037d6886f4c6cbc1751199ba12c3b">The History of the World in 6 Glasses</a></td>
+                                <td class="cell-author">Tom Standage</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Dec 10, 2018</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/In-the-Garden-of-Beasts-2a5f5525b9bd4859ad15be592f59056f">In the Garden of Beasts</a></td>
+                                <td class="cell-author">Erik Larson</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-green">Completed</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed">Dec 10, 2018</td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Premonition-c56e000a343f456a91b0a5bb779dd790">The Premonition</a></td>
+                                <td class="cell-author">Michael Lewis</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-red">To Read</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Time-was-Soft-There-d7b08b812f2241b487ba27b82fa7b4f5">Time was Soft There</a></td>
+                                <td class="cell-author">Jeremy Mercer</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-red">To Read</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/World-Travel-An-Irreverent-Guide-c70a74f3f0e741f8b507890252eb507c">World Travel: An Irreverent Guide</a></td>
+                                <td class="cell-author">Anthony Bourdain &amp; Laurie Woodlever</td>
+                                <td class="cell-status"></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Kitchen-Confidential-e8e0f021173948bd8e77612edb47b99c">Kitchen Confidential</a></td>
+                                <td class="cell-author">Anthony Bourdain</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-red">To Read</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Medium-Raw-d1fbc6bccdc44d429ffe9202e74ec26a">Medium Raw</a></td>
+                                <td class="cell-author">Anthony Bourdain</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-red">To Read</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Skyward-21e331c3c86b4d6792f2b7d820d6aa96">Skyward</a></td>
+                                <td class="cell-author">Brandon Sanderson</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-red">To Read</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Have-you-eaten-Grandma-41fabadc9ee84da6ae8e06ac8f81ef1d">Have you eaten Grandma?</a></td>
+                                <td class="cell-author"></td>
+                                <td class="cell-status"></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-big-Lebowski-and-Philosophy-ee086d4e1cbf4a0db25ae0e748d05d1f">The big Lebowski and Philosophy</a></td>
+                                <td class="cell-author"></td>
+                                <td class="cell-status"></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Rainbow-Six-John-Clark-2-35e67de335174f27b756512a647f6fc2">Rainbow Six (John Clark #2)</a></td>
+                                <td class="cell-author">Tom Clancey</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-red">To Read</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/The-Hunt-for-Red-Oct-2f1292cf05fa4f4e8e97441937e49b81">The Hunt for Red Oct</a></td>
+                                <td class="cell-author">Tom Clancey</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-red">To Read</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Without-Remorse-John-Clark-1-3b0507109d234c5cabb6a01cb2029cf8">Without Remorse (John Clark #1)</a></td>
+                                <td class="cell-author">Tom Clancey</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-red">To Read</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Homo-Deus-872d2bacb0d94dce8cc9a74e85fb6dd2">Homo Deus</a></td>
+                                <td class="cell-author">Yuval Noah Harari</td>
+                                <td class="cell-status"><span class="selected-value select-value-color-yellow">In Progress</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                            <tr class="book">
+                                <td class="cell-title"><a href="https://www.notion.so/Girl-With-The-Dragon-Tattoo-58e1e15d4d734885b675ef0f74f08e7d">Girl With The Dragon Tattoo</a></td>
+                                <td class="cell-author"></td>
+                                <td class="cell-status"><span class="selected-value select-value-color-red">To Read</span></td>
+                                <td class="cell-start"></td>
+                                <td class="cell-completed"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+    </div>
+  </div>
+</section>
+<!-- /page title -->
+
+
+{{ end }}
