@@ -27,6 +27,8 @@ URL = "plugins/shuffle/shuffle.min.js"
 [[params.plugins.js]]
 URL = "plugins/lightbox2/js/lightbox.min.js"
 
+# robot.txt 
+enableRobotsTXT = true
 
 # menu
 [[menu.main]]
