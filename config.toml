@@ -27,6 +27,8 @@ URL = "plugins/shuffle/shuffle.min.js"
 [[params.plugins.js]]
 URL = "plugins/lightbox2/js/lightbox.min.js"
 
+# robot.txt 
+enableRobotsTXT = true
 
 # menu
 [[menu.main]]
@@ -64,7 +66,7 @@ description = "Product Designer with +10 years of professional experience"
 # google analytics
 google_analytics_id = "34429936" # Your ID
 # copyright
-copyright = "Copyright &copy; 2021 Ian Donahue"
+copyright = "Copyright &copy; 2023 Ian Donahue"
 
 
 # contact
