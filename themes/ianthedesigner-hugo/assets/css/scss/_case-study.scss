@@ -262,6 +262,54 @@
 }
 
 
+
+// Design System Case Study
+.page-title-design-system {
+  background-image: url("/images/portfolio/design-system/bg-design-system.png");
+  background-color: orange;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &.page-title {
+    padding: 250px 0 430px;
+  }
+  .text-shopify-default-color {
+    color: #202223;
+  }
+  p {
+    color: #202223;
+  }
+  a {
+    color: white;
+  }
+}
+.hero.shopify-forms {
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+@media (max-width: 967px) {
+  .page-title-shopify-forms {
+    background-size: 1320px;
+    background-position: -140px bottom;
+    &.page-title {
+      padding-bottom: 390px;
+    }
+  }
+}
+@media (max-width: 414px) {
+  .page-title-shopify-forms {
+    background-size: 1320px;
+    background-position: -140px bottom;
+    &.page-title {
+      padding-bottom: 190px;
+    }
+  }
+}
+
+
+
 // Shopify Forms Case Study
 .page-title-shopify-forms {
   background-image: url("/images/portfolio/shopify/bg-shopify-forms-tinified.jpg");

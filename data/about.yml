@@ -38,7 +38,7 @@ cv_experience:
       company : "Qunomedical"
       company_site : "https://qunomedical.com"
       case_study: true
-      case_study_url: "../qunomedical/"
+      case_study_url: "../design-systems/"
       duration : "Sept 2020 - June 2022"
       description_short: ""
       description_long : "Oversaw all aspects of design. Directed a small team of designer to improver our implement a global Design System, Design Ops, Marketing Ops, and as well as individually contributed to as a Product Designer. Released numerous products to push the company to a fully digitalized post sales experience."
