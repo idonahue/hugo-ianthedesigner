@@ -27,7 +27,7 @@ To compile the SASS files, you will need to go to the theme SCSS file:
 ```cd themes/ianthedesigner-hugo/assets/css/scss```
 
 Run: 
-```sass --watch .```
+```sass --watch .:../```
 
 ## The hugo Command
 The most common usage is probably to run `hugo` with your current directory being the input directory.

@@ -1207,6 +1207,7 @@ a:hover .graphic-container {
   width: 100%;
 }
 .persona-container .persona ul li {
+  font-size: 18px;
   margin-bottom: 16px;
 }
 
@@ -1214,6 +1215,50 @@ a:hover .graphic-container {
   .persona-container .persona .persona-content {
     padding-left: 24px;
     padding-right: 24px;
+  }
+}
+.page-title-design-system {
+  background-image: url("/images/portfolio/design-system/bg-design-system.png");
+  background-color: orange;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.page-title-design-system.page-title {
+  padding: 250px 0 430px;
+}
+.page-title-design-system .text-shopify-default-color {
+  color: #202223;
+}
+.page-title-design-system p {
+  color: #202223;
+}
+.page-title-design-system a {
+  color: white;
+}
+
+.hero.shopify-forms {
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+@media (max-width: 967px) {
+  .page-title-shopify-forms {
+    background-size: 1320px;
+    background-position: -140px bottom;
+  }
+  .page-title-shopify-forms.page-title {
+    padding-bottom: 390px;
+  }
+}
+@media (max-width: 414px) {
+  .page-title-shopify-forms {
+    background-size: 1320px;
+    background-position: -140px bottom;
+  }
+  .page-title-shopify-forms.page-title {
+    padding-bottom: 190px;
   }
 }
 .page-title-shopify-forms {
