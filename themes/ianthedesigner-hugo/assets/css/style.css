@@ -1010,6 +1010,20 @@ a:hover .graphic-container {
   border-radius: 8px;
 }
 
+.hero.design-system {
+  height: 420px;
+}
+
+.case-study-design-system {
+  height: 688px;
+  bottom: 220px;
+  margin-top: 0;
+  background-image: url("/images/portfolio/design-system/case-study-hero-design-system.png");
+  background-color: white;
+  background-position: center 0;
+  background-size: cover;
+}
+
 .case-study-shopify-forms {
   height: 675px;
   background-color: white;
