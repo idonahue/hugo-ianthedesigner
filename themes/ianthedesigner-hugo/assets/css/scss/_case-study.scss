@@ -265,29 +265,20 @@
 
 // Design System Case Study
 .page-title-design-system {
-  background-image: url("/images/portfolio/design-system/bg-design-system.png");
-  background-color: orange;
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: cover; 
+  // background-image: url("/images/portfolio/design-system/bg-design-system.png");
+  // background-color: orange;
+  // background-position: bottom center;
+  // background-repeat: no-repeat;
+  // background-size: cover; 
   &.page-title {
-    padding: 250px 0 430px;
-  }
-  .text-shopify-default-color {
-    color: #202223;
-  }
-  p {
-    color: #202223;
-  }
-  a {
-    color: white;
+    padding: 250px 0;
   }
 }
-.hero.shopify-forms {
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  background-size: cover;
-}
+// .hero.shopify-forms {
+//   background-repeat: no-repeat;
+//   background-position: bottom center;
+//   background-size: cover;
+// }
 
 @media (max-width: 967px) {
   .page-title-shopify-forms {

@@ -3,13 +3,13 @@ body {
   font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
   font-size: $font-size-global;
-  line-height: 1.2;
+  line-height: 180%;
   color: #798A93;
 }
 
 p {
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 180%;
   font-family: var(--font-secondary);
 }
 

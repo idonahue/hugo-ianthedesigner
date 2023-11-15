@@ -27,13 +27,13 @@ body {
   font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 180%;
   color: #798A93;
 }
 
 p {
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 180%;
   font-family: var(--font-secondary);
 }
 
@@ -1217,30 +1217,8 @@ a:hover .graphic-container {
     padding-right: 24px;
   }
 }
-.page-title-design-system {
-  background-image: url("/images/portfolio/design-system/bg-design-system.png");
-  background-color: orange;
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 .page-title-design-system.page-title {
-  padding: 250px 0 430px;
-}
-.page-title-design-system .text-shopify-default-color {
-  color: #202223;
-}
-.page-title-design-system p {
-  color: #202223;
-}
-.page-title-design-system a {
-  color: white;
-}
-
-.hero.shopify-forms {
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  background-size: cover;
+  padding: 250px 0;
 }
 
 @media (max-width: 967px) {
@@ -2698,6 +2676,7 @@ blockquote {
 
 .page-title {
   padding: 250px 0 150px;
+  background-color: #22262C;
 }
 
 .page-title .container {
