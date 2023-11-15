@@ -49,7 +49,7 @@ in 90 ms
 
 
 ## Deployment
-Site is hosted on Netlify.com. Commit changes to `Production` branch and Netlify will fetch the changes and automatically build the site to https://ianthedesigner.com . No need for complex deployment. It is automatic.
+Site is hosted on Netlify.com. Commit changes to `master` branch and Netlify will fetch the changes and automatically build the site to https://ianthedesigner.com . No need for complex deployment. It is automatic.
 
 
 ## LiveReload
