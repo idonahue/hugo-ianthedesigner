@@ -47,7 +47,7 @@
   height: 400px;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 8px;
+  border-radius: 4px;
   //transition
   transition: 0.5s;
   transform: scale(1);
@@ -105,6 +105,16 @@ a:hover .graphic-container {
 
 
 // Custom Graphics for each project
+.design-system-section {
+  .graphic-container {
+    background-color: white;
+    background-image: url('/images/portfolio/design-system/case-study-hero-design-system.png');
+    background-size: cover;
+  }
+}
+
+
+
 .shopify-forms-section {
   .graphic-container {
     background-color: #F8BBA1;
