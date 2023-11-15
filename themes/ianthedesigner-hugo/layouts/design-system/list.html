@@ -5,9 +5,9 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-10 col-lg-8">
-        <h1 class="text-white font-tertiary">Anatomie &#8212; <br>a Design System</h1>
+        <h1 class="text-white font-tertiary">Die Anatomie &#8212; <br>a Design System</h1>
         <p>
-          Die Anatomie, meaning "the anatomy" in Germany, is the design system for Qunomedical, a Berlin based medical startup. The name seems more than fitting. It as the structures of building our product.
+          "Die Anatomie," meaning "the anatomy" in German and is the design system for <a href="https://www.qunomedical.com/en/" target="_blank">Qunomedical</a>, a Berlin based medical startup. The name seems more than fitting as it is the components of building our product.
         </p>
       </div>
       <div class="col-4"></div>
@@ -100,9 +100,9 @@
             <div class="flexbox">
               <div class="icon"></div>
               <div class="message">
-                <b>There's a lot more to see!</b>
+                <b>Case Study Preview</b>
                 <p>
-                  UX flows, wireframes, user research, and sitemaps available upon request.
+                  Complete design system documentation available upon request.
                 </p>
               </div>
             </div>
@@ -116,14 +116,23 @@
           </p>
 
           <h3>
+            Background 
+          </h3>
+          <p>
+            Qunomedical had no design system or UI library whatsoever, which ended up creating a lot of inconsistencies across the user journey. Previous designers were creating and shipping designs and interfaces with no single source of truth. This added up to creating production interfaces that had several different color and text styles, spacing, shadows and overall incongruent components.
+          </p>
+          <p>
+            As the senior most designer, I was charged with creating Qunomedical’s first design system. I had to audit the entire user journey, mapping all styles, spacings, treatments and components we were using, and create a system that was complete enough to recreate everything we had in production, but minimal enough to converge all these inconsistencies into less styles and components, while being simple to use by our designers, product managers, and engineering team.
+          </p>
+
+          <h3>
             Problem
           </h3>
           <p>
-            We lacked consistency and quality in our product. Wording, UI, colors, buttons, text styles, etc. were out of sync and based on a past designers and their preferences and goals. A design system built with react and based on a single Figma file would fix this. The goal: To make it easier for designers and developers to build products. If it fails at this, you need to change it.
+            We lacked consistency and quality in our product. This was due to having a product worked on by many different designers in a fast-paced startup environment. These inconsistencies included wording, UI, colors, buttons, text styles, etc. Qunomedical lacked a single source of truth on how the product should, look, feel and make users feel when using our products.
           </p>
 
           <h3>Goals</h3>
-
           <ul>
             <li class="mb-2">To make it easier for designers and developers to build products. </li>
             <li class="mb-2">Create a unified design system that reflects Qunomedical's brand, visual style and tone of voice. </li>
@@ -131,64 +140,22 @@
             <li class="mb-2">Create documentation where everyone can find the official and foundational resources, principles, assets and other resources.</li>
           </ul>
 
-
           <h3>
-            My Role
+            What did I inherit?
           </h3>
           <p>
-            I strive to support the patients, business objective, and product team (PMs and Engineers). I was the solo design working on this project but I had support from a our senior most front-end developer to build this out.
-          </p>
-
-          <p>
-            I've worked on and developed numerous design systems, but not from a company with some much legacy interfaces and experiences. I knew many of the best practices, but never built one that would be leveraged by multiple teams, developers or product managers. I leaned strongly into the <a href="https://atomicdesign.bradfrost.com/table-of-contents/" target="_blank">Atomic Design Model</a> and also best practices from companies like Shopify (<a href="https://polaris.shopify.com/" target="_blank">Polaris Design System</a>).
-          </p>
-          <!-- <p>
-            For your convenience, I've included a list of resources at the end of this page of resources I leverged even to this day.
-          </p> -->
-        </div>
-      </div>
-  </div>
-</div>
-
-<section class="bg-white pt-96">
-  <div class="container">
-    <div class="row justify-content-md-center">
-      <div class="col-sm-12 col-md-10 col-lg-6">
-
-
-          <h3>What did I inherit?</h3>
-
-          <h4>Where it started</h4>
-          <p>
-            With the rough strategy of, "most reused elements first" followed by "multi-page elements" following, I got started auditing
+            The initial phase of this project was auditing the entire user journey, , mapping all the color styles, text styles, spacings, shadows and components we were using across all screens. Throughout the audit process, I grouped similar components to understand how many versions of each type of component we had. For instance, I found out that we were using at least 7 different button styles across the user flow.
           </p>
           <p>
+            After the audit and grouping phase, I had a clear understanding of the opportunities I had to converge different treatments for the same component into a more minimal set.
           </p>
-            I screenshots of every page, modal, menu, and element in the web app and added the screenshots to Figma pages. I believe in working faster and not harder, so I didn't re-create anything until after we had a feel of the most inconsistent elements. Though it was buttons, inputs, and colors.
-          </p>
-
-          <h4>Tokens</h4>
-          <ol>
-            <li>Colors</li>
-            <li>Spacing</li>
-            <li>Text Styles</li>
-          </ol>
-
-          <h4>Components</h4>
-          <ol>
-            <li>Buttons</li>
-            <li>Inputs</li>
-            <li>Icons</li>
-            <li>Modals</li>
-            <li>etc...</li>
-          </ol>
 
           <div class="row">
-            <div class="content-image col-md-12" >
+            <div class="content-image col-md-12 mb-0 p-3" >
               <div class="container" style="display: flex; flex-grow: 1; gap: 20px; ">
                 
                   <div class="">
-                    <img class="shadow mobile-device" src="../images/portfolio/design-system/examples/audit-buttons-before.jpg" alt="" width="100%">
+                    <img class="shadow " src="../images/portfolio/design-system/examples/audit-buttons-before.jpg" alt="" width="100%">
                     <div class="caption text-center">
                       Previous button versions and states
                     </div>
@@ -197,81 +164,107 @@
             </div>
           </div>
 
-          <h4>Audit</h4>
 
+          <h3>
+            Collaboration
+          </h3>
           <p>
-            Once I believed I had cataloged every button, icon, and design pattern, I organized them into categories. A side-by-side examination revealed the pressing need for a design system. There were numerous button styles, inconsistent font weights, and scattered single-use icons.
+            After the the components housekeeping was done, it was time to understand how I should organize the system so designers would actually enjoy using it. Then, a lot of tooling questions came into place - Should we use components properties or variants? How many levels of artifacts should the system have? And many others.
+          </p>
+          <p>
+            To get to the answers, I had some sessions with the designers, product managers and even marketing managers understanding their preferred way to use it, and I finished to create all the components and the library in Figma accordingly.
           </p>
 
 
-
-          <h4>
-            Edit
-          </h4>
-
+          <h3>
+            Handover
+          </h3>
           <p>
-            This proved to be the most time-consuming part of the project. I had to make decisions regarding naming conventions, categorization, organization, and presentation. Much effort went into naming and re-naming my Sketch layers and organizing the symbols page. (Pro tip: Consider using Sketch plugins designed for these tasks.)
+            Lastly, I worked with Engineering to prepare a handover documentation and prioritize the development of the components for use in production. As we had a single engineer, we defined a plan of shipping first minimal but impactful elements, the primitives ones (color styles, text styles and atomic components like buttons). This would give us a huge impact on making the experience for users consistent, while we’re shipping other batches of components in a slower cadence.
+          </p>
+         
+
+          <h3>
+            Initial release
+          </h3>
+          <p>
+            Here is a portion of the initially released components that could be leveraged during development of the platform.
           </p>
 
-          <h4>
-            Continuous evolution
-          </h4>
 
-          <p>
-            Design Systems, by their very nature, are dynamic living things. I established regular reminders to update, review, and share the style guide. This ongoing process ensures that the design system remains relevant and effective.
-          </p>
+          <div class="row">
+            <div class="content-image p-3 mb-0 mt-0 col-md-12">
+              <div class="container" style="display: flex; flex-grow: 1; gap: 16px;">
+                  <div class="">
+                    <img class="" src="../images/portfolio/design-system/examples/design-system-color.png" alt="Die Anatomie - Colors" width="100%">
+                    <div class="caption text-center mt-3">
+                      Color highlights important areas, communicates status, urgency, and directs attention
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
 
+          <div class="row">
+            <div class="content-image p-3 mb-0 mt-0 col-md-12">
+              <div class="container" style="display: flex; flex-grow: 1; gap: 16px;">
+                  <div class="">
+                    <img class="" src="../images/portfolio/design-system/examples/design-system-typography.png" alt="Die Anatomie - Typography" width="100%">
+                    <div class="caption text-center mt-3">
+                      Typography is the art of arranging type in ways that provides innate hierarchy to UI
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
 
+          <div class="row">
+            <div class="content-image p-3 mb-0 mt-0 col-md-12">
+              <div class="container" style="display: flex; flex-grow: 1; gap: 16px;">
+                  <div class="">
+                    <img class="" src="../images/portfolio/design-system/examples/design-system-button-examples.png" alt="Die Anatomie - Button types" width="100%">
+                    <div class="caption text-center mt-3">
+                      Buttons are used primarily for actions, such as “Submit”, “Close”, “Cancel”, or “Save”. Plain buttons are used for less important actions.
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
 
+          <div class="row">
+            <div class="content-image p-3 mb-0 mt-0 col-md-12">
+              <div class="container" style="display: flex; flex-grow: 1; gap: 16px;">
+                  <div class="">
+                    <img class="" src="../images/portfolio/design-system/examples/design-system-button-documentation.png" alt="Die Anatomie - Button use cases" width="100%">
+                    <div class="caption text-center mt-3">
+                      Documenting button usage was very important for handover to engineering
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
 
+          <div class="row">
+            <div class="content-image p-3 mb-0 mt-0 col-md-12">
+              <div class="container" style="display: flex; flex-grow: 1; gap: 16px;">
+                  <div class="">
+                    <img class="" src="../images/portfolio/design-system/examples/design-system-funnel.png" alt="Die Anatomie - Funnel" width="100%">
+                    <div class="caption text-center mt-3">
+                      Funnels were highly touched by users, so having clearly documented variations was important
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
 
           <h3>
             Results
           </h3>
-
           <p>
-            As I mentioned in the introduction, my design process was slow, arduous, and unproductive. Working within an Agile team, I struggled to maintain agility. Initially, proposing the creation of a design system was met with skepticism and resistance. However, over time, we gained the necessary support.
-          </p>
-
-          <h5>
-            Benefits:
-          </h5>
-          <p>The advantages of implementing a design system were significant:</p>
-
-          <ul>
-            <li>Time-saving: We streamlined our workflow and reduced repetitive tasks.</li>
-            <li>UI consistency: Our design system helped us maintain a cohesive and trustworthy brand image.</li>
-            <li>Reducing complexity and ambiguity: It clarified design elements and improved user experience.</li>
-            <li>Collaboration and consensus: The design system fostered better teamwork and decision-making.</li>
-            <li>Foundation for improvement: It served as a solid basis for continuous enhancement.</li>
-            <li>In summary, we believed that a design system would make us more efficient and effective.</li>
-          </ul>
-
-          For a comprehensive list of benefits, you can refer to resources available on organizing design systems.
-
-          <h5>
-            Results:
-          </h5>
-          <p>
-            Creating an inventory of UI elements proved to be the most time-consuming phase, next to the editing process. Some of the challenges I encountered included:
+            Until end of 2022, I was also in charge of maintaining the system while working on other projects, updating and creating new components to attend the product and user needs. The system continues active and being used daily by the team, receiving lots of positive feedbacks.
           </p>
 
 
-          <p>
-            Organizing elements effectively.
-          </p>
-          <ul>
-            <li>Establishing consistent naming conventions.</li>
-            <li>Capturing different states and interactions.</li>
-            <li>Monitoring progress and updates.</li>
-            <li>Creating dynamic, nested symbols for reusability.</li>
-            <li>Adhering to Atomic Design Principles.</li>
-            <li>Maintaining focus and motivation.</li>
-          </ul>
-
-          <p>
-            I also experienced a significant setback when my computer crashed, resulting in the loss of several hours of work. This incident prompted me to adopt a more proactive approach, committing to frequent backups and version control for our design files."
-          </p>
 
 
 
@@ -283,37 +276,8 @@
   </div>
 </div>
 
-
-
-
 <section class="bg-white pt-96">
   <div class="container">
-
-
-    <div class="row justify-content-md-center">
-      <div class="col-md-12 col-lg-8 align-self-center">
-        <h3 class="text-left">Die Anatomie - Preview</h3>
-        <p class="text-left">
-          Qunomedical's design team was split between different departments and deliverables including interfaces, marketing landing pages, social media posts, promotional videos, patient documents, and much more. There was no single owner of the design system and we lacked a single source of truth.
-        </p>
-        <p class="text-left">
-          My initiative at Qunomedical was to start developing a single design system, Die Anatomie. Die Anatomie, or Anatomie, ended up allowing all teams members to use to create consistent experiences for patients. Ranges of projects crossed all departments of Qunomedical. Die Anatomie was based on Brand Foster's Atomic Design principles and methodologies.
-        </p>
-        <p class="text-left">
-          We like to know we are building useful cells (Atoms) and organs (Organisms) for non-design team members to use, each one able to control and slightly alter visual components in one way or another.
-        </p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="content-image col-md-12">
-        <img class="no-shadow" src="../images/portfolio/qunomedical/die-anatomie/die-anatomie-1-tinified.png" alt="" style="max-width: 736px; width: 100%;">
-        <img class="no-shadow" src="../images/portfolio/qunomedical/die-anatomie/die-anatomie-2-tinified.png" alt="" style="max-width: 736px; width: 100%;">
-        <img class="no-shadow" src="../images/portfolio/qunomedical/die-anatomie/die-anatomie-3-tinified.png" alt="" style="max-width: 736px; width: 100%;">
-        <img class="no-shadow" src="../images/portfolio/qunomedical/die-anatomie/die-anatomie-4-tinified.png" alt="" style="max-width: 736px; width: 100%;">
-      </div>
-    </div>
-
 
     <div class="row justify-content-md-center mb-96">
       <div class="col-md-12 col-lg-6 text-center">
