@@ -6,7 +6,7 @@ author_signature : "images/about/signature.png"
 draft: false
 ---
 
-I am an interdisciplinary designer with 12+ years of designing digital products that call the web their home. My professional experience has covered all stages of product design - including research, strategy, design, development & delivery.
+I am an interdisciplinary designer with +10 years of designing digital products that call the web their home. My professional experience has covered all stages of product design - including research, strategy, design, development & delivery.
 
 ### Product Designer
 I’m a Product Designer who grew up on the web. I’m not a web designer as much as I think of myself as a Designer who builds products that live on the web. Most recently, I’ve been a Product lead at Dave and unicorn Designer UberMedia. I enjoy solving complex problems with research and elegant UX designs.
