@@ -33,7 +33,7 @@ body {
 
 p {
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 180%;
   font-family: var(--font-secondary);
 }
 
@@ -919,7 +919,7 @@ a:hover .graphic-container {
 
 .design-system-section .graphic-container {
   background-color: white;
-  background-image: url("/images/portfolio/design-system/case-study-hero-design-system.png");
+  background-image: url("/images/portfolio/design-system/design-system-thumbnail.png");
   background-size: cover;
 }
 
