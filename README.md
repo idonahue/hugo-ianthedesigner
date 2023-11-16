@@ -1,6 +1,6 @@
 # hugo-ianthedesigner
 
-## Install homebrew
+## Install Homebrew
 If you don't have homebrew, install that. 
 https://docs.brew.sh/Installation
 ```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"```
@@ -9,12 +9,25 @@ https://docs.brew.sh/Installation
 If you are on macOS and using Homebrew, you can install Hugo with the following one-liner:
 ```brew install hugo```
 
+## Install SASS
+If you are macOS, you will need to install SASS to run the compiling of the SASS
+```brew install sass/sass/sass```
+This doesn't require npm, just Homebrew
 
-## Hugo Local developing
+
+## Running the local developing
+
+### Running Hugo
 To run locally, go to the Hugo root directory. Run command `hugo server` which will output some files and give you a port to view the develpment. When a change is made, Hugo will automatically rebuild and update the browser.
 
 Local port: `http://localhost:1313/`
 
+### Running SASS watch and compile
+To compile the SASS files, you will need to go to the theme SCSS file:
+```cd themes/ianthedesigner-hugo/assets/css/scss```
+
+Run: 
+```sass --watch .:../```
 
 ## The hugo Command
 The most common usage is probably to run `hugo` with your current directory being the input directory.
@@ -36,7 +49,7 @@ in 90 ms
 
 
 ## Deployment
-Site is hosted on Netlify.com. Commit changes to `Production` branch and Netlify will fetch the changes and automatically build the site to https://ianthedesigner.com . No need for complex deployment. It is automatic.
+Site is hosted on Netlify.com. Commit changes to `master` branch and Netlify will fetch the changes and automatically build the site to https://ianthedesigner.com . No need for complex deployment. It is automatic.
 
 
 ## LiveReload

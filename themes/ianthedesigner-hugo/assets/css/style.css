@@ -6,22 +6,6 @@ VERSION: Versoin Number
 -------------------------------------------------------------------*/
 @import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Work+Sans:wght@400;500;600;700&display=swap";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap");
-
-@font-face {
-  font-family: 'Apfel Grotezk';
-  src: url('fonts/ApfelGrotezk-Regular.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Apfel Grotezk';
-  src: url('fonts/ApfelGrotezk-Mittel.woff2') format('woff2');
-  font-weight: 500;
-}
-@font-face {
-  font-family: 'Apfel Grotezk';
-  src: url('fonts/ApfelGrotezk-Fett.woff2') format('woff2');
-  font-weight: 700;
-}
-
 /* terest  s*/
 .button-group {
   margin-bottom: 50px;
@@ -43,8 +27,14 @@ body {
   font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 180%;
   color: #798A93;
+}
+
+p {
+  font-weight: 400;
+  line-height: 180%;
+  font-family: var(--font-secondary);
 }
 
 h1,
@@ -56,7 +46,7 @@ h6 {
   color: #143757;
   font-family: var(--font-primary);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.2;
 }
 
@@ -64,12 +54,6 @@ h1, .h1 {
   font-size: 67px;
   line-height: 110%;
   letter-spacing: -1px;
-}
-
-p {
-  font-weight: 400;
-  line-height: 160%;
-  font-family: var(--font-secondary);
 }
 
 p a {
@@ -886,7 +870,7 @@ b {
   height: 400px;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 8px;
+  border-radius: 4px;
   transition: 0.5s;
   transform: scale(1);
   box-shadow: 0px 36px 100px rgba(33, 68, 104, 0), 0px 12px 32px rgba(25, 28, 31, 0);
@@ -931,6 +915,12 @@ a:hover .graphic-container {
 .note.dark {
   color: white;
   background-color: #155263;
+}
+
+.design-system-section .graphic-container {
+  background-color: white;
+  background-image: url("/images/portfolio/design-system/case-study-hero-design-system.png");
+  background-size: cover;
 }
 
 .shopify-forms-section .graphic-container {
@@ -1024,6 +1014,20 @@ a:hover .graphic-container {
   background-size: contain;
   box-shadow: 0px 36px 100px rgba(33, 68, 104, 0.12), 0px 12px 32px rgba(25, 28, 31, 0.08);
   border-radius: 8px;
+}
+
+.hero.design-system {
+  height: 420px;
+}
+
+.case-study-design-system {
+  height: 688px;
+  bottom: 220px;
+  margin-top: 0;
+  background-image: url("/images/portfolio/design-system/case-study-hero-design-system.png");
+  background-color: white;
+  background-position: center 0;
+  background-size: cover;
 }
 
 .case-study-shopify-forms {
@@ -1223,6 +1227,7 @@ a:hover .graphic-container {
   width: 100%;
 }
 .persona-container .persona ul li {
+  font-size: 18px;
   margin-bottom: 16px;
 }
 
@@ -1230,6 +1235,28 @@ a:hover .graphic-container {
   .persona-container .persona .persona-content {
     padding-left: 24px;
     padding-right: 24px;
+  }
+}
+.page-title-design-system.page-title {
+  padding: 250px 0;
+}
+
+@media (max-width: 967px) {
+  .page-title-shopify-forms {
+    background-size: 1320px;
+    background-position: -140px bottom;
+  }
+  .page-title-shopify-forms.page-title {
+    padding-bottom: 390px;
+  }
+}
+@media (max-width: 414px) {
+  .page-title-shopify-forms {
+    background-size: 1320px;
+    background-position: -140px bottom;
+  }
+  .page-title-shopify-forms.page-title {
+    padding-bottom: 190px;
   }
 }
 .page-title-shopify-forms {

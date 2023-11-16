@@ -38,6 +38,19 @@
   border-radius: 8px;
 }
 
+.hero.design-system {
+  height: 420px;
+}
+.case-study-design-system {
+  height: 688px;
+  bottom: 220px;
+  margin-top: 0;
+  background-image: url('/images/portfolio/design-system/case-study-hero-design-system.png');
+  background-color: white;
+  background-position: center 0;
+  background-size: cover;
+}
+
 .case-study-shopify-forms {
   height: 675px;
   background-color: white;
@@ -45,7 +58,6 @@
   background-size: cover;
   overflow: hidden;
 }
-
 .case-study-dave {
   height: 734px;
   background-image: url('/images/portfolio/dave/dave-hero-tinified.png');
@@ -260,6 +272,45 @@
     }
   }
 }
+
+
+
+// Design System Case Study
+.page-title-design-system {
+  // background-image: url("/images/portfolio/design-system/bg-design-system.png");
+  // background-color: orange;
+  // background-position: bottom center;
+  // background-repeat: no-repeat;
+  // background-size: cover; 
+  &.page-title {
+    padding: 250px 0;
+  }
+}
+// .hero.shopify-forms {
+//   background-repeat: no-repeat;
+//   background-position: bottom center;
+//   background-size: cover;
+// }
+
+@media (max-width: 967px) {
+  .page-title-shopify-forms {
+    background-size: 1320px;
+    background-position: -140px bottom;
+    &.page-title {
+      padding-bottom: 390px;
+    }
+  }
+}
+@media (max-width: 414px) {
+  .page-title-shopify-forms {
+    background-size: 1320px;
+    background-position: -140px bottom;
+    &.page-title {
+      padding-bottom: 190px;
+    }
+  }
+}
+
 
 
 // Shopify Forms Case Study
