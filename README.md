@@ -1,96 +1,200 @@
-# hugo-ianthedesigner
+# Ian Donahue - Portfolio Website
 
-## Install Homebrew
-If you don't have homebrew, install that. 
-https://docs.brew.sh/Installation
-```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"```
+A modern React portfolio website built with TypeScript, Vite, and React Router.
 
-## Install Hugo
-If you are on macOS and using Homebrew, you can install Hugo with the following one-liner:
-```brew install hugo```
+## 🚀 Features
 
-## Install SASS
-If you are macOS, you will need to install SASS to run the compiling of the SASS
-```brew install sass/sass/sass```
-This doesn't require npm, just Homebrew
+- **Modern React Architecture**: Built with React 18, TypeScript, and Vite
+- **Responsive Design**: Mobile-first approach with modern CSS
+- **Portfolio Showcase**: Dynamic portfolio section with project filtering
+- **Blog Integration**: Blog posts with markdown-like content
+- **About Section**: Professional experience and skills
+- **SEO Optimized**: Meta tags and structured data
+- **Fast Performance**: Optimized build with Vite
 
+## 🛠️ Tech Stack
 
-## Running the local developing
+- **Frontend**: React 18, TypeScript
+- **Build Tool**: Vite
+- **Routing**: React Router v6
+- **Styling**: Custom CSS with CSS Variables
+- **Icons**: Themify Icons
+- **Fonts**: Inter, Work Sans
 
-### Running Hugo
-To run locally, go to the Hugo root directory. Run command `hugo server` which will output some files and give you a port to view the develpment. When a change is made, Hugo will automatically rebuild and update the browser.
+## 📦 Installation
 
-Local port: `http://localhost:1313/`
-
-### Running SASS watch and compile
-To compile the SASS files, you will need to go to the theme SCSS file:
-```cd themes/ianthedesigner-hugo/assets/css/scss```
-
-Run: 
-```sass --watch .:../```
-
-## The hugo Command
-The most common usage is probably to run `hugo` with your current directory being the input directory.
-
-This generates your website to the `public/` directory by default, although you can customize the output directory in your site configuration by changing the publishDir field.
-
-The command hugo renders your site into `public/` dir and is ready to be deployed to your web server:
-
-```
-hugo
-0 draft content
-0 future content
-99 pages created
-0 paginator pages created
-16 tags created
-0 groups created
-in 90 ms
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd ian-donahue-portfolio
 ```
 
-
-## Deployment
-Site is hosted on Netlify.com. Commit changes to `master` branch and Netlify will fetch the changes and automatically build the site to https://ianthedesigner.com . No need for complex deployment. It is automatic.
-
-
-## LiveReload
-Hugo comes with LiveReload built in. There are no additional packages to install. A common way to use Hugo while developing a site is to have Hugo run a server with the `hugo server` command and watch for changes:
-
-```
-hugo server
-0 draft content
-0 future content
-99 pages created
-0 paginator pages created
-16 tags created
-0 groups created
-in 120 ms
+2. Install dependencies:
+```bash
+npm install
 ```
 
-Watching for changes in ``/Users/yourname/sites/yourhugosite/{data,content,layouts,static}``
-Serving pages from ``/Users/yourname/sites/yourhugosite/public`
-Web Server is available at http://localhost:1313/
-Press `Ctrl+C` to stop
-This will run a fully functioning web server while simultaneously watching your file system for additions, deletions, or changes within the following areas of your project organization:
-
-```
-/static/*
-/content/*
-/data/*
-/i18n/*
-/layouts/*
-/themes/<CURRENT-THEME>/*
-config
+3. Start the development server:
+```bash
+npm run dev
 ```
 
-Whenever you make changes, Hugo will simultaneously rebuild the site and continue to serve content. As soon as the build is finished, LiveReload tells the browser to silently reload the page.
+4. Open your browser and visit `http://localhost:3000`
 
-Most Hugo builds are so fast that you may not notice the change unless looking directly at the site in your browser. This means that keeping the site open on a second monitor (or another half of your current monitor) allows you to see the most up-to-date version of your website without the need to leave your text editor.
+## 🏗️ Build for Production
 
+```bash
+npm run build
+```
 
-## Compiling SCSS/SASS
-Install SASS
-`brew install sass/sass/sass`
+The built files will be in the `dist` directory.
 
-Go to the SCSS/ Folder and run `sass --watch .:..` to have the SCSS compile to CSS in the parent director.
+## 📁 Project Structure
 
-Navigate to: `hugo-ianthedesigner/themes/ianthedesigner-hugo/assets/css/scss/style.scss`
+```
+src/
+├── components/          # Reusable React components
+│   ├── Layout.tsx      # Main layout wrapper
+│   ├── Header.tsx      # Navigation header
+│   ├── Footer.tsx      # Site footer
+│   ├── Hero.tsx        # Hero section
+│   └── PortfolioSection.tsx
+├── pages/              # Page components
+│   ├── Home.tsx        # Homepage
+│   ├── About.tsx       # About page
+│   ├── Portfolio.tsx   # Portfolio page
+│   ├── Blog.tsx        # Blog page
+│   ├── Tools.tsx       # Tools page
+│   └── Books.tsx       # Books page
+├── data/               # Data files
+│   ├── siteConfig.ts   # Site configuration
+│   ├── homepageData.ts # Homepage content
+│   ├── portfolioData.ts # Portfolio items
+│   ├── aboutData.ts    # About page content
+│   └── blogData.ts     # Blog posts
+├── assets/             # Static assets
+│   ├── images/         # Images
+│   ├── fonts/          # Font files
+│   └── css/            # Stylesheets
+└── main.tsx           # Application entry point
+```
+
+## 🎨 Customization
+
+### Adding New Portfolio Items
+
+Edit `src/data/portfolioData.ts`:
+
+```typescript
+export const portfolioData: PortfolioItem[] = [
+  {
+    title: "Your Project Title",
+    image: "/images/portfolio/your-project.jpg",
+    projectUrl: "https://your-project.com",
+    categories: ["design", "development"]
+  },
+  // ... more items
+];
+```
+
+### Adding New Blog Posts
+
+Edit `src/data/blogData.ts`:
+
+```typescript
+export const blogData: BlogPost[] = [
+  {
+    title: "Your Blog Post",
+    date: "2024-01-15T10:00:00+00:00",
+    description: "Post description",
+    draft: false,
+    slug: "your-blog-post",
+    content: "Your blog content..."
+  },
+  // ... more posts
+];
+```
+
+### Updating Site Configuration
+
+Edit `src/data/siteConfig.ts` to update:
+- Site title and description
+- Social media links
+- Navigation menu
+- Contact information
+
+## 🚀 Deployment
+
+### Netlify
+
+1. Build the project: `npm run build`
+2. Deploy the `dist` folder to Netlify
+3. Configure redirects for SPA routing in `public/_redirects`:
+
+```
+/*    /index.html   200
+```
+
+### Vercel
+
+1. Connect your GitHub repository to Vercel
+2. Vercel will automatically detect the Vite configuration
+3. Deploy with zero configuration
+
+### GitHub Pages
+
+1. Install gh-pages: `npm install --save-dev gh-pages`
+2. Add deploy script to package.json:
+```json
+"scripts": {
+  "deploy": "gh-pages -d dist"
+}
+```
+3. Build and deploy: `npm run build && npm run deploy`
+
+## 📝 Content Management
+
+The website uses TypeScript data files for content management. This approach provides:
+
+- **Type Safety**: TypeScript ensures data consistency
+- **Version Control**: All content is tracked in Git
+- **Developer Friendly**: Easy to edit and maintain
+- **Performance**: No database queries needed
+
+For more complex content management, consider integrating with:
+- Headless CMS (Strapi, Contentful, Sanity)
+- Markdown files with frontmatter
+- JSON API endpoints
+
+## 🔧 Development
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+### Code Style
+
+The project uses:
+- TypeScript for type safety
+- ESLint for code linting
+- Prettier for code formatting (recommended)
+
+## 📄 License
+
+This project is licensed under the ISC License.
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## 📞 Contact
+
+Ian Donahue - [donahue.ian@gmail.com](mailto:donahue.ian@gmail.com)
+
+Project Link: [https://github.com/iandonahue/ian-donahue-portfolio](https://github.com/iandonahue/ian-donahue-portfolio)

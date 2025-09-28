@@ -1,0 +1,77 @@
+export const homepageData = {
+  banner: {
+    title: "Hi! I'm Ian. <br>Product designer <br>& Developer",
+    subTitle: "Oh, and dog photographer... ",
+    miniBio: "I love digging into complex problems and building novel solutions. Today, I do this as the VP of Strategy at UberMedia, a Los Angeles location intelligence company that tracks the movement of over 800 Million smartphones throughout the world."
+  },
+
+  about: {
+    enable: true,
+    content: "I'm an interdisciplinary Product Designer and former startup cofounder. I'm currently a Freelance Product Design Lead designing workspace tools at Dave and UberMedia. I focus on making complex workflows simple, effective, and delightful. Also, I build front-ends. My core skills are empathy, problem-solving, and execution. I'm blessed to have built my own company, been acquired, and learned a lot along the way. But I'll never stop learning. Reach out if you're interested in working together.",
+    button: {
+      enable: true,
+      label: "know more",
+      url: "/about"
+    }
+  },
+
+  experience: {
+    enable: true,
+    title: "Experience",
+    items: [
+      {
+        logo: "/images/experience/icon-1.png",
+        title: "Senior Product Designer",
+        company: "Dave",
+        duration: "Jan 2007 - Feb 2009",
+        description: "Helping people join the public conversation and express themselves with media-focused creation tools."
+      },
+      {
+        logo: "/images/experience/icon-2.png",
+        title: "Senior Product Designer", 
+        company: "UberMedia",
+        duration: "Mar 2009 - Aug 2014",
+        description: "Helping people join the public conversation and express themselves with media-focused creation tools."
+      },
+      {
+        logo: "/images/experience/icon-1.png",
+        title: "Co-founder & VP, User Experience",
+        company: "Cintric",
+        duration: "Sep 2014 - Present",
+        description: "Helping people join the public conversation and express themselves with media-focused creation tools."
+      },
+      {
+        logo: "/images/experience/icon-1.png",
+        title: "Product Designer",
+        company: "CompuCom",
+        duration: "Sep 2014 - Present",
+        description: "Helping people join the public conversation and express themselves with media-focused creation tools."
+      },
+      {
+        logo: "/images/experience/icon-1.png",
+        title: "Venn",
+        company: "Co-founder & Product Designer",
+        duration: "Sep 2014 - Present",
+        description: "Helping people join the public conversation and express themselves with media-focused creation tools."
+      },
+      {
+        logo: "/images/experience/icon-1.png",
+        title: "Co-founder & VP, User Experience",
+        company: "Cintric",
+        duration: "Sep 2014 - Present",
+        description: "Helping people join the public conversation and express themselves with media-focused creation tools."
+      }
+    ]
+  },
+
+  portfolio: {
+    enable: true,
+    title: "Portfolio",
+    itemShow: 5
+  },
+
+  blog: {
+    enable: true,
+    title: "Blogs"
+  }
+};
