@@ -1,15 +1,15 @@
 # hugo-ianthedesigner
 
-## Install Homebrew
+## 1. Install Homebrew
 If you don't have homebrew, install that. 
 https://docs.brew.sh/Installation
 ```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"```
 
-## Install Hugo
+## 2. Install Hugo
 If you are on macOS and using Homebrew, you can install Hugo with the following one-liner:
 ```brew install hugo```
 
-## Install SASS
+## 3. Install SASS
 If you are macOS, you will need to install SASS to run the compiling of the SASS
 ```brew install sass/sass/sass```
 This doesn't require npm, just Homebrew
@@ -17,12 +17,12 @@ This doesn't require npm, just Homebrew
 
 ## Running the local developing
 
-### Running Hugo
-To run locally, go to the Hugo root directory. Run command `hugo server` which will output some files and give you a port to view the develpment. When a change is made, Hugo will automatically rebuild and update the browser.
+### 1. Running Hugo
+To run locally, go to the Hugo root directory. Run command `hugo server` which will output some files and give you a port to view the development. When a change is made, Hugo will automatically rebuild and update the browser.
 
 Local port: `http://localhost:1313/`
 
-### Running SASS watch and compile
+### 2. Running SASS watch and compile
 To compile the SASS files, you will need to go to the theme SCSS file:
 ```cd themes/ianthedesigner-hugo/assets/css/scss```
 
